@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'nebula';
+  src:  url('fonts/nebula.eot?riyatl');
+  src:  url('fonts/nebula.eot?riyatl#iefix') format('embedded-opentype'),
+    url('fonts/nebula.ttf?riyatl') format('truetype'),
+    url('fonts/nebula.woff?riyatl') format('woff'),
+    url('fonts/nebula.svg?riyatl#nebula') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nebula-"], [class*=" nebula-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'nebula' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nebula-change2:before {
+  content: "\e913";
+}
+.nebula-transfer2:before {
+  content: "\e912";
+}
+.nebula-change:before {
+  content: "\e911";
+}
+.nebula-direction-left:before {
+  content: "\e90b";
+}
+.nebula-direction-down:before {
+  content: "\e90c";
+}
+.nebula-direction-right:before {
+  content: "\e90d";
+}
+.nebula-direction-up:before {
+  content: "\e90e";
+}
+.nebula-logout:before {
+  content: "\e907";
+}
+.nebula-refresh:before {
+  content: "\e908";
+}
+.nebula-transfer:before {
+  content: "\e909";
+}
+.nebula-fullscreen:before {
+  content: "\e906";
+}
+.nebula-medium:before {
+  content: "\e954";
+}
+.nebula-facebook1:before {
+  content: "\e947";
+}
+.nebula-instagram:before {
+  content: "\e948";
+}
+.nebula-telegram:before {
+  content: "\e949";
+}
+.nebula-play-store:before {
+  content: "\e91e";
+}
+.nebula-user-box:before {
+  content: "\e900";
+}
+.nebula-wallet:before {
+  content: "\e901";
+}
+.nebula-pause:before {
+  content: "\e90f";
+}
+.nebula-play-type2:before {
+  content: "\e910";
+}
+.nebula-play:before {
+  content: "\e902";
+}
+.nebula-browser:before {
+  content: "\e903";
+}
+.nebula-mobile:before {
+  content: "\e92a";
+}
+.nebula-pc:before {
+  content: "\e927";
+}
+.nebula-ios:before {
+  content: "\e928";
+}
+.nebula-arrow-diagonal:before {
+  content: "\e929";
+}
+.nebula-arrow-thin-right:before {
+  content: "\e918";
+}
+.nebula-arrow-thin-top:before {
+  content: "\e91a";
+}
+.nebula-arrow-thin-left:before {
+  content: "\e91c";
+}
+.nebula-arrow-thin-bottom:before {
+  content: "\e91d";
+}
+.nebula-twitter:before {
+  content: "\e904";
+}
+.nebula-discord:before {
+  content: "\e919";
+}
+.nebula-youtube:before {
+  content: "\e91b";
+}
+.nebula-globe:before {
+  content: "\e943";
+}
+.nebula-search:before {
+  content: "\e944";
+}
+.nebula-minus:before {
+  content: "\e942";
+}
+.nebula-plus:before {
+  content: "\e945";
+}
+.nebula-close:before {
+  content: "\e956";
+}
+.nebula-filter:before {
+  content: "\e933";
+}
+.nebula-check:before {
+  content: "\e905";
+}
+.nebula-exclamation-mark:before {
+  content: "\e90a";
+}

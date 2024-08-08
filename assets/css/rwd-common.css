@@ -1,0 +1,101 @@
+/*
+ * File : rwd-main.css
+ */
+
+
+
+/* **************************************** *
+ * 1680px
+ * **************************************** */
+@media (max-width: 1680px){
+
+    
+}
+
+
+
+/* **************************************** *
+ * 1480px
+ * **************************************** */
+@media (max-width: 1480px){
+
+}
+
+/* **************************************** *
+ * 1280px
+ * **************************************** */
+@media (max-width: 1280px){
+
+
+}
+
+
+/* **************************************** *
+ * 1023px
+ * **************************************** */
+@media (max-width: 1023px){
+
+    /* BUTTON */
+    .btn-more a {font-size:15rem; padding: 14rem 28rem;}
+
+}
+
+
+
+/* **************************************** *
+ * 860px
+ * **************************************** */
+@media (max-width: 860px){
+
+    /* BUTTON */
+    .btn-wrap {margin-top:60rem}
+    .btn-basic { font-size:16rem;}
+    .btn-more a { font-size: 13rem; padding: 12rem 24rem;}
+    .btn-external span:after {font-size:8rem;}
+
+    /* MAGNIFIC POPUP */
+    .mfp-close:after {font-size:16rem;}
+
+    /* FORM */
+    .form-field-item {gap:15rem;}
+
+    /* SWIPER */
+    .swiper-pagination-bullet span {width:12rem; height:12rem;}
+    .swiper-pagination-bullet-active > span {width:32rem;}
+    .swiper-play-state { width: 40rem; height: 40rem;}
+    .swiper-play-state__btn:after {font-size:12rem;}
+}
+
+
+
+/* **************************************** *
+ * 540px
+ * **************************************** */
+@media (max-width: 540px){
+
+    /* BUTTON */
+    .btn-wrap {margin-top:40rem}
+    .btn-basic { min-width:auto; padding: 16rem 20rem;}
+    html.ios .btn-basic {padding-top:14rem; padding-bottom:16rem;}
+    .btn-more a { font-size: 12rem; padding: 10rem 20rem;}
+    .btn-small { font-size:14rem; padding: 10rem 15rem;}
+    html.ios .btn-small {padding-top:8rem; padding-bottom:10rem;}
+    .btn-external span {padding-right:15rem;}
+
+    /* FORM */
+    .form-field-wrap + .form-field-wrap { margin-top:15rem;}
+    .form-field-item {display:block;}
+    .form-field-item > .form-input__wrap {padding:10rem 0;}
+    .form-input__inner {display:block;}
+    .form-input {height:50rem; padding: 6rem 15rem 10rem;}
+
+    .valid-message {margin-top:6rem; font-size:14rem;}
+    .valid-message .icon {width: 16rem; height: 16rem; line-height: 16rem;}
+
+    /* SWIPER */
+    .swiper-pagination-bullet span { width: 12rem; height: 12rem;}
+    .swiper-pagination-bullet-active > span {width:36rem;}
+
+    /* CLIPBOARD */
+    .clipboard-copynote { padding: 12rem 20rem;}
+}

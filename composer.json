@@ -1,0 +1,6 @@
+{
+    "require": {
+        "kornrunner/ethereum-offline-raw-tx": "^0.6.0",
+	"2tvenom/cborencode": "1.0.0"
+    }
+}

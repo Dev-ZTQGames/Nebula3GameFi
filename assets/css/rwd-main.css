@@ -1,0 +1,259 @@
+/*
+ * File : rwd-main.css
+ */
+
+
+
+/* **************************************** *
+ * 1680px
+ * **************************************** */
+@media (max-width: 1680px){
+
+    /* VIDEO */
+    .main-video__box {max-width:1100rem;}
+    
+}
+
+
+
+/* **************************************** *
+ * 1480px
+ * **************************************** */
+@media (max-width: 1480px){
+
+    /* VIDEO */
+    .main-video__box {max-width:1000rem;}
+
+}
+
+/* **************************************** *
+ * 1280px
+ * **************************************** */
+@media (max-width: 1280px){
+
+
+}
+
+
+/* **************************************** *
+ * 1023px
+ * **************************************** */
+@media (max-width: 1023px){
+
+    /* COMMON */
+    .main-section { margin-top: 120rem;}
+    .main-section__head {margin-bottom:20rem;}
+    .main-section__title { font-size: 34rem;}
+
+    /* VISUAL */
+    .triple-slider {width:100%;}
+    .triple-slider .main-visual__left { left: -4%;}
+    .triple-slider .main-visual__right { right: -4%;}
+
+    .main-visual__contents { flex-direction: column-reverse; gap:0;}
+    .main-visual__txt {width:100%; max-width:100%; margin-right:0;display: flex; flex-direction: column;  margin-top:10rem;}
+    .main-visual__txt__inner { order:2;}
+    .main-visual__title {font-size:34rem; order:2; margin-top:20rem;}
+    .main-visual__sub-title { font-size: 26rem; order:3;}
+    .main-visual__desc { order:4;}
+    .main-visual__control.swiper-control { order: 1; justify-content: center;margin-top:0;}
+    .main-visual__control .swiper-navigation {display:none;}
+    .main-visual__control .swiper-pagination {display:block;}
+    .main-visual__control .swiper-play-state {margin-top:2rem;}
+
+    /* VIDEO */
+    .main-video__inner {gap:20rem;}
+    .main-video__box {max-width:725rem;}
+    .main-video__pagination .swiper-slide + .swiper-slide {margin-top:20rem;}
+    .main-video__pagination .main-video__title { bottom: 15rem;left: 15rem; right: 15rem; font-size:16rem;}
+
+    /* GAMES */
+    .main-games__list { margin: -10rem;}
+    .main-games__item { width: calc(33.33% - 20rem); margin: 10rem;}
+    .main-games__title { font-size: 18rem;}
+    .main-games-big__list { margin: 40rem -10rem -10rem;}
+    .main-games-big__item { width: calc(50% - 20rem); margin: 10rem;}
+
+    /* NFTS */
+    .main-nfts__list {overflow:visible;}
+    .nft-item {max-width:250rem;margin-right:20rem;}
+    .nft-info {padding: 18rem 20rem 22rem;}
+    .nft-info__title {font-size:16rem;}
+    .nft-info li { font-size: 15rem;}
+
+    /* LAUNCHPAD */
+    .launchpad-wrap h2 { font-size: 26rem;}
+    .launchpad-list { margin: 0rem -14rem -14rem;}
+    .launchpad-item {width: calc(33.33% - 20rem); margin: 10rem;}
+    .launchpad-info .goods { font-size: 15rem;}
+    .launchpad-info .goods i img {padding:2rem;}
+    .launchpad-info h3 {font-size:18rem;}
+    .launchpad-date {width:55rem;}
+    .launchpad-date b {font-size:18rem;}
+    .launchpad-date span { font-size: 13rem;}
+
+    /* ANNOUNCEMENT */
+    .main-announcement__section + .main-announcement__section {margin-top:80rem;}
+    .main-announcement__section h3 { font-size: 24rem;}
+    .main-updates__content h4 {font-size:16rem; margin-bottom:6rem;}
+    .main-updates__content p {font-size: 15rem;}
+    .main-updates__item time { font-size: 13rem;}
+    .main-updates__item time span.day { font-size: 24rem;}
+
+    .main-events__list {overflow:visible; gap:20rem;}
+    .main-events__list:before {content:''; display:block; width:100%; height:100%; background:#212121; position:absolute; left:-100%; z-index:10;}
+    .main-events__title {font-size:16rem;}
+
+    .main-faq__item h4 {font-size:16rem;}
+    .main-faq__item p {font-size: 15rem;}
+
+   
+}
+
+
+
+
+/* **************************************** *
+ * 860px
+ * **************************************** */
+@media (max-width: 860px){
+
+    /* COMMON */
+    .main-section { margin-top: 100rem;}
+    .main-section__title { font-size: 28rem;}
+
+    /* VISUAL */
+    .triple-slider .main-visual__left, .triple-slider .main-visual__right {display:none;}
+    .main-visual__title {font-size:24rem;margin-top:10rem;}
+    .main-visual__sub-title { font-size: 20rem;}
+    .main-visual__desc {font-size:18rem;}
+    .main-visual__control .swiper-play-state {margin-top:3rem;}
+    html.ios .main-visual__control .swiper-play-state {margin-top:4rem;}
+
+    /* VIDEO */
+    .main-video__inner {display:block;}
+    .main-video__box {max-width:100%;border-radius: 12rem;}
+    .main-video__box .swiper-slide.embed-video { padding-top: 56.2%;}
+    .main-video__pagination { margin-top:20rem; }
+    .main-video__pagination .swiper-wrapper {gap: 16rem; align-items:center;flex-direction: row;}
+    .main-video__pagination .swiper-slide {width: calc(33.33% - 11rem);}
+    .main-video__pagination .swiper-slide + .swiper-slide {margin-top:0;}
+    .main-video__pagination figure {border-radius:6rem;}
+    .main-video__pagination figure:after {border-radius:6rem;}
+    .video-icon { right: 10rem; top: 10rem; width: 40rem; height: 40rem;}
+    .video-icon:before { font-size: 16rem;}
+
+
+    /* GAMES */
+    .main-games__inner {overflow:visible;}
+    .main-games__list { margin:0;}
+    .main-games__item { width: 100%; max-width: 320rem; margin: 0 16rem 0 0;}
+    .main-games__item:last-child {margin-right:0;}
+    .main-games__title { font-size: 16rem;}
+    .main-games-big__list { margin: 30rem -8rem -8rem;}
+    .main-games-big__item { width: calc(50% - 16rem); margin: 8rem;}
+
+
+    /* NFTS */
+    .nft-item {max-width:220rem;margin-right:16rem;}
+    .nft-info li { font-size: 14rem;}
+
+
+    /* LAUNCHPAD */
+    .launchpad-wrap + .launchpad-wrap {margin-top: 80rem;}
+    .launchpad-wrap h2 { font-size: 22rem;}
+    .launchpad-list { margin: 0rem -8rem -8rem;}
+    .launchpad-item {width: calc(50% - 16rem); margin:8rem}
+    .launchpad-info .goods { font-size: 14rem;}
+    .launchpad-info .goods i {width: 18rem; height:18rem;}
+    .launchpad-info h3 {font-size:16rem;}
+    .launchpad-date {width:50rem;}
+    .launchpad-date b {font-size:16rem;}
+    .launchpad-date span { font-size: 12rem;}
+
+    /* ANNOUNCEMENT */
+    .main-announcement {overflow-x:hidden;}
+    .main-announcement .main-section__head {margin-bottom:30rem;}
+    .main-announcement .main-section__head__inner {display:flex;}
+    .main-announcement__section h3 { font-size: 22rem; }
+    .main-announcement .main-section__head .btn-more {margin-left:auto; margin-top:0;}
+    .main-announcement__inner {display:block;}
+    .main-announcement__section + .main-announcement__section {margin-top:60rem;}
+    .main-announcement .main-section__head {width:100%;}
+    .main-announcement__contents {width:100%;}
+    .main-events__list {gap:16rem;}
+    .main-events__list:before {display:none;}
+    .main-events__item { }
+
+
+}
+
+
+
+/* **************************************** *
+ * 540px
+ * **************************************** */
+@media (max-width: 540px){
+
+    /* COMMON */
+    .main-section { margin-top: 60rem; }
+    .main-section__head { margin-bottom: 10rem;}
+    .main-section__title { font-size: 22rem; line-height:1.5;}
+
+
+    /* VISUAL */
+    .triple-slider .swiper-pagination { bottom: -25rem;}
+
+    .main-visual__title {font-size:20rem;margin-top:5rem;}
+    .main-visual__sub-title { font-size: 18rem;}
+    .main-visual__desc { margin-top:10rem; font-size: 14rem; }
+    .main-visual .btn-more {margin-top:20rem;}
+
+    /* VIDEO */
+    .main-video__pagination .main-video__title {display:none;}
+    .main-video__pagination .swiper-wrapper { gap: 10rem;}
+    .main-video__pagination .swiper-slide { width: calc(33.33% - 7rem);}
+    .main-video__pagination { margin-top: 10rem;}
+    .main-video__pagination figure:after {padding:2rem;}
+    .video-icon { right: auto; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30rem; height: 30rem;}
+    .video-icon:before { font-size: 12rem;}
+
+    /* GAMES */
+    .main-games__title { font-size: 14rem;}
+    .main-games__item { max-width: 280rem; margin-right:12rem;}
+
+    .main-games-big__list {margin: 30rem -0 0;}
+    .main-games-big__item { width: 100%; margin: 0;}
+    .main-games-big__item + .main-games-big__item {margin-top:12rem;}
+
+    /* NFTS */
+    .nft-item {margin-right:12rem;}
+    .nft-info {padding:16rem;}
+    .nft-info ul { margin-top: 15rem; }
+    .nft-info li + li { margin-top: 8rem;}
+
+    /* LAUNCHPAD */
+    .launchpad-wrap + .launchpad-wrap {margin-top: 60rem;}
+    .launchpad-list { margin:0;}
+    .launchpad-item { width: 100%; margin:0;}
+    .launchpad-item + .launchpad-item {margin-top:12rem;}
+    .launchpad-date { width: auto;}
+    .launchpad-date span { font-size: 11rem;}
+    .launchpad-info { padding: 12rem;}
+    .launchpad-info .goods {font-size: 13rem;}
+    .launchpad-info h3 { }
+    .nfts-info__item {width: calc(50% - 20rem);}
+
+    /* ANNOUNCEMENT */
+    .main-announcement__section + .main-announcement__section {margin-top: 40rem;}
+    .main-announcement .main-section__head {margin-bottom:20rem;}
+    .main-announcement__section h3 { font-size: 18rem; margin-bottom: 15rem;}
+    .main-events__list {display:block;}
+    .main-events__item {width:100%;}
+    .main-events__item + .main-events__item {margin-top:28rem;}
+    .main-updates__item > a {gap:12rem;}
+    .main-updates__item time { font-size: 12rem;}
+    .main-updates__item time span.day { font-size: 20rem;}
+    .main-updates__item time span.month { padding-top: 28rem;}
+
+}
