@@ -1,0 +1,146 @@
+
+0068_kort_ani_idle_navy.png
+size: 734,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Kote_L_blush
+  rotate: false
+  xy: 665, 7
+  size: 39, 39
+  orig: 39, 39
+  offset: 0, 0
+  index: -1
+Kote_L_ear
+  rotate: true
+  xy: 383, 5
+  size: 92, 101
+  orig: 92, 101
+  offset: 0, 0
+  index: -1
+Kote_L_eye
+  rotate: false
+  xy: 326, 10
+  size: 25, 15
+  orig: 25, 15
+  offset: 0, 0
+  index: -1
+Kote_L_feet
+  rotate: false
+  xy: 627, 158
+  size: 66, 45
+  orig: 66, 45
+  offset: 0, 0
+  index: -1
+Kote_L_hand
+  rotate: true
+  xy: 557, 122
+  size: 81, 68
+  orig: 81, 68
+  offset: 0, 0
+  index: -1
+Kote_R_blush
+  rotate: false
+  xy: 695, 164
+  size: 37, 39
+  orig: 37, 39
+  offset: 0, 0
+  index: -1
+Kote_R_ear
+  rotate: false
+  xy: 463, 102
+  size: 92, 101
+  orig: 92, 101
+  offset: 0, 0
+  index: -1
+Kote_R_eye
+  rotate: false
+  xy: 298, 10
+  size: 26, 15
+  orig: 26, 15
+  offset: 0, 0
+  index: -1
+Kote_R_feet
+  rotate: false
+  xy: 627, 111
+  size: 66, 45
+  orig: 66, 45
+  offset: 0, 0
+  index: -1
+Kote_R_hand
+  rotate: false
+  xy: 604, 48
+  size: 63, 61
+  orig: 63, 61
+  offset: 0, 0
+  index: -1
+Kote_body
+  rotate: true
+  xy: 240, 27
+  size: 176, 141
+  orig: 176, 141
+  offset: 0, 0
+  index: -1
+Kote_bowtie
+  rotate: true
+  xy: 486, 8
+  size: 92, 48
+  orig: 92, 48
+  offset: 0, 0
+  index: -1
+Kote_head
+  rotate: false
+  xy: 2, 3
+  size: 236, 200
+  orig: 236, 200
+  offset: 0, 0
+  index: -1
+Kote_mouse
+  rotate: false
+  xy: 240, 9
+  size: 56, 16
+  orig: 56, 16
+  offset: 0, 0
+  index: -1
+Kote_popsicle
+  rotate: false
+  xy: 536, 18
+  size: 66, 82
+  orig: 66, 82
+  offset: 0, 0
+  index: -1
+Kote_sailboat
+  rotate: true
+  xy: 383, 99
+  size: 104, 78
+  orig: 104, 78
+  offset: 0, 0
+  index: -1
+Kote_tail
+  rotate: false
+  xy: 604, 2
+  size: 59, 44
+  orig: 59, 44
+  offset: 0, 0
+  index: -1
+Kote_tougue
+  rotate: false
+  xy: 695, 103
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: -1
+Nomi_Love_big
+  rotate: false
+  xy: 669, 53
+  size: 58, 48
+  orig: 58, 48
+  offset: 0, 0
+  index: -1
+Nomi_Love_smaill
+  rotate: false
+  xy: 695, 133
+  size: 36, 29
+  orig: 36, 29
+  offset: 0, 0
+  index: -1

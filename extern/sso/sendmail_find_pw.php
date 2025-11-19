@@ -4,6 +4,11 @@ include $_SERVER['DOCUMENT_ROOT'] . "/includes/config.php";
 $id = escape_string(trim($_REQUEST['id']));
 $email = escape_string(trim($_REQUEST['email']));
 
+$check = checkEmailDomainMX($email);
+if($check == false) {
+	exit;
+}
+
 $que = mysqli_query($connect, "SELECT * FROM Accounts WHERE login_id='".$id."'");
 
 $row = mysqli_fetch_array($que);

@@ -1,0 +1,132 @@
+
+0020_ed_ani_idle_pajamas.png
+size: 918,316
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ed_L_ear
+  rotate: true
+  xy: 766, 16
+  size: 80, 74
+  orig: 81, 74
+  offset: 0, 0
+  index: -1
+Ed_L_eye
+  rotate: true
+  xy: 885, 239
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+Ed_L_feet
+  rotate: true
+  xy: 616, 23
+  size: 91, 76
+  orig: 91, 76
+  offset: 0, 0
+  index: -1
+Ed_L_hand
+  rotate: true
+  xy: 359, 2
+  size: 112, 96
+  orig: 112, 96
+  offset: 0, 0
+  index: -1
+Ed_R_ear
+  rotate: true
+  xy: 842, 18
+  size: 78, 74
+  orig: 78, 74
+  offset: 0, 0
+  index: -1
+Ed_R_eye
+  rotate: false
+  xy: 885, 198
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Ed_R_feet
+  rotate: true
+  xy: 694, 9
+  size: 87, 70
+  orig: 87, 70
+  offset: 0, 0
+  index: -1
+Ed_R_hand
+  rotate: true
+  xy: 457, 6
+  size: 61, 70
+  orig: 63, 70
+  offset: 1, 0
+  index: -1
+Ed_body
+  rotate: true
+  xy: 2, 6
+  size: 308, 355
+  orig: 308, 355
+  offset: 0, 0
+  index: -1
+Ed_book
+  rotate: false
+  xy: 706, 176
+  size: 177, 138
+  orig: 178, 138
+  offset: 0, 0
+  index: -1
+Ed_hat
+  rotate: false
+  xy: 706, 98
+  size: 209, 76
+  orig: 209, 76
+  offset: 0, 0
+  index: -1
+Ed_hattop
+  rotate: false
+  xy: 457, 69
+  size: 157, 45
+  orig: 157, 45
+  offset: 0, 0
+  index: -1
+Ed_mouth
+  rotate: true
+  xy: 885, 260
+  size: 54, 30
+  orig: 54, 30
+  offset: 0, 0
+  index: -1
+Ed_pajamas
+  rotate: false
+  xy: 359, 116
+  size: 345, 198
+  orig: 345, 198
+  offset: 0, 0
+  index: -1
+dot
+  rotate: false
+  xy: 908, 254
+  size: 4, 4
+  orig: 30, 30
+  offset: 13, 14
+  index: -1
+z1
+  rotate: true
+  xy: 885, 219
+  size: 18, 21
+  orig: 30, 30
+  offset: 6, 4
+  index: -1
+z2
+  rotate: true
+  xy: 902, 183
+  size: 13, 14
+  orig: 30, 30
+  offset: 9, 8
+  index: -1
+z3
+  rotate: true
+  xy: 885, 183
+  size: 13, 15
+  orig: 30, 30
+  offset: 9, 7
+  index: -1

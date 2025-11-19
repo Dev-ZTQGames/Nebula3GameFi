@@ -49,7 +49,7 @@
                             <h2 class="main-visual__title"><?php echo $info['m_title']; ?></h2>
                             <h3 class="main-visual__sub-title"><?php echo $info['m_sub_title']; ?></h3>
                             <p class="main-visual__desc"><?php echo $info['m_description']; ?></p>
-                            <div class="btn-more"><a href="<?php echo $link; ?>"><span>VIEW MORE</span></a></div>
+                            <div class="btn-more"><a href="<?php echo $link; ?>"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                         </div><!-- .main-visual__txt__item -->
 					<?php
 						}
@@ -146,8 +146,8 @@
     <div class="main-section main-games">
         <div class="wrap">
             <div class="main-section__head">
-                <h2 class="main-section__title">GAMES</h2>
-                <div class="btn-more"><a href="/sub/games.php"><span>VIEW MORE</span></a></div>
+                <h2 class="main-section__title"><?php echo $lang['GAMES']; ?></h2>
+                <div class="btn-more"><a href="/sub/games.php"><span><?php echo $lang['ViewMore']; ?></span></a></div>
             </div>
             <div class="main-games__inner swiper-container">
                 <div class="main-games__list swiper-wrapper">
@@ -212,12 +212,12 @@
     <div class="main-section main-nfts">
         <div class="wrap">
             <div class="main-section__head">
-                <h2 class="main-section__title">NFTS</h2>
-                <div class="btn-more"><a href="/sub/nfts.php"><span>VIEW MORE</span></a></div>
+                <h2 class="main-section__title"><?php echo $lang['NFTS']; ?></h2>
+                <div class="btn-more"><a href="/sub/nfts.php"><span><?php echo $lang['ViewMore']; ?></span></a></div>
             </div>
             <div class="main-nfts__list swiper-container">
                 <div class="swiper-wrapper">
-				<?php
+				<?php /*
 					$query_nft = mysqli_query($connect, "SELECT * FROM AccountsNFTData ORDER BY m_index DESC LIMIT 5");
 
 					while ( $row = mysqli_fetch_array($query_nft) ) {
@@ -255,8 +255,84 @@
                         </div>
                     </div><!-- .main-nfts__item --> 
 				<?php
-					}
+					} */
 				?>
+					<div class="main-nfts__item nft-item swiper-slide">
+                        <figure class="lazyload">
+							<img loading="lazy" src="https://test.nebula3gamefi.com/img_remote/test/game/mm/legend.png" alt="" class="lazyload--loaded" style="z-index:1">
+                            <img loading="lazy" data-unveil="https://cdn.nebula3gamefi.com/nft/mm/img/9444.png" src="https://cdn.nebula3gamefi.com/nft/mm/img/9444.png" alt="" />
+                            <noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>
+                        </figure>
+                        <div class="main-nfts__info nft-info">
+                            <h3 class="nft-info__title">Mining Maze</h3>
+                            <ul>
+                                <li><span>Legend</span><span>#9443</span></li>
+                                <li><span>Breeding Count</span><span>(5/5)</span></li>
+                                <li><span>Current Level</span><span>(5/5)</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .main-nfts__item --> 
+					<div class="main-nfts__item nft-item swiper-slide">
+                        <figure class="lazyload">
+							<img loading="lazy" src="https://test.nebula3gamefi.com/img_remote/test/game/mm/legend.png" alt="" class="lazyload--loaded" style="z-index:1">
+                            <img loading="lazy" data-unveil="https://cdn.nebula3gamefi.com/nft/mm/img/9445.png" src="https://cdn.nebula3gamefi.com/nft/mm/img/9445.png" alt="" />
+                            <noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>
+                        </figure>
+                        <div class="main-nfts__info nft-info">
+                            <h3 class="nft-info__title">Mining Maze</h3>
+                            <ul>
+                                <li><span>Legend</span><span>#9444</span></li>
+                                <li><span>Breeding Count</span><span>(5/5)</span></li>
+                                <li><span>Current Level</span><span>(5/5)</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .main-nfts__item --> 
+					<div class="main-nfts__item nft-item swiper-slide">
+                        <figure class="lazyload">
+							<img loading="lazy" src="https://test.nebula3gamefi.com/img_remote/test/game/mm/legend.png" alt="" class="lazyload--loaded" style="z-index:1">
+                            <img loading="lazy" data-unveil="https://cdn.nebula3gamefi.com/nft/mm/img/9446.png" src="https://cdn.nebula3gamefi.com/nft/mm/img/9446.png" alt="" />
+                            <noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>
+                        </figure>
+                        <div class="main-nfts__info nft-info">
+                            <h3 class="nft-info__title">Mining Maze</h3>
+                            <ul>
+                                <li><span>Legend</span><span>#9445</span></li>
+                                <li><span>Breeding Count</span><span>(5/5)</span></li>
+                                <li><span>Current Level</span><span>(5/5)</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .main-nfts__item --> 
+					<div class="main-nfts__item nft-item swiper-slide">
+                        <figure class="lazyload">
+							<img loading="lazy" src="https://test.nebula3gamefi.com/img_remote/test/game/mm/legend.png" alt="" class="lazyload--loaded" style="z-index:1">
+                            <img loading="lazy" data-unveil="https://cdn.nebula3gamefi.com/nft/mm/img/9448.png" src="https://cdn.nebula3gamefi.com/nft/mm/img/9448.png" alt="" />
+                            <noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>
+                        </figure>
+                        <div class="main-nfts__info nft-info">
+                            <h3 class="nft-info__title">Mining Maze</h3>
+                            <ul>
+                                <li><span>Legend</span><span>#9447</span></li>
+                                <li><span>Breeding Count</span><span>(5/5)</span></li>
+                                <li><span>Current Level</span><span>(5/5)</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .main-nfts__item --> 
+					<div class="main-nfts__item nft-item swiper-slide">
+                        <figure class="lazyload">
+							<img loading="lazy" src="https://test.nebula3gamefi.com/img_remote/test/game/mm/legend.png" alt="" class="lazyload--loaded" style="z-index:1">
+                            <img loading="lazy" data-unveil="https://cdn.nebula3gamefi.com/nft/mm/img/9450.png" src="https://cdn.nebula3gamefi.com/nft/mm/img/9450.png" alt="" />
+                            <noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>
+                        </figure>
+                        <div class="main-nfts__info nft-info">
+                            <h3 class="nft-info__title">Mining Maze</h3>
+                            <ul>
+                                <li><span>Legend</span><span>#9449</span></li>
+                                <li><span>Breeding Count</span><span>(5/5)</span></li>
+                                <li><span>Current Level</span><span>(5/5)</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- .main-nfts__item --> 
+					
 
                 </div>
             </div><!-- .main-nfts__list -->
@@ -266,12 +342,12 @@
     <div class="main-section main-launchpad">
         <div class="wrap">
             <div class="main-section__head">
-                <h2 class="main-section__title">LAUNCHPAD</h2>
-                <div class="btn-more"><a href="/sub/launchpad.php"><span>VIEW MORE</span></a></div>
+                <h2 class="main-section__title"><?php echo $lang['LAUNCHPAD']; ?></h2>
+                <div class="btn-more"><a href="/sub/launchpad.php"><span><?php echo $lang['ViewMore']; ?></span></a></div>
             </div>
             <div class="launchpad-list">
 			<?php
-				$query_launchpad = mysqli_query($connect, "SELECT m_index, m_game_code, m_chain, m_main_banner_img, m_start FROM GamesNFTLaunchpad LIMIT 3");
+				$query_launchpad = mysqli_query($connect, "SELECT m_index, m_game_code, m_chain, m_main_banner_img, m_start FROM GamesNFTLaunchpad WHERE m_status != 3 ORDER BY m_status DESC, m_sort ASC LIMIT 3");
 
 				while ( $info_launchpad = mysqli_fetch_array($query_launchpad) ) {
 					$timestamp = strtotime($info_launchpad['m_start']);
@@ -307,7 +383,7 @@
 			?>
                 <div class="launchpad-item">
                     <!--a href="/sub/launchpad-view.php?idx=<?php echo $info_launchpad['m_index']; ?>"-->
-					<?php if ($info_launchpad['m_game_code'] == 'mm') echo '<a href="/sub/launchpad-view.php?idx='.$info_launchpad['m_index'].'">';?>
+					<!--?php if ($info_launchpad['m_game_code'] == 'mm') echo '<a href="/sub/launchpad-view.php?idx='.$info_launchpad['m_index'].'">';?-->
                         <div class="launchpad-img">
                             <figure class="lazyload">
                                 <img loading="lazy" data-unveil="<?php echo $info_launchpad['m_main_banner_img']; ?>" src="../assets/images/blank.gif" alt="" />
@@ -316,8 +392,15 @@
                              <div class="launchpad-date"><b><?php echo $info_launchpad['year']?></b><span><?php echo $info_launchpad['season']; ?></span></div>
                         </div><!-- .launchpad-img -->
                         <div class="launchpad-info">
-                            <p class="goods"><?php if ($info_launchpad['m_chain'] == 'ICP') echo '<i><img src="../assets/images/symbol-icp.svg" alt=""></i>'?><span><?php echo $info_launchpad['m_chain']; ?></span></p>
-                            <h3><?php echo $info_games['m_title']; ?> Minting</h3>
+                            <p class="goods">
+									<?php if ($info_launchpad['m_chain'] == 'TBA') {?><span><?php echo $info_launchpad['m_chain']; ?></span><?php } ?>
+									<?php if ($info_launchpad['m_chain'] == 'ICP') {?><i><img src="../assets/images/symbol-icp.svg" alt=""></i><span><?php echo $info_launchpad['m_chain']; ?></span><?php } ?>
+									<?php if ($info_launchpad['m_chain'] == 'IMX') {?><i><img src="../assets/images/symbol-imx.svg" alt=""></i><span><?php echo $info_launchpad['m_chain']; ?></span><?php } ?>
+									<?php if ($info_launchpad['m_chain'] == 'KAIA') {?><i><img src="../assets/images/symbol-kaia.svg" alt=""></i><span><?php echo $info_launchpad['m_chain']; ?></span><?php } ?>
+									<?php if ($info_launchpad['m_chain'] == 'STRK') {?><i><img src="../assets/images/symbol-strk.svg" alt=""></i><span><?php echo $info_launchpad['m_chain']; ?></span><?php } ?>
+									<?php if ($info_launchpad['m_chain'] == 'BNB') {?><i><img src="../assets/images/symbol-bnb.svg" alt=""></i><span><?php echo $info_launchpad['m_chain']; ?></span><?php } ?>
+							</p>
+                            <h3><?php echo $info_games['m_title']; ?> <?php echo $lang['Minting']; ?></h3>
                         </div><!-- .launchpad-info -->
                     <?php if ($info_launchpad['m_game_code'] == 'mm') echo '</a>'; ?>
                 </div>
@@ -334,13 +417,13 @@
             <div class="main-announcement__inner">
                 <div class="main-section__head">
                     <div class="main-section__head__inner">
-                        <h2 class="main-section__title">ANNOUNCEMENT</h2>
-                        <div class="btn-more"><a href="/sub/announcement.php"><span>VIEW MORE</span></a></div>
+                        <h2 class="main-section__title"><?php echo $lang['ANNOUNCEMENT']; ?></h2>
+                        <div class="btn-more"><a href="/sub/announcement.php"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                     </div>
                 </div>
                 <div class="main-announcement__contents">
                     <div class="main-updates main-announcement__section">
-                        <h3>Updates</h3>
+                        <h3><?php echo $lang['Updates']; ?></h3>
                         <div class="main-updates__list">
 						<?php
 							$query_updates = mysqli_query($connect, "SELECT * FROM News WHERE m_type = '2' ORDER BY m_index DESC LIMIT 3");
@@ -353,11 +436,11 @@
 								$day = date("d", $timestamp);
 						?>
                             <div class="main-updates__item">
-                                <a href="<?php echo $info['m_link']; ?>">
+                                <a href="<?php echo $info['m_link']; ?>" target="_blank">
                                     <time datetime="2024-05-03"><span class="month"><?php echo $month; ?></span><span class="day"><i>.</i><?php echo $day; ?></span></time>
                                     <div class="main-updates__content">
                                         <h4><span><?php echo $info['m_title']; ?></span></h4>
-                                        <p><?php echo $info['m_description']; ?></p>
+                                        <p><?php echo strip_tags($info['m_description']); ?></p>
                                     </div><!-- .main-updates__content -->
                                 </a>
                             </div><!-- .main-updates__item -->
@@ -367,7 +450,7 @@
                         </div><!-- .main-updates__list -->
                     </div><!-- .main-updates -->
                     <div class="main-events main-announcement__section">
-                        <h3>Events</h3>
+                        <h3><?php echo $lang['Events']; ?></h3>
                         <div class="main-events__list">
 						<?php
 							$query_events = mysqli_query($connect, "SELECT * FROM News WHERE m_type = '3' AND m_status != 4 ORDER BY m_index DESC LIMIT 2");
@@ -377,7 +460,7 @@
 								
 						?>
                             <div class="main-events__item">
-                                <a href="<?php echo $info['m_link']; ?>">
+                                <a href="<?php echo $info['m_link']; ?>" target="_blank">
                                     <div class="main-events__img">
                                         <figure class="lazyload">
                                             <img loading="lazy" data-unveil="<?php echo $info['m_img_url']; ?>" src="../assets/images/blank.gif" alt="" />
@@ -394,7 +477,7 @@
                         </div>
                     </div><!-- .main-updates -->
                     <div class="main-faq main-announcement__section">
-                        <h3>FAQ</h3>
+                        <h3><?php echo $lang['FAQ']; ?></h3>
                         <div class="main-faq__list">
 						<?php
 							$query_faq = mysqli_query($connect, "SELECT * FROM FAQ WHERE m_status != '0' ORDER BY m_index DESC LIMIT 3");

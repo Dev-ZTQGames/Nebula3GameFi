@@ -7,11 +7,25 @@ $query_launchpad = mysqli_query($connect, "SELECT * FROM GamesNFTLaunchpad WHERE
 $info_launchpad = mysqli_fetch_array($query_launchpad);
 
 
-if ($info_lanuchpag['m_chain'] == 'ICP') {
+if ($info_launchpad['m_chain'] == 'ICP') {
 	$chain_icon = '<i><img src="../assets/images/symbol-icp.svg" alt=""></i>';
 }
 
+if ($info_launchpad['m_chain'] == 'IMX') {
+	$chain_icon = '<i><img src="../assets/images/symbol-imx.svg" alt=""></i>';
+}
 
+if ($info_launchpad['m_chain'] == 'KAIA') {
+	$chain_icon = '<i><img src="../assets/images/symbol-kaia.svg" alt=""></i>';
+}
+
+if ($info_launchpad['m_chain'] == 'STRK') {
+	$chain_icon = '<i><img src="../assets/images/symbol-strk.svg" alt=""></i>';
+}
+
+if ($info_launchpad['m_chain'] == 'BNB') {
+	$chain_icon = '<i><img src="../assets/images/symbol-bnb.svg" alt=""></i>';
+}
 ?>
 
 <script>
@@ -70,15 +84,15 @@ window.addEventListener('message', function(event) {
 
 			if (result.hasOwnProperty('Ok')) {
 				swal({
-					text: 'Congratulations!\n\nYou succeeded in this project minting!!!\n\n',
-					buttons: 'Confirm',
+					text: '<?php echo $lang["succeededminting"]; ?>',
+					buttons: '<?php echo $lang["confirm"]; ?>',
 				}).then(function(){
 					location.reload();
 				});
 			} else {
 				swal({
-					text: 'Failure!\n\nPlease try again later.\n\n',
-					buttons: 'Confirm',
+					text: '<?php echo $lang["Failureminting"]; ?>',
+					buttons: '<?php echo $lang["confirm"]; ?>',
 				}).then(function(){
 					location.reload();
 				});
@@ -141,17 +155,26 @@ window.addEventListener('message', function(event) {
                             <?php echo $info_launchpad['m_description']; ?>
                         </p>
                         <div class="launchpad-view__btn">
-							<?php
-							if ($_SESSION['sess_login_id'] != "") {
-							?>
-                            <a href="#mint-purchase-popup" class="btn-mint"><span>Mint</span></a>
-							<?php
-							} else {
-							?>
-							<a href="/sub/login.php"><span>Login</span></a>
-							<?php
+						<?php
+							$ip = get_client_ip();
+							$ip_info = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip));
+							$client_region = strtolower($ip_info['geoplugin_countryCode']);
+							if ($client_region == "kr" || $client_region == "cn") {
+						?>
+								<a href="javascript:void(0)" class="btn-basic disabled"><span><?php echo $lang['Mint']; ?></span></a>
+								<p style="text-align: center;color: gray;">Sorry, this service is not available in your region.</p>
+						<?php
 							}
-							?>
+							else if ($_SESSION['sess_login_id'] != "") {
+						?>
+                            <a href="#mint-purchase-popup" class="btn-mint"><span><?php echo $lang['Mint']; ?></span></a>
+						<?php
+							} else {
+						?>
+							<a href="/sub/login.php"><span><?php echo $lang['Login']; ?></span></a>
+						<?php
+							}
+						?>
                         </div>
                     </div>
                     
@@ -166,37 +189,49 @@ window.addEventListener('message', function(event) {
 							foreach ( $launch_info as $key=>$val) {
 
 							$price[$key] = $price[$key] != 0 ? number_format($price[$key]) : 'Free';
+							
+							if( $key == 0 ) {
+								$mint_img = 'mint_img';
+								$mint_bar = 'mint_bar';
+								$mint_percent = 'mint_percent';
+								$mint_total = 'mint_total';
+							} else if ($key == 1 ) {
+								$mint_img = 'FCFS_mint_img';
+								$mint_bar = 'FCFS_mint_bar';
+								$mint_percent = 'FCFS_mint_percent';
+								$mint_total = 'FCFS_mint_total';
+							}
 						?>
                         <div class="launchpad-view__mint-info__item">
                             <h3><?php echo $launch_info[$key]; ?></h3>
                             <ul class="launchpad-view__mint-info__box">
                                 <li>
-                                    <b>Price</b>
+                                    <b><?php echo $lang['Price']; ?></b>
                                     <p><?php echo $price[$key];?></p>
                                 </li>
                                 <li>
-                                    <b>Pieces</b>
+                                    <b><?php echo $lang['Pieces']; ?></b>
                                     <p><?php echo number_format($pieces[$key]); ?></p>
                                 </li>
                                 <li>
-                                    <b>Limit</b>
-                                    <p><span><?php echo $limit[$key]; ?> pc per wallet</span></p>
+                                    <b><?php echo $lang['Limit']; ?></b>
+                                    <p><span><?php echo $limit[$key]; ?> <?php echo $lang['pcperwallet']; ?></span></p>
                                 </li>
                                 <li>
-                                    <b>Minting Date</b>
+                                    <b><?php echo $lang['MintingDate']; ?></b>
                                     <p><span><?php echo $date_mint[$key]; ?></span></p>
                                 </li>
                             </ul>
                             <div class="mint-progressbar">
                                 <div class="mint-progressbar__box">
                                     <div class="progressbar">
-                                        <figure id="mint_img"><img src="../assets/images/nft-bar-character.gif" alt=""></figure>
-                                        <div class="progressbar-item" data-value="0" id="mint_bar"></div> 
+                                        <figure id="<?php echo $mint_img; ?>"><img src="../assets/images/nft-bar-character.gif" alt=""></figure>
+                                        <div class="progressbar-item" data-value="0" id="<?php echo $mint_bar; ?>"></div> 
                                     </div>
                                 </div>
                                 <ul>
-                                    <li><span id="mint_percent">0% minted</span></li>
-                                    <li><span id="mint_total">0 / <?php echo number_format($pieces[$key]); ?></span></li>
+                                    <li><span id="<?php echo $mint_percent; ?>">0% <?php echo $lang['minted']; ?></span></li>
+                                    <li><span id="<?php echo $mint_total; ?>">0 / <?php echo number_format($pieces[$key]); ?></span></li>
                                 </ul>
                             </div>
                         </div><!-- .launchpad-view__mint-info__item -->
@@ -309,19 +344,19 @@ window.addEventListener('message', function(event) {
                             <h3><?php echo $launch_info[$key]; ?></h3>
                             <ul class="launchpad-view__mint-info__box">
                                 <li>
-                                    <b>Price</b>
+                                    <b><?php echo $lang['Price']; ?></b>
                                     <p><?php echo $price[$key];?></p>
                                 </li>
                                 <li>
-                                    <b>Pieces</b>
+                                    <b><?php echo $lang['Pieces']; ?></b>
                                     <p><?php echo number_format($pieces[$key]); ?></p>
                                 </li>
                                 <li>
-                                    <b>Limit</b>
-                                    <p><span><?php echo $limit[$key]; ?> pc per wallet</span></p>
+                                    <b><?php echo $lang['Limit']; ?></b>
+                                    <p><span><?php echo $limit[$key]; ?> <?php echo $lang['pcperwallet']; ?></span></p>
                                 </li>
                                 <li>
-                                    <b>Minting Date</b>
+                                    <b><?php echo $lang['MintingDate']; ?></b>
                                     <p><span><?php echo $date_mint[$key]; ?></span></p>
                                 </li>
                             </ul>
@@ -346,7 +381,7 @@ window.addEventListener('message', function(event) {
                             <img loading="lazy" data-unveil="<?php echo $info_launchpad['m_project_img']; ?>" src="../assets/images/blank.gif" alt="" />
                             <noscript><img loading="lazy" src="https://dummyimage.com/700x700/333/fff" alt="" /></noscript>
                         </figure>
-                        <p class="minting-result"><span>SOLD OUT</span></p>
+                        <p class="minting-result"><span><?php echo $lang['SOLDOUT']; ?></span></p>
                         <!--<p class="minting-result"><span>SALE ENDED</span></p>-->
                     </div>
                 </div>
@@ -404,19 +439,19 @@ window.addEventListener('message', function(event) {
                             <h3><?php echo $launch_info[$key]; ?></h3>
                             <ul class="launchpad-view__mint-info__box">
                                 <li>
-                                    <b>Price</b>
+                                    <b><?php echo $lang['Price']; ?></b>
                                     <p><?php echo $price[$key];?></p>
                                 </li>
                                 <li>
-                                    <b>Pieces</b>
+                                    <b><?php echo $lang['Pieces']; ?></b>
                                     <p><?php echo number_format($pieces[$key]); ?></p>
                                 </li>
                                 <li>
-                                    <b>Limit</b>
-                                    <p><span><?php echo $limit[$key]; ?> pc per wallet</span></p>
+                                    <b><?php echo $lang['Limit']; ?></b>
+                                    <p><span><?php echo $limit[$key]; ?> <?php echo $lang['pcperwallet']; ?></span></p>
                                 </li>
                                 <li>
-                                    <b>Minting Date</b>
+                                    <b><?php echo $lang['MintingDate']; ?></b>
                                     <p><span><?php echo $date_mint[$key]; ?></span></p>
                                 </li>
                             </ul>
@@ -437,23 +472,23 @@ window.addEventListener('message', function(event) {
 
 <div id="mint-purchase-popup" class="mint-purchase-popup mfp-hide">
     <div class="mint-purchase-popup__head">
-        <h2>Mint</h2>
+        <h2><?php echo $lang['Mint']; ?></h2>
     </div><!-- .mint-purchase-popup__head -->
     <div class="mint-purchase-popup__body">
         <div class="project-info__wrap">
             <figure class="project-info__img"><img src="../assets/images/launchpad-logo-mm.png" alt=""></figure>
             <div class="project-info">
-                <b>Mining Maze</b>
-                <p><i><img src="../assets/images/symbol-icp.svg" alt=""></i><span>ICP</span></p>
+                <b><?php echo $lang['MiningMaze']; ?></b>
+                <p><i><img src="../assets/images/symbol-icp.svg" alt=""></i><span><?php echo $lang['ICP']; ?></span></p>
             </div>
         </div><!-- .project-info -->
         <ul class="mint-purchase-info">
             <li>
-                <b>Price</b>
-                <p><i><img src="../assets/images/symbol-icp.svg" alt="ICP"></i> <span>0.00</span> ( free minting )</p>
+                <b><?php echo $lang['Price']; ?></b>
+                <p><i><img src="../assets/images/symbol-icp.svg" alt="ICP"></i> <span>0.00</span> ( <?php echo $lang['free minting']; ?> )</p>
             </li>
             <li>
-                <b>Quantity</b>
+                <b><?php echo $lang['Quantity']; ?></b>
                 <div class="quantity">
                     <button class="btn-count count-down" disabled><span class="sr-only">-</span></button>
                     <p><input type="text" class="qty-input" value="1" id="mint_times" readonly></p>
@@ -462,11 +497,11 @@ window.addEventListener('message', function(event) {
             </li>
         </ul>
         <div class="mint-total">
-            <b>Total Estimated</b>
-            <p><em>0</em> ICP</p>
+            <b><?php echo $lang['TotalEstimated']; ?></b>
+            <p><em>0</em> <?php echo $lang['ICP']; ?></p>
         </div>
 		<!--button type="button" class="btn-pruchase" id="button-mint"><span>TBA</span></button-->
-        <button type="button" class="btn-pruchase" id="button-mint" onclick="go_Mint();"><span id="button_mint_span">Mint</span></button>
+        <button type="button" class="btn-pruchase" id="button-mint" onclick="go_Mint();"><span id="button_mint_span"><?php echo $lang['Mint']; ?></span></button>
     </div><!-- .mint-purchase-popup__body -->
 </div><!-- .mint-purchase-popup -->
 
@@ -481,7 +516,7 @@ function go_Mint() { //	whiteList or not
 		if (totalSupplyNormalCustom < 2000) {
 
 			if ( !checkWhiteAddress(principalID, game_code, "WhitelistSale_Guaranteed") ) {
-				alert("You are not WhiteList");
+				alert("<?php echo $lang['NotWhiteList']; ?>");
 				location.reload();
 				return false;
 			}
@@ -489,7 +524,7 @@ function go_Mint() { //	whiteList or not
 		} else if (totalSupplyNormalCustom < 5555) {
 
 			if ( !checkWhiteAddress(principalID, game_code, "WhitelistSale_FCFS") ) {
-				alert("You are not WhiteList");
+				alert("<?php echo $lang['NotWhiteList']; ?>");
 				location.reload();
 				return false;
 			}
@@ -499,8 +534,8 @@ function go_Mint() { //	whiteList or not
 		}
 	} else {
 		swal({
-			text: 'please connect wallet\n\n or try again later',
-			buttons: 'Confirm',
+			text: "<?php echo $lang['PleaseConnectWallet']; ?>",
+			buttons: '<?php echo $lang["confirm"]; ?>',
 		});
 		return false;
 	}
@@ -516,8 +551,8 @@ function CountMint() {
 		mintDip721();
 	} else {
 		swal({
-			text: 'Failure!\n\nYou can only get 1 NFTs minting!!!\n\n',
-			buttons: 'Confirm',
+			text: '<?php echo $lang["Failure1NFTsminting"]; ?>',
+			buttons: '<?php echo $lang["confirm"]; ?>',
 		}).then(function(){
 			location.reload();
 		});
@@ -526,7 +561,7 @@ function CountMint() {
 
 function mintDip721() {
 	document.getElementById('button-mint').onclick = null;
-	$("#button_mint_span").html("Processing...");
+	$("#button_mint_span").html("<?php echo $lang['Processing']; ?>");
 	console.log('mint');
 	
 	$.ajax({
@@ -541,16 +576,16 @@ function mintDip721() {
 		switch(args.trim()){
 			case("success"):
 			swal({
-				text: 'Congratulations!\n\nYou succeeded in this project minting!!!\n\n',
-				buttons: 'Confirm',
+				text: '<?php echo $lang["succeededminting"]; ?>',
+				buttons: '<?php echo $lang["confirm"]; ?>',
 			}).then(function(){
 				location.reload();
 			});
 			break;
 			case("failure"):
 			swal({
-				text: 'Failure!\n\nPlease try again later.\n\n',
-				buttons: 'Confirm',
+				text: '<?php echo $lang["Failureminting"]; ?>',
+				buttons: '<?php echo $lang["confirm"]; ?>',
 			}).then(function(){
 				location.reload();
 			});
@@ -558,7 +593,7 @@ function mintDip721() {
 		}
 	  },
 	  error: function whenError(e){
-		console.log("code : " + e.status + "message : " + e.responseText);
+		console.log("<?php echo $lang['code']; ?> : " + e.status + "<?php echo $lang['message']; ?> : " + e.responseText);
 	  }
 	});
 	
@@ -571,7 +606,7 @@ function checkWhiteAddress(address, game_code, step ) {
 	for(var i=0; i<WhiteListAddress[game_code][step].length; i++){
 		WhiteListAddress[game_code][step][i] = WhiteListAddress[game_code][step][i].toLowerCase();
 		if( WhiteListAddress[game_code][step][i] === address ){
-			console.log("checked : " + address);
+			console.log("<?php echo $lang['checked']; ?> : " + address);
 			return true;
 		}
 	}

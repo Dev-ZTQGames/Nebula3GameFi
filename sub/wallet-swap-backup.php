@@ -31,40 +31,40 @@ window.addEventListener('message', function(event) {
 						console.log('args: ' + args);
 						switch(args.trim()){
 							case("InvalidConnection"):
-								show_msg("Invalid connection access.");
+								show_msg("<?php echo $lang['InvalidConnectionAccess']; ?>");
 								break;
 							case("CATTokenInsufficient"):
-								show_msg("Insufficient balance for BAT token.");
+								show_msg("<?php echo $lang['InsufficientBAT']; ?>");
 								break;
 							case("NoCATWallet"):
-								show_msg("BAT token wallet does not exist.");
+								show_msg("<?php echo $lang['BATNotExist']; ?>");
 								break;
 							case("NoSyncEthWallet"):
-								show_msg("ETH wallet is out of sync.");
+								show_msg("<?php echo $lang['ETHwalletOutSync']; ?>");
 								break;
 							case("OutOfGas"):
-								show_msg("Not enough gas. Please contact CS Center or Community administrator.");
+								show_msg("<?php echo $lang['NotEnoughGas']; ?>");
 								break;
 							case("OutOfPMWBalance"):
-								show_msg("Not enough SN3 for swap. Please contact CS Center or Community administrator.");
+								show_msg("<?php echo $lang['NotEnoughSN3']; ?>");
 								break;
 							case("BusyNetwork"):
-								show_msg("The Ethereum network is very congested. Please try again later to avoid congestion.");
+								show_msg("<?php echo $lang['EthereumCongested']; ?>");
 								break;
 							case("Success"):
 								clear_msg();
-								$(".valid-message--confirm span").html("The SWAP was successful.");
+								$(".valid-message--confirm span").html("<?php echo $lang['SWAPsuccessful']; ?>");
 								$(".valid-message--confirm").show();
-								$("#execute_swap_button").html("Success!!!");
+								$("#execute_swap_button").html("<?php echo $lang['Success']; ?>");
 								setTimeout(function() {
-								  $("#execute_swap_button").html("Refreshing...");
+								  $("#execute_swap_button").html("<?php echo $lang['Refreshing']; ?>");
 								  location.href="/sub/wallet-swap.php";
 								}, 3000);
 							 break;
 						}
 				   },
 				   error: function whenError(e){
-					console.log("code : " + e.status + ", message : " + e.responseText);
+					console.log("<?php echo $lang['code']; ?> : " + e.status + "<?php echo $lang['message']; ?> : " + e.responseText);
 				   }
 				});
 
@@ -76,7 +76,7 @@ window.addEventListener('message', function(event) {
 <div id="container" class="page-swap">
     <div class="article-header">
         <div class="article-header__inner wrap">
-            <h2 class="article-title">SWAP</h2>
+            <h2 class="article-title"><?php echo $lang['SWAP']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -84,21 +84,21 @@ window.addEventListener('message', function(event) {
         <div class="wrap">
             <div class="swap-box">
                 <div class="swap-top">
-					<p class="valid-message valid-message--confirm"><i class="icon"></i><span>Not enough CAT.</span></p>
-                    <p class="valid-message valid-message--error"><i class="icon"></i><span>Not enough CAT.</span></p>
-                    <a href="javascript:void(0);" class="swap-refresh" onclick="javascript:location.reload();"><span>Refresh</span></a>
+					<p class="valid-message valid-message--confirm"><i class="icon"></i><span><?php echo $lang['NotenoughCAT']; ?></span></p>
+                    <p class="valid-message valid-message--error"><i class="icon"></i><span><?php echo $lang['NotenoughCAT']; ?></span></p>
+                    <a href="javascript:void(0);" class="swap-refresh" onclick="javascript:location.reload();"><span><?php echo $lang['Refresh']; ?></span></a>
                 </div>
                 <div class="swap-item swap-to">
                     <div class="swap-item__left">
-                        <h3 class="swap-item__title">To [Estimate]</h3>
+                        <h3 class="swap-item__title"><?php echo $lang['To']; ?> [<?php echo $lang['Estimate']; ?>]</h3>
                         <div class="swap-select__container">
                             <select class="swap-select selectric" id="select_swap_to">
-                                <option class="swap-select__pmw" value="pmw">SN3</option>
+                                <option class="swap-select__pmw" value="pmw"><?php echo $lang['SN3']; ?></option>
                             </select>
                         </div>
                     </div>
                     <div class="swap-item__right">
-                        <div class="swap-item__max"><button type="button" onclick="placeMaxSN3();"><span>MAX</span></button></div>
+                        <div class="swap-item__max"><button type="button" onclick="placeMaxSN3();"><span><?php echo $lang['MAX']; ?></span></button></div>
                         <div class="swap-input__box">
                             <label>
                                 <input type="number" class="swap-input" id="swap_to" onkeyup="placeSN3value()">
@@ -107,29 +107,29 @@ window.addEventListener('message', function(event) {
                         </div>
                     </div>
                 </div>
-                <div class="swap-transfer"><button type="button"><span class="sr-only">swap transfer</span></button></div>
+                <div class="swap-transfer"><button type="button"><span class="sr-only"><?php echo $lang['swaptransfer']; ?></span></button></div>
                 <div class="swap-item swap-from">
                     <div class="swap-item__left">
-                        <h3 class="swap-item__title">From</h3>
+                        <h3 class="swap-item__title"><?php echo $lang['From']; ?></h3>
                         <div class="swap-select__container">
                             <select class="swap-select selectric" id="select_swap_from">
                                 <!--option class="swap-select__cat" value="clwmc">CLWMC CAT</option-->
-                                <option class="swap-select__bat" value="mm">MM BAT</option>
+                                <option class="swap-select__bat" value="mm"><?php echo $lang['MMBAT']; ?></option>
                             </select>
                         </div>
                     </div>
                     <div class="swap-item__right">
-                        <div class="swap-item__balance"><p>Balance : <?php echo $BAT; ?> BAT</p></div>
+                        <div class="swap-item__balance"><p><?php echo $lang['Balance']; ?> : <?php echo $BAT; ?> <?php echo $lang['BAT']; ?></p></div>
                         <div class="swap-input__box">
                             <label>
                                 <input type="number" class="swap-input" id="swap_from" value="" readonly disabled>
                                 <span class="placeholder">0.0</span>
                             </label>
                         </div>
-                        <div class="swap-item__fee"><p>fee : 0 BAT</p></div>
+                        <div class="swap-item__fee"><p><?php echo $lang['fee']; ?> : 0 <?php echo $lang['BAT']; ?></p></div>
                     </div>
                 </div>
-                <button type="button" class="btn-basic btn-primary btn-swap disabled" id="execute_swap_button" onclick="execute_swap();"><span>Swap</span></button>
+                <button type="button" class="btn-basic btn-primary btn-swap disabled" id="execute_swap_button" onclick="execute_swap();"><span><?php echo $lang['Swap']; ?></span></button>
             </div>
         </div><!-- .wrap -->
     </div><!-- .article-body -->
@@ -159,8 +159,8 @@ $(document).ready(function(){
 			case 'mm':
 				$('.btn-swap').off('click');
 
-				$('.swap-item__balance').find('p').text('Balance : ' + BAT.balance + ' BAT');
-				$('.swap-item__fee').find('p').text('fee : ' + BAT.gas_fee + ' BAT');
+				$('.swap-item__balance').find('p').text('<?php echo $lang['Balance']; ?> : ' + BAT.balance + ' <?php echo $lang['BAT']; ?>');
+				$('.swap-item__fee').find('p').text('<?php echo $lang['fee']; ?> : ' + BAT.gas_fee + ' <?php echo $lang['BAT']; ?>');
 				
 				break;
 /*
@@ -199,7 +199,7 @@ function placeMaxSN3() {
 	if ( $("#select_swap_from").val() == "mm" ) { 
 		token = BAT;
 		if (token.balance < token.gas_fee ) {
-			show_msg("Not enough CAT.");
+			show_msg("<?php echo $lang['NotenoughCAT']; ?>");
 			$("#execute_swap_button").addClass("disabled");
 			return false;
 		}
@@ -208,7 +208,7 @@ function placeMaxSN3() {
 		$("#swap_from").val(can_swap_pmw * 1 + token.gas_fee);
 
 		if ( can_swap_pmw < 1000) {
-			show_msg("The minimum swap PMW is 1000 PMW.");
+			show_msg("<?php echo $lang['MinimumSwapPMW']; ?>");
 			$("#swap_from").addClass("swap_over");
 			$("#execute_swap_button").addClass("disabled");
 			return false;
@@ -259,7 +259,7 @@ function placeSN3value() {
 	if ( $("#select_swap_from").val() == "mm" ) {
 		token = BAT;
 		if ( SN3_value * 1 > token.balance - token.gas_fee ) {
-			show_msg("Not enough BAT.");
+			show_msg("<?php echo $lang['NotenoughBAT']; ?>");
 			$("#swap_from").val(SN3_value * 1 + token.gas_fee );
 			$("#swap_from").addClass("swap_over");
 			$("#execute_swap_button").addClass("disabled");
@@ -271,7 +271,7 @@ function placeSN3value() {
 		}
 
 		if ( SN3_value < 1000) {
-			show_msg("The minimum swap SN3 is 1000 SN3.");
+			show_msg("<?php echo $lang['MinimumSwap']; ?>");
 			$("#swap_from").addClass("swap_over");
 			$("#execute_swap_button").addClass("disabled");
 			return false;
@@ -287,7 +287,7 @@ function execute_swap() {
 	// check sync account
 	$("#execute_swap_button").addClass("disabled");
 	if ( $("#swap_to").val() < 1000) {
-		show_msg("The minimum swap PMW is 1000 PMW.");
+		show_msg("<?php echo $lang['MinimumSwapPMW']; ?>");
 		$("#swap_from").addClass("swap_over");
 		$("#execute_swap_button").addClass("disabled");
 		return false;
@@ -407,7 +407,7 @@ function bat_swap () {
 			switch(args.trim()){
 			 case("done"):
 
-				$("#execute_swap_button").html("Processing...");
+				$("#execute_swap_button").html("<?php echo $lang['Processing']; ?>'");
 				$("#execute_swap_button").prop('disabled', true);
 				
 				const amount = Number($("#swap_from").val()) * 100000000;
@@ -443,7 +443,7 @@ function bat_swap () {
 		
 	   },
 	   error: function whenError(e){
-		console.log("code : " + e.status + "message : " + e.responseText);
+		console.log("<?php echo $lang['code']; ?> : " + e.status + "<?php echo $lang['message']; ?> : " + e.responseText);
 		return false;
 	  }
 	});

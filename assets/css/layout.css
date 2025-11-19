@@ -178,21 +178,28 @@ html.desktop .wallet-tabs .tabs-menu li .disabled:hover {color:#fff;}
 .wallet-btn {cursor:pointer;display:block; width:100%; padding:18rem 10rem; margin-top:10rem; text-align:center; font-size:18rem; font-weight:700; line-height:1;color:#fff;border:none; border-radius:6rem; background: linear-gradient(90deg, rgba(52,52,234,1) 0%, rgba(161,75,201,1) 50%, rgba(255,133,51,1) 100%);}
 html.ios .wallet-btn {padding-bottom:18rem; padding-top:16rem;}
 .multi-wallet__key {margin-top:30rem;}
-.multi-wallet__key-item + .multi-wallet__key-item {margin-top:15rem;}
+.multi-wallet__key div + div {margin-top:15rem;}
 .multi-wallet__key-title { text-align:left; font-size:16rem; font-weight:700; color:#111;}
 .multi-wallet__key .wallet-key {margin-top:5rem; display: flex;align-items:center;background:#E8E8E8; border-radius:6rem; padding:10rem 15rem 10rem;}
 .multi-wallet__key .copy-text {font-size:14rem;}
 .multi-wallet__key .clipboard-js {font-size:14rem;}
 
+.multi-wallet__key-connect {display:flex; align-items:center; gap:10rem; border:1rem solid #ddd; padding:8rem 10rem; border-radius:6rem;}
+.multi-wallet__key-connect + .multi-wallet__key-connect {margin-top:10rem;}
+.multi-wallet__key-connect figure {width: 35rem;height: 35rem;border-radius:50%;background: #fff; border:1rem solid #ddd; overflow:hidden;}
+.multi-wallet__key-connect figure img {display:block; width:100%; height:100%;}
+.multi-wallet__key-connect p {font-size:16rem; font-weight:700;}
+
 .tokens-list {margin-top:30rem;}
 .tokens-title {text-align:center; font-size:15rem; font-weight:700; color:#111; padding-bottom:10rem; border-bottom:1rem solid #000;}
+.tokens-list .scrollbar-inner {max-height:300rem; padding-right:12rem;}
 .tokens-item {display:flex; align-items:center; }
 .tokens-item figure {width: 35rem;height: 35rem;border-radius:50%;background: #fff;  overflow:hidden;}
 .tokens-item figure img {display:block; width:100%; height:100%;}
 .tokens-item b {font-size:16rem; font-weight:700; margin-left:10rem; color:#111;}
-.tokens-item span {font-size:16rem; font-weight:600; margin-left:auto; margin-right: 10rem; color:#111;}
-.tokens-item.tokens-item--icp figure, .tokens-item.tokens-item--sn3 figure { border:1rem solid #ddd;}
-.tokens-item.tokens-item--icp figure img, .tokens-item.tokens-item--sn3 figure img { padding:5rem;}
+.tokens-item span {font-size:16rem; font-weight:600; margin-left:auto; margin-right: 10rem; color:#111;text-align:right;}
+.tokens-item.tokens-item--icp figure, .tokens-item.tokens-item--sn3 figure, .tokens-item.tokens-item--ustdton figure { border:1rem solid #ddd;}
+.tokens-item.tokens-item--icp figure img, .tokens-item.tokens-item--sn3 figure img, .tokens-item.tokens-item--ustdton figure img { padding:5rem;}
 
 .send-to-multi__select-popup {display:none;flex-direction: column;position: absolute;top: 0;background: #fff;width: 100%;height: 100%;padding: 25rem;}
 .send-to-multi__select__item button {display:flex; align-items:center; gap:10rem; width: 100%; background: #fff;border:1rem solid #ddd; padding:15rem; border-radius:6rem;cursor:pointer;}
@@ -208,13 +215,15 @@ html.ios .wallet-btn {padding-bottom:18rem; padding-top:16rem;}
 .wallet-addr-form__popup:before { content: ''; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.4); position: absolute; }
 .wallet-addr-form__contents { background: #fff; border-radius: 12rem; padding: 25rem; width: calc(100% - 50rem); z-index: 100; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .wallet-addr-form__title {text-align:center; font-size: 22rem; font-weight:700; margin-bottom:20rem;}
-.wallet-addr-form__id { width: 100%; padding: 12rem 15rem; margin-bottom:15rem; background: #eee; border: 1rem solid #3434EA; border-radius: 6rem; font-size: 14rem; color: #111; word-break: break-word; }
+.wallet-addr-form__id { width: 100%; padding: 12rem 15rem; margin-bottom:15rem; background: #eee; border: 1rem solid #3434EA; border-radius: 6rem; font-size: 14rem; line-height:1; color: #111; word-break: break-word; }
+.wallet-addr-form__item .external-addr {border:none; background:none; width:100%;line-height:2;}
+.wallet-addr-form__item .wallet-addr-form__id {margin-bottom:0}
 .wallet-addr-form__input { display:flex; align-items: center; background: #eee; border-radius: 6rem; padding: 10rem 15rem; width: 100%; margin-left: 10rem; flex: 1; text-align: right; font-size: 14rem; font-weight: 700; color: #111; }
 .wallet-addr-form__input .symbol {display:flex;align-items: center;}
 .wallet-addr-form__input figure {width: 30rem;height: 30rem;border-radius:50%;background: #fff;  overflow:hidden;}
 .wallet-addr-form__input figure img {display:block; width:100%; height:100%;}
 .wallet-addr-form__input figure.symbol-sn3 {padding:5rem;}
-.wallet-addr-form__input p {position:relative; display:flex; align-items:center; margin-left:auto;}
+.wallet-addr-form__input p {position:relative; display:flex; align-items:center; margin-left:auto; word-break: break-word;}
 .wallet-addr-form__input p input {border:none; background:transparent; width:100%;text-align:right; font-weight:700; font-size:14rem;} 
 .wallet-addr-form__input .placeholder {font-size: 14rem; display: flex; align-items: center; gap: 3rem; position: absolute;right: 2rem; cursor: auto;}
 .wallet-addr-form__input .placeholder i {font-style:normal; color:#3434EA;}
@@ -242,6 +251,7 @@ html.ios .wallet-btn {padding-bottom:18rem; padding-top:16rem;}
 .assets-item figure {width:35rem; height:35rem; background-size:100%;}
 .assets-item figure img {display:block; width:100%;}
 .assets-list { margin-top: 30rem;}
+.assets-list .scrollbar-inner {max-height:300rem; padding-right:12rem;}
 .assets-title { text-align: center; font-size: 18rem; font-weight: 700; color: #111; padding-bottom: 10rem; margin-bottom:8rem; border-bottom: 1rem solid #ddd;}
 .assets-item a {display:flex; align-items:center; color:#111; padding:8rem 25rem 8rem 0; position: relative;}
 .assets-item a:after { font-family: 'nebula'; font-size: 8rem; font-weight: bold; width:21rem; height:21rem; line-height:20rem; text-align:center; border-radius:50%; background:#3434EA; color: #fff; content: '\e918'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
@@ -249,18 +259,19 @@ html.ios .wallet-btn {padding-bottom:18rem; padding-top:16rem;}
 .assets-item span {font-size:16rem; font-weight:600; margin-left:auto; margin-right:10rem;}
 .assets-item:last-child {padding-bottom:0;}
 
-.assets-item .custom-radio, .tokens-item .custom-radio {padding-left:0; width:100%; display: flex; align-items: center; color: #111; padding: 8rem 25rem 8rem 0; position: relative;}
+.assets-item .custom-radio, .tokens-item .custom-radio { width:100%; display: flex; align-items: center; color: #111; padding: 8rem 25rem 8rem 0; position: relative;}
 .assets-item .custom-radio .checkmark, .tokens-item .custom-radio .checkmark {left:auto; right:0; margin-right:0;}
 
 .before-connect-wallet {padding:30rem;}
+.wallet-popup .before-connect-wallet button.mfp-close {display:block;}
 .before-connect-wallet__title {font-size:24rem; font-weight:700; text-align:center;}
 .wallet-connect__list {margin-top:30rem;}
 .wallet-connect__item {display:flex; align-items:center; gap:10rem; border:1rem solid #ddd; padding:15rem; border-radius:6rem;}
 .wallet-connect__item + .wallet-connect__item {margin-top:15rem;}
 .wallet-connect__item figure {width: 35rem;height: 35rem;border-radius:50%;background: #fff; border:1rem solid #ddd; overflow:hidden;}
-.wallet-connect__item figure img {display:block; width:100%; height:100%; padding:5rem;}
+.wallet-connect__item figure img {display:block; width:100%; height:100%;}
 .wallet-connect__item p {font-size:18rem; font-weight:700;}
-.switch { position: relative; display: inline-block; height: 30rem; cursor: pointer; margin-left:auto;} 
+.switch { position: relative; display: flex; align-items:center;height: 30rem; cursor: pointer; margin-left:auto;} 
 .switch > input { position: absolute; opacity: 0; z-index: -1; visibility: hidden; } 
 .switch .switch-body {width: 60rem;height: 30rem;background: white;display: inline-block;position: relative;border-radius: 50rem; -webkit-mask-image: -webkit-radial-gradient(white, black);} 
 .switch .switch-switch {width: 24rem;height: 24rem;display: inline-block;background-color: #fff;position: absolute;left: 32rem;top: 3rem;border-radius: 50%;-moz-box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.13);-moz-transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, -moz-transform cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;-o-transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, -o-transform cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;-webkit-transition: left cubic-bezier(0.34, 1.61, 0.7, 1), -webkit-transform cubic-bezier(0.34, 1.61, 0.7, 1);-webkit-transition-delay: 250ms, 250ms;transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, transform cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;z-index: 1;} 

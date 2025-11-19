@@ -46,6 +46,9 @@
 html.desktop .btn-more a:hover:after {width: 100%;transition: 0.3s;opacity: 1;}
 .btn-more a span {position:relative; z-index:10;}
 
+.btn-close {background:none;border:none;padding:10rem;position: absolute;right: 5rem; top: 5rem; width: 45rem; height: 45rem; cursor:pointer;}
+.btn-close:after {display:block;font-family: 'nebula';content:'\e956';font-weight:normal;font-size: 16rem; background: none;}
+
 
 
 /* **************************************** *
@@ -165,7 +168,24 @@ textarea.form-input {height: 200rem;padding: 18rem 25rem;overflow: auto;resize: 
 /* **************************************** *
  * TABLE
  * **************************************** */
-
+/* list */
+.basic-table-wrap {margin-top:100rem;}
+.basic-table-wrap h3 {font-size:22rem; color:#fff;}
+.basic-table {margin-top: 20rem;width: 100%;position: relative;table-layout: fixed;}
+.basic-table caption {width: 1rem;height: 1rem;position: absolute;top: 0;left: 0;font-size: 0;line-height: 0;overflow: hidden;}
+.basic-table tr {width: 100%; cursor:pointer;}
+.basic-table th {padding: 23rem 0;position: relative;font-size: 16rem;text-align: center;font-weight: 600;color: #fff;vertical-align: middle;border-bottom: 1rem solid #444;background: #444;}
+.basic-table th:before {content: '';display: block;width: 1rem;height: 16rem;position: absolute;top: 50%;left: 0;margin-top: -8rem;background: #666;}
+.basic-table th:first-child:before {display: none;}
+.basic-table td {padding: 20rem 30rem;font-size: 16rem;font-weight: 400;text-align: center;color: #aaa;vertical-align: middle;border-bottom: 1rem solid #444;-webkit-transition: background 300ms;transition: background 300ms;}
+.basic-table tr td { font-size:15rem;}
+.basic-table tr td.title {text-align:left;}
+.basic-table tr td.title a {display:flex; align-items:center; gap:10rem; }
+.basic-table tr td.title .notice {color:#fff; background:#a023c4; padding:4rem 10rem 6rem; border-radius:6rem; font-size:13rem; font-weight:normal }
+.basic-table tr.sticky {background:#222;}
+.basic-table .title-wrap {width: auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;}
+.basic-table .title-wrap * {vertical-align: middle;}
+.basic-table .title-wrap a {font-size: 16rem; color:#666; }
 
 
 /* **************************************** *
@@ -190,7 +210,6 @@ html.desktop .custom-checkbox:hover input ~ .checkmark:before {background: linea
 .custom-radio + .custom-radio {margin-left:40rem;}
 .custom-radio input { position: absolute; opacity: 0; cursor: pointer; visibility: hidden;}
 .custom-radio .checkmark {position: absolute;left: 0;height: 22rem;width: 22rem;background:#fff;border-radius: 50%; top: 50%; transform: translateY(-50%);}
-html.ios .custom-radio .checkmark {top:2rem;}
 html.desktop .custom-radio:hover input ~ .checkmark:before {background: linear-gradient(120deg, rgba(52,52,234,1) 0%, rgba(161,75,201,1) 50%, rgba(255,133,51,1) 100%);}}
 .custom-radio input:checked ~ .checkmark {background: linear-gradient(120deg, rgba(52,52,234,1) 0%, rgba(161,75,201,1) 50%, rgba(255,133,51,1) 100%);}
 .custom-radio .checkmark:after { content: ""; position: absolute; display: none; }

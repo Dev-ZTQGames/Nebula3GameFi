@@ -3,7 +3,7 @@
 <div id="container" class="page-games">
     <div class="article-header">
         <div class="article-header__inner wrap">
-            <h2 class="article-title">Games</h2>
+            <h2 class="article-title"><?php echo $lang['Games']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -11,18 +11,19 @@
         <div class="wrap">
             <div class="tabs-checkbox">
                 <ul class="tabs-checkbox__list">
-                    <li><label class="tab-checkbox"><input type="checkbox" class="all" value="all" checked><span>ALL</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="1"><span>BROWSER</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="2"><span>PC</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="3"><span>AOS</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="4"><span>iOS</span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="all" value="all" checked><span><?php echo $lang['ALL']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="1"><span><?php echo $lang['BROWSER']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="2"><span><?php echo $lang['PC']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="3"><span><?php echo $lang['AOS']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_1" value="4"><span><?php echo $lang['iOS']; ?></span></label></li>
                 </ul>
                 <ul class="tabs-checkbox__list">
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="1"><span>ARCADE</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="2"><span>PUZZLE</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="3"><span>METAVERSE</span></label></li>
-                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="4"><span>RPG</span></label></li>
-					<li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="5"><span>RTS</span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="1"><span><?php echo $lang['ARCADE']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="2"><span><?php echo $lang['PUZZLE']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="3"><span><?php echo $lang['METAVERSE']; ?></span></label></li>
+                    <li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="4"><span><?php echo $lang['RPG']; ?></span></label></li>
+					<li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="5"><span><?php echo $lang['RTS']; ?></span></label></li>
+					<li><label class="tab-checkbox"><input type="checkbox" class="categoryCheckbox_2" value="6"><span><?php echo $lang['SPORTS']; ?></span></label></li>
                 </ul>
             </div>
             <div class="game-list">
@@ -42,17 +43,31 @@
 					$info_langing = mysqli_fetch_array($query_landing);
 
 					$icon_i = $icon_o = $icon_pc = $icon_web = "";
-					if($info_langing['m_platform_icon_i'] !== 'Y'){
+
+					if($info_langing['m_platform_icon_i'] > 1){
 						$icon_i = "coming-soon";
 					}
-					if($info_langing['m_platform_icon_o'] !== 'Y'){
+					if($info_langing['m_platform_icon_o'] > 1){
 						$icon_o = "coming-soon";
 					}
-					if($info_langing['m_platform_icon_pc'] !== 'Y'){
+					if($info_langing['m_platform_icon_pc'] > 1){
 						$icon_pc = "coming-soon";
 					}
-					if($info_langing['m_platform_icon_web'] !== 'Y'){
+					if($info_langing['m_platform_icon_web'] > 1){
 						$icon_web = "coming-soon";
+					}
+					
+					if($info_langing['m_platform_icon_i'] < 3){
+						$icon_i .= " active";
+					}
+					if($info_langing['m_platform_icon_o'] < 3){
+						$icon_o .= " active";
+					}
+					if($info_langing['m_platform_icon_pc'] < 3){
+						$icon_pc .= " active";
+					}
+					if($info_langing['m_platform_icon_web'] < 3){
+						$icon_web .= " active";
 					}
 
 					switch($info_games['m_category2']) {
@@ -65,6 +80,8 @@
 						case '4': $category2 = "RPG";
 						break;
 						case '5': $category2 = "RTS";
+						break;
+						case '6': $category2 = "SPORTS";
 						break;
 					}
 			?>
@@ -80,10 +97,10 @@
                             <p class="game-genre"><span><?php echo $category2; ?></span></p>
                             <h3 class="game-title"><?php echo $info_games['m_name_'.$lang_code]?></h3>
                             <ul class="device-list">
-                                <li class="device-browser <?php echo $icon_web; ?>"><p><span>Browser</span><?php if($icon_web) echo "<span>Coming Soon</span>"; ?></p></li>
-                                <li class="device-pc <?php echo $icon_pc; ?>"><p><span>PC</span><?php if($icon_pc) echo "<span>Coming Soon</span>"; ?></p></li>
-                                <li class="device-android <?php echo $icon_o; ?>"><p><span>Android</span><?php if($icon_o) echo "<span>Coming Soon</span>"; ?></p></li>
-                                <li class="device-ios <?php echo $icon_i; ?>"><p><span>iOS</span><?php if($icon_i) echo "<span>Coming Soon</span>"; ?></p></li>
+                                <li class="device-browser <?php echo $icon_web; ?>"><p><span><?php echo $lang['Browser']; ?></span><?php if(str_contains($icon_web, "coming-soon")) echo '<span>' . $lang['ComingSoon'] . '</span>'; ?></p></li>
+                                <li class="device-pc <?php echo $icon_pc; ?>"><p><span><?php echo $lang['PC']; ?></span><?php if(str_contains($icon_pc, "coming-soon")) echo  '<span>' . $lang['ComingSoon'] . '</span>'; ?></p></li>
+                                <li class="device-android <?php echo $icon_o; ?>"><p><span><?php echo $lang['Android']; ?></span><?php if(str_contains($icon_o, "coming-soon")) echo  '<span>' . $lang['ComingSoon'] . '</span>'; ?></p></li>
+                                <li class="device-ios <?php echo $icon_i; ?>"><p><span><?php echo $lang['iOS']; ?></span><?php if(str_contains($icon_i, "coming-soon")) echo  '<span>' . $lang['ComingSoon'] . '</span>'; ?></p></li>
                             </ul>
                         </div><!-- .game-info -->
                     </a>
@@ -150,6 +167,14 @@ $(document).ready(function() {
                 $(this).hide();
             }
         });
+		
+		if ($('.game-item:visible').length === 0) {
+            if ($('.no-list').length === 0) {
+                $('.game-list').append('<p class="no-list" style="width:100%;"><span>Currently, no project data are available</span></p');
+            }
+        } else {
+            $('.no-list').remove();
+        }
     });
 
 	$('.all').on('click', function() {

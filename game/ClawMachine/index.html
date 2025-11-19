@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Claw Machine - Catch! The Friends</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true"/>
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" href="TemplateData/style_google_ad.css?v=251118-16">
+
+</head>
+<body>
+  <div id="GameDiv" cc_exact_fit_screen="true">
+      <div id="Cocos3dGameContainer">
+        <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
+      </div>
+    </div>
+    <div id="adOverlay">
+      <div id="adContainer">
+        <button id="closeAdButton" onclick="hideAd()" style="display:block;">x</button>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1309590692528297"
+            crossorigin="anonymous"></script>
+        
+        <div id="adBanner" style="width:100%; height:auto; margin:10px 0px 10px 0px; position:relative; text-align: center;"></div>
+      </div>
+    </div>
+ <script> 
+	let timerInterval;
+	window.showAd = async function(){
+//	async function showAd() {
+	    const adOverlay = document.getElementById('adOverlay');
+	    const adBanner = document.getElementById('adBanner');
+
+	    adBanner.innerHTML = '';
+
+	    const ins = document.createElement('ins');
+	    ins.className = 'adsbygoogle';
+	    ins.style.display = 'inline-block';
+		ins.style.width = '300px';
+	    ins.style.height = '600px';
+	    ins.setAttribute('data-ad-client', 'ca-pub-1309590692528297');
+	    ins.setAttribute('data-ad-slot', '1906262009');
+	//	ins.setAttribute('data-ad-format', 'auto');
+	//	ins.setAttribute('data-full-width-responsive', 'true');
+
+	    adBanner.appendChild(ins);
+	    adOverlay.style.display = 'flex';
+
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		
+		/*
+	    setTimeout(() => {
+	        try {
+	            (adsbygoogle = window.adsbygoogle || []).push({});
+	        } catch (e) {
+	        //    console.error('AdSense error:', e);
+	        }
+	    }, 100);
+
+		*/
+		/*
+		const RADIUS = 13;
+		const FULL_DASH_ARRAY = 2 * Math.PI * RADIUS;
+		const TIME_LIMIT = 10; // 倒數 10 秒
+		let timeLeft = TIME_LIMIT;
+
+		const circle = document.querySelector('.circle-progress');
+		const timeText = document.getElementById('time');
+
+		circle.style.strokeDasharray = FULL_DASH_ARRAY;
+		circle.style.strokeDashoffset = 0;
+
+		function updateCircle() {
+		  const offset = FULL_DASH_ARRAY * (1 - timeLeft / TIME_LIMIT);
+		  circle.style.strokeDashoffset = offset;
+		  timeText.textContent = timeLeft;
+		}
+
+		updateCircle(); // 初始化一次
+
+		timerInterval = setInterval(() => {
+		  timeLeft--;
+		  if (timeLeft < 0) {
+		    clearInterval(timerInterval);
+		    timeText.textContent = '0';
+			hideAd();
+		    return;
+		  }
+		  updateCircle();
+		}, 1000);
+		*/
+		let result = {"status":"success","message":"Request OK, Success."};
+		return result;
+	}
+
+	window.hideAd = function() {
+		var adOverlay = document.getElementById("adOverlay");
+		adOverlay.style.display = "none";
+	}
+  </script>
+<!-- Polyfills bundle. -->
+<script src="src/polyfills.bundle.js" charset="utf-8"> </script>
+
+<!-- SystemJS support. -->
+<script src="src/system.bundle.js" charset="utf-8"> </script>
+
+<!-- Import map -->
+<script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+
+<script>
+    System.import('./index.js').catch(function(err) { console.error(err); })
+</script>
+
+</body>
+</html>

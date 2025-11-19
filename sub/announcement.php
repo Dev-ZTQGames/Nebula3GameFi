@@ -3,7 +3,7 @@
 <div id="container" class="page-announcement">
     <div class="article-header">
         <div class="article-header__inner wrap">
-            <h2 class="article-title">ANNOUNCEMENT</h2>
+            <h2 class="article-title"><?php echo $lang['ANNOUNCEMENT']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -11,8 +11,8 @@
         <div class="wrap">
             <div class="announcement-section">
                 <div class="announcement-head">
-                    <h2 class="announcement-head__title">Updates</h2>
-                    <div class="btn-more"><a href="https://medium.com/test-4formonth/updates/home" target="_blank"><span>VIEW MORE</span></a></div>
+                    <h2 class="announcement-head__title"><?php echo $lang['Updates']; ?></h2>
+                    <div class="btn-more"><a href="https://x.com/Nebula3_GameFi" target="_blank"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                 </div>
                 <div class="announcement-list announcement-slide swiper-container">
                     <div class="swiper-wrapper">
@@ -36,7 +36,7 @@
                                 </figure>
                                 <div class="announcement-info">
                                     <h3 class="announcement-info__title"><?php echo $info['m_title']; ?></h3>
-                                    <div class="announcement-info__desc"><?php echo $info['m_description']; ?></div>
+                                    <div class="announcement-info__desc"><?php echo strip_tags($info['m_description']); ?></div>
                                     <time datetime="<?php echo $datetime; ?>"><span><?php echo $time; ?></span></time>
                                 </div>
                             </a>
@@ -50,8 +50,8 @@
             </div><!-- .announcement-section -->
             <div class="announcement-section">
                 <div class="announcement-head">
-                    <h2 class="announcement-head__title">Events</h2>
-                    <div class="btn-more"><a href="https://medium.com/test-4formonth/events/home" target="_blank"><span>VIEW MORE</span></a></div>
+                    <h2 class="announcement-head__title"><?php echo $lang['Events']; ?></h2>
+                    <div class="btn-more"><a href="https://x.com/Nebula3_GameFi" target="_blank"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                 </div>
                 <div class="announcement-list announcement-slide swiper-container">
                     <div class="swiper-wrapper">
@@ -83,39 +83,39 @@
             </div><!-- .announcement-section -->
             <div class="announcement-section">
                 <div class="announcement-head">
-                    <h2 class="announcement-head__title">FAQ</h2>
-                    <div class="btn-more"><a href="https://medium.com/test-4formonth/faq-accounts/home" target="_blank"><span>VIEW MORE</span></a></div>
+                    <h2 class="announcement-head__title"><?php echo $lang['FAQ']; ?></h2>
+                    <div class="btn-more"><a href="https://medium.com/nebula3-gamefi/faq/home" target="_blank"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                 </div>
                 <div class="faq-list">
                     <div class="faq-item faq-item--creators">
-                        <a href="https://medium.com/test-4formonth/faq-creators/home" target="_blank">
-                            <h3 class="faq-item__title">Creators</h3>
-                            <p class="faq-item__view btn-line btn-external"><span>view more</span></p>
+                        <a href="https://medium.com/nebula3-gamefi/faq/home" target="_blank">
+                            <h3 class="faq-item__title"><?php echo $lang['Creators']; ?></h3>
+                            <p class="faq-item__view btn-line btn-external"><span><?php echo $lang['viewmore']; ?></span></p>
                         </a>
                     </div><!-- .faq-item -->
                     <div class="faq-item faq-item--payments">
-                        <a href="https://medium.com/test-4formonth/faq-payments/home" target="_blank">
-                            <h3 class="faq-item__title">Payments</h3>
-                            <p class="faq-item__view btn-line btn-external"><span>view more</span></p>
+                        <a href="https://medium.com/nebula3-gamefi/faq/home" target="_blank">
+                            <h3 class="faq-item__title"><?php echo $lang['Payments']; ?></h3>
+                            <p class="faq-item__view btn-line btn-external"><span><?php echo $lang['viewmore']; ?></span></p>
                         </a>
                     </div><!-- .faq-item -->
                     <div class="faq-item faq-item--accounts">
-                        <a href="#" target="_blank">
-                            <h3 class="faq-item__title">Accounts</h3>
-                            <p class="faq-item__view btn-line btn-external"><span>view more</span></p>
+                        <a href="https://medium.com/nebula3-gamefi/faq/home" target="_blank">
+                            <h3 class="faq-item__title"><?php echo $lang['Accounts']; ?></h3>
+                            <p class="faq-item__view btn-line btn-external"><span><?php echo $lang['viewmore']; ?></span></p>
                         </a>
                     </div><!-- .faq-item -->
                     <div class="faq-item faq-item--technical">
-                        <a href="https://medium.com/test-4formonth/faq-technical-issues/home" target="_blank">
-                            <h3 class="faq-item__title">Technical Issues</h3>
-                            <p class="faq-item__view btn-line btn-external"><span>view more</span></p>
+                        <a href="https://medium.com/nebula3-gamefi/faq/home" target="_blank">
+                            <h3 class="faq-item__title"><?php echo $lang['TechnicalIssues']; ?></h3>
+                            <p class="faq-item__view btn-line btn-external"><span><?php echo $lang['viewmore']; ?></span></p>
                         </a>
                     </div><!-- .faq-item -->
                     <div class="faq-item faq-item--chat">
-                        <a href="https://discord.gg/6ycrYmgzTP" target="_blank">
-                            <h3 class="faq-item__title">LIVE CHAT</h3>
-                            <p class="faq-item__desc">On Nebula 3 Discord</p>
-                            <p class="faq-item__view btn-line btn-external"><span>view more</span></p>
+                        <a href="https://t.me/Nebula3_GameFi" target="_blank">
+                            <h3 class="faq-item__title"><?php echo $lang['LIVECHAT']; ?></h3>
+                            <p class="faq-item__desc"><?php echo $lang['OnNebula3Telegram']; ?></p>
+                            <p class="faq-item__view btn-line btn-external"><span><?php echo $lang['viewmore']; ?></span></p>
                         </a>
                     </div><!-- .faq-item -->
                 </div><!-- .faq-list -->

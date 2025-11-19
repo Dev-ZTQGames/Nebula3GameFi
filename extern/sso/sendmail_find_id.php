@@ -3,6 +3,11 @@ include $_SERVER['DOCUMENT_ROOT'] . "/includes/config.php";
 
 $email = escape_string(trim($_REQUEST['email']));
 
+$check = checkEmailDomainMX($email);
+if($check == false) {
+	exit;
+}
+
 $que = mysqli_query($connect, "SELECT * FROM Accounts WHERE email='".$email."'");
 
 $row = mysqli_fetch_array($que);

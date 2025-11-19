@@ -1,6 +1,14 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
+if( ($_SESSION['sess_login_id'] == "") ){
+?>
+	<script>
+		location.href = '/sub/login.php';
+	</script>
+<?php
+}
+
 	$query = "SELECT m_token_balance FROM AccountsChain WHERE m_login_id = '".$_SESSION['sess_login_id']."' AND m_symbol = 'ETH'";
 //	echo $query;
 	$que = mysqli_query($connect, $query);
@@ -13,6 +21,14 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <div class="article-header">
         <div class="article-header__inner wrap">
             <h2 class="article-title">NFTs COLLECTIONS</h2>
+			<?php
+				$ip = get_client_ip();
+				$ip_info = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip));
+				$client_region = strtolower($ip_info['geoplugin_countryCode']);
+				if ($client_region == "kr" || $client_region == "cn") {
+				echo '<p style="color: gray;">Sorry, this service is not available in your region.</p>';
+				}
+			?>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -33,11 +49,15 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 					$game = mysqli_fetch_array($result_game);
 					
 					$query_nft = "SELECT m_NFTs, m_NFT_images FROM AccountsPSCTNodeWallet WHERE m_login_id = '".$_SESSION['sess_login_id']."' AND m_game_code = '".$info['m_game_code']."'";
+
 					$result_nft = mysqli_query($connect, $query_nft);
 					$info_nft = mysqli_fetch_array($result_nft);
 
 					$nft = explode("|", $info_nft['m_NFTs']);
-					$nft = array_filter($nft);
+				//	$nft = array_filter($nft);
+					$nft = array_filter($nft, function($item) {
+					    return trim($item) !== '';
+					});
 
 					$count = count($nft);
 					
@@ -82,9 +102,9 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 								    $rarity = "Rare";
 								} else if ($nft[$i] >= 7777 && $nft[$i] <= 8887) {
 								    $rarity = "Epic";
-								} else if ($nft[$i] >= 8888 && $nft[$i] <= 9443) {
+								} else if ($nft[$i] >= 8888 && $nft[$i] <= 9442) {
 								    $rarity = "Unique";
-								} else if ($nft[$i] >= 9444 && $nft[$i] <= 9554) {
+								} else if ($nft[$i] >= 9443 && $nft[$i] <= 9553) {
 								    $rarity = "Legend";
 								}
 
@@ -98,7 +118,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                                 <div class="nft-item show" data-category="<?php echo $info['m_game_code']; ?>" data-tokenid="<?php echo $nft[$i]; ?>" data-rarity="<?php echo $rarity; ?>" data-level="<?php echo $info_nftData['m_level']?>" data-breeding="<?php echo $info_nftData['m_breeding']; ?>">
                                     <figure class="lazyload">
 										<img data-unveil="https://<?php echo $HOST; ?>.nebula3gamefi.com/img_remote/test/game/mm/<?php echo strtolower($rarity);?>.png" src="https://<?php echo $HOST; ?>.nebula3gamefi.com/img_remote/test/game/mm/<?php echo strtolower($rarity);?>.png" alt="" class="lazyload--loaded" style="z-index:1">
-                                        <img data-unveil="<?php echo $image_nft[$i]; ?>" src="<?php echo $image_nft[$i]; ?>" alt="" class="lazyload--loaded">
+                                        <img class="NFTImage" data-unveil="<?php echo $image_nft[$i]; ?>" src="<?php echo $image_nft[$i]; ?>" alt="" class="lazyload--loaded">
                                         <noscript><img loading="lazy" src="<?php echo $image_nft[$i]; ?>" alt="" /></noscript>
                                     </figure>
                                     <div class="nft-info">
@@ -108,11 +128,20 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                                             <li><span>Current Level</span><span>(<?php echo $info_nftData['m_level']; ?>/5)</span></li>
                                         </ul>
                                         <div class="btn-nft-utility-wrap">
+										<?php
+											if ($client_region == "kr" || $client_region == "cn") {
+										?>
+											<a href="javascript:void(0);" class="btn-primary disabled"><span>Level Up</span></a>
+                                            <a href="javascript:void(0);" class="btn-primary disabled"><span>Breeding</span></a>
+										<?php
+											} else {
+										?>
                                             <a href="javascript:void(0);" onclick="Select_lvUp(<?php echo '\''.$info['m_game_code'].'\',\''.$rarity.'\','.$nft[$i];?> );" class="btn-primary nft-utility-popup-open btn-reinforce <?php if($info_nftData['m_level'] == '5') echo 'disabled'; ?>"><span>Level Up</span></a>
                                             <a href="javascript:void(0);" onclick="Select_brdg(<?php echo '\''.$info['m_game_code'].'\',\''.$rarity.'\','.$nft[$i];?> );" class="btn-primary nft-utility-popup-open btn-synthesize <?php if(!$info_nftData['m_breeding'] || $info_nftData['m_level'] != '5' || $rarity == "Legend") echo 'disabled'; ?>"><span>Breeding</span></a>
+										<?php
+											}
+										?>
 
-											<!--a href="#btn-reinforce" class="btn-primary nft-utility-popup-open btn-reinforce"><span>Level Up</span></a>
-                                            <a href="#btn-synthesize-select" class="btn-primary nft-utility-popup-open btn-synthesize"><span>Breeding</span></a-->
                                         </div>
                                     </div>
                                 </div>
@@ -709,11 +738,13 @@ function category(game_code, rarity) {
 
 function Select_lvUp(game_code, rarity, token_id) {
 	let level;
+	let NFTImage;
 	$('div[data-category="'+ game_code +'"][data-tokenid="'+ token_id +'"][data-rarity="'+ rarity +'"]').each(function() {
 		level = $(this).data('level');
+		NFTImage = $(this).find('.NFTImage').attr('data-unveil');
 	});
 
-	$('#lvUp_img').attr('src','https://cdn.aurorahunt.xyz/nft/' + game_code + '/img/'+ token_id +'.png');
+	$('#lvUp_img').attr('src', NFTImage);
 	$('#lvUp_token_id').text(token_id);
 	$('#lvUp_rarity').text(rarity);
 	$('#lvUp_level').text(level + '/5');
@@ -754,11 +785,13 @@ function Select_brdg(game_code, rarity, token_id) {
 	});
 
 	let breeding1;
+	let NFTImage
 	$('div[data-category="'+ game_code +'"][data-tokenid="'+ token_id +'"][data-rarity="'+ rarity +'"]').each(function() {
 		breeding1 = $(this).data('breeding');
+		NFTImage = $(this).find('.NFTImage').attr('data-unveil');
 	});
 
-	$('#brdg_token_img_1').attr('src','https://cdn.aurorahunt.xyz/nft/' + game_code + '/img/'+ token_id +'.png');
+	$('#brdg_token_img_1').attr('src', NFTImage);
 	$('#brdg_token_id_1').text(token_id);
 	$('#brdg_count_1').text('(' + breeding1 + '/5)');
 	$('#brdg_cost_1').text(breeding[rarity][breeding1]);
@@ -771,12 +804,13 @@ function Select_brdg(game_code, rarity, token_id) {
 	    Probability = '40%';
 	} else if (token_id >= 7777 && token_id <= 8887) {
 	    Probability = '30%';
-	} else if (token_id >= 8888 && token_id <= 9443) {
+	} else if (token_id >= 8888 && token_id <= 9442) {
 	    Probability = '20%';
 	}
 	$('#brdg_p').text(Probability);
 	
 	$('.collections-view__list.scrollbar-inner.scroll-content.scroll-scrolly_visible').empty();
+	$('.collections-view__list.scrollbar-inner.scroll-content').empty();
 	$('.nft-item.show').each(function(){
 
 		const nft_category = $(this).data('category');
@@ -789,12 +823,13 @@ function Select_brdg(game_code, rarity, token_id) {
 			
 			const nft_breeding = $(this).data('breeding');
 			const nft_level = $(this).data('level');
+			const NFTImage = $(this).find('.NFTImage').attr('data-unveil');
 			
 			$('.collections-view__list.scrollbar-inner').append(
 			'<div class="nft-item">' +
                 '<figure class="lazyload">' +
-                    '<img loading="lazy" data-unveil="https://cdn.aurorahunt.xyz/nft/' + nft_category + '/img/' + nft_tokenid + '.png" src="https://cdn.aurorahunt.xyz/nft/' + nft_category + '/img/' + nft_tokenid + '.png" alt="" class="lazyload--loaded">' +
-                    '<noscript><img loading="lazy" src="https://cdn.aurorahunt.xyz/nft/' + nft_category + '/img/' + nft_tokenid + '.png" alt="" /></noscript>' +
+                    '<img loading="lazy" data-unveil="' + NFTImage + '" src="' + NFTImage +'" alt="" class="lazyload--loaded">' +
+                    '<noscript><img loading="lazy" src="' + NFTImage + '" alt="" /></noscript>' +
                 '</figure>' +
                 '<div class="nft-info">' +
                     '<ul>' +
@@ -838,11 +873,13 @@ function Select_brdg(game_code, rarity, token_id) {
 
 function Select_brdg_second(game_code, rarity, token_id) {
 	let breeding2;
+	let NFTImage;
 	$('div[data-category="'+ game_code +'"][data-tokenid="'+ token_id +'"][data-rarity="'+ rarity +'"]').each(function() {
 		breeding2 = $(this).data('breeding');
+		NFTImage = $(this).find('.NFTImage').attr('data-unveil');
 	});
 
-	$('#brdg_token_img_2').attr('src','https://cdn.aurorahunt.xyz/nft/' + game_code + '/img/'+ token_id +'.png');
+	$('#brdg_token_img_2').attr('src', NFTImage);
 	$('#brdg_token_id_2').text(token_id);
 	$('#brdg_count_2').text('(' + breeding2 + '/5)');
 	$('#brdg_cost_2').text(breeding[rarity][breeding2]);
@@ -891,10 +928,10 @@ $('#level_up').on('click',function(){
 	} else if (token_id >= 7777 && token_id <= 8887) {
 	    p = 0.25;
 		rarity = "Epic";
-	} else if (token_id >= 8888 && token_id <= 9443) {
+	} else if (token_id >= 8888 && token_id <= 9442) {
 	    p = 0.2;
 		rarity = "Unique";
-	} else if (token_id >= 9444 && token_id <= 9554) {
+	} else if (token_id >= 9443 && token_id <= 9553) {
 	    p = 0.5;
 		rarity = "Legend";
 	}
@@ -927,16 +964,16 @@ $('#level_up').on('click',function(){
 		return;
 	}
 	
-	if (r < p) {
 		$.ajax({
 		  type:"POST",        
 		  url:"/includes/proc_galaxyWallet.php",     
-		  data : ({mode:"level_up", status:"success",token_id: token_id, cost:cost, game_code: game_code}),
+		  data : ({mode:"level_up",token_id: token_id, game_code: game_code}),
 		  timeout : 5000,  
 		  cache : false,        
 		  success: function whenSuccess(args){
 			//	console.log(args);
 			updateSN3();
+			if(args == "level_up_success") {
 			$('#lvUp_level').text(Number(level)+1 + '/5');
 
 			const rarity = $('#lvUp_rarity').text();
@@ -963,33 +1000,18 @@ $('#level_up').on('click',function(){
 					buttons: 'Confirm',
 				})
 				return;
-		  },
-		  error: function whenError(e){
-			console.log("code : " + e.status + "message : " + e.responseText);
-		  }
-		});
-	} else {
-		$.ajax({
-		  type:"POST",        
-		  url:"/includes/proc_galaxyWallet.php",     
-		  data : ({mode:"level_up", status:"failure",token_id: token_id, cost:cost, game_code: game_code}),
-		  timeout : 5000,  
-		  cache : false,        
-		  success: function whenSuccess(args){
-			//	console.log(args);
-			updateSN3();
+			} else {
 				swal({
 					text: 'Failure!\n\nNFT: '+token_id+' upgrade fail!!!\n\n',
 					buttons: 'Confirm',
 				})
 				return;
+			}
 		  },
 		  error: function whenError(e){
 			console.log("code : " + e.status + "message : " + e.responseText);
 		  }
 		});
-
-	}
 
 });
 
@@ -1006,7 +1028,7 @@ $('#breeding').on('click',function(){
 	    rarity1 = "Rare";
 	} else if (token_id1 >= 7777 && token_id1 <= 8887) {
 	    rarity1 = "Epic";
-	} else if (token_id1 >= 8888 && token_id1 <= 9443) {
+	} else if (token_id1 >= 8888 && token_id1 <= 9442) {
 	    rarity1 = "Unique";
 	}
 	
@@ -1017,7 +1039,7 @@ $('#breeding').on('click',function(){
 	    rarity2 = "Rare";
 	} else if (token_id2 >= 7777 && token_id2 <= 8887) {
 	    rarity2 = "Epic";
-	} else if (token_id2 >= 8888 && token_id2 <= 9443) {
+	} else if (token_id2 >= 8888 && token_id2 <= 9442) {
 	    rarity2 = "Unique";
 	}
 
@@ -1089,7 +1111,7 @@ $('#breeding').on('click',function(){
 		p = 0.3;
 	    rarity = "Epic";
 		breed_rarity = "Unique";
-	} else if (token_id1 >= 8888 && token_id1 <= 9443) {
+	} else if (token_id1 >= 8888 && token_id1 <= 9442) {
 		p = 0.2;
 	    rarity = "Unique";
 		breed_rarity = "Legend";
@@ -1098,7 +1120,7 @@ $('#breeding').on('click',function(){
 	const r = Math.random();
 	const Probability = $('#brdg_p').text();
 
-	if (r < p) {
+
 
 		$('#breeding').off('click');
 		$('#breeding').addClass('disabled');
@@ -1107,7 +1129,7 @@ $('#breeding').on('click',function(){
 		$.ajax({
 		  type:"POST",        
 		  url:"/includes/proc_galaxyWallet.php",     
-		  data : ({mode:"breeding", status:"success", rarity: breed_rarity, token_id: token_id1, token_id2: token_id2, cost:cost, game_code: game_code}),
+		  data : ({mode:"breeding", token_id: token_id1, token_id2: token_id2, game_code: game_code}),
 		  timeout : 5000,  
 		  cache : false,        
 		  success: function whenSuccess(args){
@@ -1125,7 +1147,9 @@ $('#breeding').on('click',function(){
 						swal({
 							text: 'Failure!\n\nNFT: '+token_id1+' and '+token_id2+'  breeding fail!!!\n\n',
 							buttons: 'Confirm',
-						})
+						}).then(function(){
+							location.reload();
+						});
 						
 					break;
 				}
@@ -1135,34 +1159,7 @@ $('#breeding').on('click',function(){
 			console.log("code : " + e.status + "message : " + e.responseText);
 		  }
 		});
-			
-	} else {
 
-	//	$('#brdg_cost_1').text(breeding[rarity][Number(match1)-1]);
-	//	$('#brdg_cost_2').text(breeding[rarity][Number(match2)-1]);
-	//	const total_cost = breeding[rarity][Number(match1)-1] + breeding[rarity][Number(match2)-1];
-	//	$('#brdg_total_cost').text(total_cost);
-		
-		$.ajax({
-		  type:"POST",        
-		  url:"/includes/proc_galaxyWallet.php",     
-		  data : ({mode:"breeding", status:"failure", token_id: token_id1, token_id2: token_id2, cost:cost, game_code: game_code}),
-		  timeout : 5000,  
-		  cache : false,        
-		  success: function whenSuccess(args){
-			//	console.log(args);
-			updateSN3();
-				swal({
-					text: 'Failure!\n\nNFT: '+token_id1+' and '+token_id2+'  breeding fail!!!\n\n',
-					buttons: 'Confirm',
-				})
-				return;
-		  },
-		  error: function whenError(e){
-			console.log("code : " + e.status + "message : " + e.responseText);
-		  }
-		});
-	}
 });
 
 function nfts_utility_popup_slider(){

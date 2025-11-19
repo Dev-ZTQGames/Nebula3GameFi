@@ -1,4 +1,4 @@
-export const idlFactory = ({ IDL }) => {
+exports.idlFactory = ({ IDL }) => {
   const Value = IDL.Rec();
   const UpgradeArg = IDL.Record({ 'ledger_id' : IDL.Opt(IDL.Principal) });
   const InitArg = IDL.Record({ 'ledger_id' : IDL.Principal });
@@ -118,7 +118,7 @@ export const idlFactory = ({ IDL }) => {
     'status' : IDL.Func([], [Status], ['query']),
   });
 };
-export const init = ({ IDL }) => {
+exports.init = ({ IDL }) => {
   const UpgradeArg = IDL.Record({ 'ledger_id' : IDL.Opt(IDL.Principal) });
   const InitArg = IDL.Record({ 'ledger_id' : IDL.Principal });
   const IndexArg = IDL.Variant({ 'Upgrade' : UpgradeArg, 'Init' : InitArg });

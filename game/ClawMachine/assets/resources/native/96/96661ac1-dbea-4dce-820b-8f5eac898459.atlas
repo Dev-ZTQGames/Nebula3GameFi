@@ -1,0 +1,139 @@
+
+0119_baloo_ani_idle_hospital.png
+size: 466,156
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_L_blush
+  rotate: false
+  xy: 423, 38
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+Baloo_L_eye
+  rotate: false
+  xy: 440, 17
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+Baloo_L_feet
+  rotate: true
+  xy: 214, 6
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+Baloo_L_hand
+  rotate: false
+  xy: 285, 28
+  size: 46, 52
+  orig: 46, 52
+  offset: 0, 0
+  index: -1
+Baloo_L_medicine
+  rotate: false
+  xy: 380, 38
+  size: 41, 42
+  orig: 41, 42
+  offset: 0, 0
+  index: -1
+Baloo_L_symbol
+  rotate: true
+  xy: 186, 9
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+Baloo_M_symbol
+  rotate: true
+  xy: 160, 3
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+Baloo_R_blush
+  rotate: false
+  xy: 443, 38
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+Baloo_R_eye
+  rotate: false
+  xy: 445, 61
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Baloo_R_feet
+  rotate: true
+  xy: 235, 6
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+Baloo_R_hand
+  rotate: true
+  xy: 333, 31
+  size: 49, 45
+  orig: 49, 45
+  offset: 0, 0
+  index: -1
+Baloo_R_medicine
+  rotate: false
+  xy: 391, 2
+  size: 47, 34
+  orig: 47, 34
+  offset: 0, 0
+  index: -1
+Baloo_R_symbol
+  rotate: true
+  xy: 423, 58
+  size: 22, 20
+  orig: 22, 20
+  offset: 0, 0
+  index: -1
+Baloo_body
+  rotate: false
+  xy: 2, 9
+  size: 156, 145
+  orig: 156, 145
+  offset: 0, 0
+  index: -1
+Baloo_coat
+  rotate: false
+  xy: 285, 82
+  size: 167, 72
+  orig: 167, 72
+  offset: 0, 0
+  index: -1
+Baloo_medicine bag
+  rotate: false
+  xy: 160, 21
+  size: 123, 133
+  orig: 123, 133
+  offset: 0, 0
+  index: -1
+Baloo_mouth
+  rotate: false
+  xy: 341, 2
+  size: 48, 27
+  orig: 48, 27
+  offset: 0, 0
+  index: -1
+Kote_L_eye
+  rotate: true
+  xy: 285, 3
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+Kote_R_eye
+  rotate: true
+  xy: 313, 3
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1

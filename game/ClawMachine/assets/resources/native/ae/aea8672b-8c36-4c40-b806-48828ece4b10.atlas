@@ -1,0 +1,132 @@
+
+0121_tina_ani_idle_idol.png
+size: 1032,392
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Tina_B_coat
+  rotate: false
+  xy: 564, 234
+  size: 336, 156
+  orig: 336, 156
+  offset: 0, 0
+  index: -1
+Tina_L_blush
+  rotate: true
+  xy: 947, 49
+  size: 59, 60
+  orig: 59, 60
+  offset: 0, 0
+  index: -1
+Tina_R_blush
+  rotate: true
+  xy: 947, 49
+  size: 59, 60
+  orig: 59, 60
+  offset: 0, 0
+  index: -1
+Tina_L_coat
+  rotate: false
+  xy: 902, 110
+  size: 124, 137
+  orig: 124, 137
+  offset: 0, 0
+  index: -1
+Tina_L_ear
+  rotate: true
+  xy: 778, 125
+  size: 107, 118
+  orig: 107, 118
+  offset: 0, 0
+  index: -1
+Tina_L_eye
+  rotate: false
+  xy: 58, 10
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+Tina_L_feet
+  rotate: false
+  xy: 676, 174
+  size: 100, 58
+  orig: 100, 58
+  offset: 0, 0
+  index: -1
+Tina_L_hand
+  rotate: false
+  xy: 772, 22
+  size: 110, 101
+  orig: 110, 101
+  offset: 0, 0
+  index: -1
+Tina_R_coat
+  rotate: true
+  xy: 902, 249
+  size: 141, 128
+  orig: 141, 128
+  offset: 0, 0
+  index: -1
+Tina_R_ear
+  rotate: false
+  xy: 604, 16
+  size: 108, 118
+  orig: 108, 118
+  offset: 0, 0
+  index: -1
+Tina_R_eye
+  rotate: false
+  xy: 80, 10
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+Tina_R_feet
+  rotate: true
+  xy: 714, 71
+  size: 101, 56
+  orig: 101, 56
+  offset: 0, 0
+  index: -1
+Tina_R_hand
+  rotate: false
+  xy: 564, 136
+  size: 110, 96
+  orig: 110, 96
+  offset: 0, 0
+  index: -1
+Tina_body
+  rotate: false
+  xy: 2, 33
+  size: 302, 357
+  orig: 302, 357
+  offset: 0, 0
+  index: -1
+Tina_bowtie
+  rotate: true
+  xy: 884, 16
+  size: 92, 61
+  orig: 92, 61
+  offset: 0, 0
+  index: -1
+Tina_nose
+  rotate: false
+  xy: 2, 2
+  size: 54, 29
+  orig: 54, 29
+  offset: 0, 0
+  index: -1
+Tina_skirt
+  rotate: false
+  xy: 306, 13
+  size: 296, 119
+  orig: 296, 119
+  offset: 0, 0
+  index: -1
+confettiBox2
+  rotate: false
+  xy: 306, 134
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1

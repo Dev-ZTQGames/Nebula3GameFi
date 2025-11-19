@@ -1,0 +1,169 @@
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/header.html";?>
+    <div class="container">
+        <div class="text-center py-10 md:py-16">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-4xl font-bold tracking-tight mb-2">ICRC Token Explorer</h1>
+                <p class="text-xl">Internet Computer Protocol ICRC Token Explorer</p>
+            </div>
+        </div>
+        <section class="mb-16">
+            <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-global">
+                <p>
+                    ICRC Token Explorer is a web application that allows you to easily explore
+                    and manage ICRC standard tokens issued on the Internet Computer Protocol network.
+                    Users can check various token information and track transaction history.
+                </p>
+            </div>
+        </section>
+        <section class="mb-16">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold tracking-tight text-center mb-12">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-4 gap-4 md:gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="font-semibold mb-1">Token List</div>
+                        <p class="text-sm">Check the complete list of tokens issued under the ICRC standard.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="font-semibold mb-1">Token Details</div>
+                        <p class="text-sm">Check detailed information, statistics, and metadata for each token.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"></path>
+                            </svg>
+                        </div>
+                        <div class="font-semibold mb-1">Real-time Data</div>
+                        <p class="text-sm">All data is fetched directly from canisters using the ICP SDK.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                        </div>
+                        <div class="font-semibold mb-1">Real-time Updates</div>
+                        <p class="text-sm">Provides real-time token information and blockchain interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl-1 font-semibold tracking-tight">ICRC-1 Standard</h2>
+                </div>
+                <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-global">
+                    <p class="text-muted-foreground mb-6">
+                        The ICRC-1 standard defines a common interface for fungible tokens on the Internet Computer.
+                        This explorer implements all standard methods to provide accurate and up-to-date token information.
+                    </p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
+                        <div>
+                            <h4 class="font-semibold">Query Methods</h4>
+                            <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_name()</code> - Token Name
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_symbol()</code> - Token Symbol
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_decimals()</code> - Decimal Places
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_total_supply()</code> - Total Supply
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_fee()</code> - Transfer Fee
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_metadata()</code> - Token Metadata
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Account Methods</h4>
+                            <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_balance_of()</code> - Check Balance
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_transfer()</code> - Transfer Tokens
+                                </li>
+                                <li class="hover:text-foreground transition-colors">
+                                    • <code class="text-xs bg-primary/10 rounded">icrc1_supported_standards()</code> - Standard Information
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- CTA -->
+        <section class="text-center py-10 md:py-16">
+            <div class="mx-auto">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Start Exploring Tokens</h2>
+                <p class="text-xl text-muted-foreground mb-8">
+                    Discover the expanding ecosystem of ICRC tokens on Internet Computer.
+                </p>
+                <a href="/pages/transaction.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors bg-primary text-white h-10 px-8">
+                    <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    Start Token Exploration
+                </a>
+            </div>
+        </section>
+        <section class="text-center py-10 md:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-4 gap-4 md:gap-8">
+                <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-global">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database w-6 h-6 text-primary">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                            <path d="M3 12A9 3 0 0 0 21 12"></path>
+                        </svg></div>
+                    <h4 class="text-lg font-bold mb-2">ICRC Standard</h4>
+                    <p class="text-sm text-muted-foreground leading-relaxed">Built on the Internet Computer using the ICRC token standard for maximum compatibility and security.</p>
+                </div>
+                <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-global">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-6 h-6 text-primary">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                        </svg></div>
+                    <h4 class="text-lg font-bold mb-2">Secure &amp; Audited</h4>
+                    <p class="text-sm text-muted-foreground leading-relaxed">Smart contracts audited by leading security firms to ensure the safety of your assets.</p>
+                </div>
+                <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-global">
+                    <div class="w-12 h-12 bg-primary/10 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-6 h-6 text-primary">
+                            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                        </svg></div>
+                    <h4 class="text-lg font-bold mb-2">Fast Transactions</h4>
+                    <p class="text-sm text-muted-foreground leading-relaxed">Lightning-fast transaction speeds with minimal fees on the Internet Computer network.</p>
+                </div>
+                <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-global">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-6 h-6 text-primary">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg></div>
+                    <h4 class="text-lg font-bold mb-2">Decentralized</h4>
+                    <p class="text-sm text-muted-foreground leading-relaxed">Fully decentralized token with community governance and transparent operations.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/footer.html";?>

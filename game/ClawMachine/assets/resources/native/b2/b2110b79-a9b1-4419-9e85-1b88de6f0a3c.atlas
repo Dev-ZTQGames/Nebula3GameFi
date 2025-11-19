@@ -1,0 +1,174 @@
+
+0015_mica_ani_idle_floewr.png
+size: 348,523
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_R_eye2
+  rotate: false
+  xy: 291, 37
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+Haru_triangle1
+  rotate: false
+  xy: 233, 117
+  size: 59, 54
+  orig: 61, 56
+  offset: 1, 1
+  index: -1
+Haru_triangle2
+  rotate: false
+  xy: 294, 111
+  size: 44, 60
+  orig: 46, 62
+  offset: 1, 1
+  index: -1
+Haru_triangle3
+  rotate: false
+  xy: 279, 267
+  size: 49, 29
+  orig: 51, 31
+  offset: 1, 1
+  index: -1
+Leo_L_eye
+  rotate: false
+  xy: 291, 5
+  size: 17, 17
+  orig: 19, 19
+  offset: 1, 1
+  index: -1
+Leo_R_eye
+  rotate: false
+  xy: 312, 248
+  size: 17, 17
+  orig: 19, 19
+  offset: 1, 1
+  index: -1
+Mica_L_blush
+  rotate: false
+  xy: 291, 67
+  size: 35, 22
+  orig: 35, 22
+  offset: 0, 0
+  index: -1
+Mica_R_blush
+  rotate: false
+  xy: 291, 67
+  size: 35, 22
+  orig: 35, 22
+  offset: 0, 0
+  index: -1
+Mica_L_ear
+  rotate: false
+  xy: 2, 133
+  size: 135, 127
+  orig: 135, 127
+  offset: 0, 0
+  index: -1
+Mica_L_eye
+  rotate: true
+  xy: 325, 329
+  size: 26, 11
+  orig: 26, 11
+  offset: 0, 0
+  index: -1
+Mica_L_eyebrow
+  rotate: false
+  xy: 312, 234
+  size: 15, 12
+  orig: 15, 12
+  offset: 0, 0
+  index: -1
+Mica_L_feet
+  rotate: true
+  xy: 139, 2
+  size: 110, 74
+  orig: 110, 74
+  offset: 0, 0
+  index: -1
+Mica_L_hand
+  rotate: false
+  xy: 279, 450
+  size: 64, 71
+  orig: 64, 71
+  offset: 0, 0
+  index: -1
+Mica_R_ear
+  rotate: false
+  xy: 2, 4
+  size: 135, 127
+  orig: 135, 127
+  offset: 0, 0
+  index: -1
+Mica_R_eye
+  rotate: false
+  xy: 291, 24
+  size: 26, 11
+  orig: 26, 11
+  offset: 0, 0
+  index: -1
+Mica_R_eyebrow
+  rotate: true
+  xy: 328, 73
+  size: 16, 10
+  orig: 16, 10
+  offset: 0, 0
+  index: -1
+Mica_R_feet
+  rotate: true
+  xy: 215, 2
+  size: 110, 74
+  orig: 110, 74
+  offset: 0, 0
+  index: -1
+Mica_R_hand
+  rotate: false
+  xy: 279, 380
+  size: 60, 68
+  orig: 60, 68
+  offset: 0, 0
+  index: -1
+Mica_body
+  rotate: false
+  xy: 2, 262
+  size: 275, 259
+  orig: 275, 259
+  offset: 0, 0
+  index: -1
+Mica_bowtie
+  rotate: true
+  xy: 139, 114
+  size: 146, 92
+  orig: 146, 92
+  offset: 0, 0
+  index: -1
+Mica_flower
+  rotate: true
+  xy: 233, 173
+  size: 87, 77
+  orig: 87, 77
+  offset: 0, 0
+  index: -1
+Mica_mouse
+  rotate: false
+  xy: 291, 91
+  size: 47, 18
+  orig: 48, 18
+  offset: 1, 0
+  index: -1
+Mica_tail
+  rotate: true
+  xy: 279, 298
+  size: 80, 44
+  orig: 80, 44
+  offset: 0, 0
+  index: -1
+Mica_tongue
+  rotate: false
+  xy: 325, 357
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1

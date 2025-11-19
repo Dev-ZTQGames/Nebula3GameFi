@@ -251,9 +251,14 @@
     .main-events__list {display:block;}
     .main-events__item {width:100%;}
     .main-events__item + .main-events__item {margin-top:28rem;}
+    .main-updates__content h4 {font-size:15rem;}
+    .main-updates__content p {font-size: 14rem;}
     .main-updates__item > a {gap:12rem;}
     .main-updates__item time { font-size: 12rem;}
     .main-updates__item time span.day { font-size: 20rem;}
     .main-updates__item time span.month { padding-top: 28rem;}
+    
+    .main-faq__item h4 {font-size:15rem;}
+    .main-faq__item p {font-size: 14rem;}
 
 }

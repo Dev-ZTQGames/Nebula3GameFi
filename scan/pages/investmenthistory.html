@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:description" content="Take Control of Your Crypto Portfolio with CryptoTrakX Tailwind Crypto Dashboard! Keep track of all your cryptocurrencies with ease using it.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="CryptoTrakX: Tailwind Crypto Dashboard - Free Download">
+    <meta property="og:image" content="https://designtocodes.com/wp-content/uploads/2024/04/CryptoTrackX-Dashboard-Thumbnai-01.jpg">
+    <link rel="icon" href="../public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
+    <title>Investment History - CryptoTrakX Tailwind Dashboard</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+</head>
+
+ <body>
+    
+    <!-- Preloader Start -->
+    <div class="preloader h-full fixed w-full z-50 bg-white transition duration-300">
+        <img src="../public/assets/images/preloader.gif" class="max-w-[12rem] md:max-w-[20rem] block absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4" alt="Loading">
+    </div>
+    <!-- Preloader End -->
+
+    <div class="flex flex-no-wrap h-screen">
+
+        <!-- Sidebar starts -->
+        <aside class="bg-primary w-full md:w-96 pt-5 fixed lg:relative h-screen overflow-y-auto lg:flex flex-col justify-between -translate-x-full lg:translate-x-0 transition-transform duration-500 z-10" id="sidebar">
+            <nav class="px-8">
+                <div class="flex items-center justify-between">
+                    <a href="../index.html"><img class="max-w-[14rem]" src="../public/assets/images/logo/logo.png" alt="Logo"></a>
+                    <button id="closeSideBar" class="text-white lg:hidden">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <ul class="mt-12">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-home"></i></span> Overview </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./exchange.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-money-check-alt"></i></span> Exchange </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./market.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-chart-line"></i></span> Market </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./wallet.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-wallet"></i></span> wallet </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item active">
+                        <a href="./investmenthistory.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-network-wired"></i></span> Investment History </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./transaction.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-list-alt"></i></span> Transaction </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./activity.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-poll"></i></span> Activity </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./performance.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-money-check"></i></span> Performance </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./profile.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-user"></i></span> profile </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="../pages/landingpage.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="far fa-file-alt"></i></span> landing page </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"  data-toggler="active" data-tdg-dropdown="dropdown1">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-question-circle"></i></span> Help & Support </span>
+                        </a>
+                        <!-- Sub Menu -->
+                        <ul class="mt-2 hidden" data-tdg-dropdownItem="down-element1">
+                            <li>
+                                <a class="sub-menu-link" href="./faq.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./contact.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> Contact us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./blank.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> Blank
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggler="active" data-tdg-dropdown="dropdown1">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-unlock-alt"></i></span> Authentication</span>
+                        </a>
+
+                        <!-- Sub Menu -->
+                        <ul class="mt-2 hidden" data-tdg-dropdownItem="down-element1">
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/login.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> SignIn
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/registration.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> SignUp
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/resetpassword.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> Forget Password
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/404.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> 404
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/505.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> 505
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Pro Banner -->
+            <div class="px-8">
+                <ul>
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-cog"></i></span> Settings </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Pro Banner -->
+
+        </aside>
+
+        <!-- Main Body -->
+        <aside class="w-full overflow-y-auto">
+            <!-- Top Navbar -->
+            <nav   class="py-4 shadow-global">
+                <div class="flex items-center justify-between px-4">
+                    <div class="inline-flex items-center">
+                        <button class="bg-primary-shade-4 text-primary hover:bg-primary-shade-2 hover:text-primary rounded transition-colors shadow-std py-2 px-3 lg:hidden mr-2" id="openSideBar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- Search Input -->
+                        <div class="hidden md:flex">
+                            <form class="validation" novalidate>
+                                <div class="bg-white rounded flex items-center">
+                                    <span class="bg-white rounded p-1">
+                                        <button class="bg-primary-2 text-primary-shade-4 px-3 py-2 rounded hover:bg-primary hover:text-accent transition-colors" type="submit"><i class="fas fa-search"></i></button>
+                                    </span>
+
+                                    <input type="text" autocomplete="off" class="bg-white font-medium form-control border-0 w-auto h-auto flex items-center px-2 py-2 text-sm rounded  pl-0" name="search" placeholder="Search" required data-error-message="Please enter a valid text.">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="flex md:hidden relative dropdown">
+                            <button class="bg-white text-primary hover:bg-primary hover:text-white rounded transition-colors py-2 px-3" data-dropdown-label="btn"><i class="fas fa-search"></i></button>
+
+                            <div class="absolute left-0 top-12 hidden z-10" data-dropdown-item="item">
+                                <form class="validation" novalidate>
+                                    <div class="bg-white rounded border border-primary flex items-center">
+                                        <input type="text" autocomplete="off" class="bg-white font-medium w-auto h-auto flex items-center px-2 py-3 text-sm-1 rounded focus:outline-none form-control" name="search" placeholder="Search" required data-error-message="Please enter a valid text.">
+
+                                        <span class="bg-white rounded p-1"> 
+                                            <button class="bg-primary-shade-1 text-primary px-3 py-2 rounded hover:bg-primary-shade-1 hover:text-secondary transition-colors" type="submit"><i class="fas fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Input -->
+                    </div>
+
+                    <div class="flex items-center">
+                        <button class="text-primary-shade-4 hover:text-primary rounded transition-colors py-2 px-3 mr-4">
+                            <i class="fas fa-bell fa-shake"></i>
+                        </button>
+                        <!-- Profile Menu -->
+                        <div class="relative dropdown pl-4 before:content-[''] before:absolute before:h-8 before:w-0.5 before:top-1/2 before:-translate-y-1/2 before:-left-1 before:bg-primary-shade-4">
+                            <button data-dropdown-label="btn" class="flex items-center text-sm  bg-white p-2 rounded focus:outline-none transition duration-150 ease-in-out">
+                                <img class="rounded-full h-8 w-8 object-cover" src="../public/assets/images/avatar/avatar_1.png" alt="avatar image">
+                                <span class="ml-2 text-primary text-sm-1 font-semibold hidden lg:block">Leslie Alexander</span>
+                                <span class="ml-2 text-primary-shade-4">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="px-4 w-[10rem] lg:w-full bg-white border border-primary-shade-4 hover:border-primary absolute rounded right-0 top-2 text-left shadow-std mt-10 hidden" data-dropdown-item="item">
+                                <li class="text-secondary hover:text-primary transition-colors duration-500 text-base pt-2">
+                                    <a href="../pages/profile.html">
+                                        <i class="fas fa-user"></i>
+                                        <span class="ml-2">User Profile</span>
+                                    </a>
+                                </li>
+                                <li class="text-secondary hover:text-primary transition-colors duration-500 text-base pt-2 last:pb-2">
+                                    <a href="#">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span class="ml-2">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Profile Menu -->
+
+                    </div>
+                </div>
+            </nav>
+            <!-- Top Navbar -->
+
+
+            <div class="p-6 lg:p-8">
+                <div class="grid grid-cols-12 gap-4 md:gap-7">
+                    <div class="d2c_card col-start-1 col-span-12 xl:col-span-6 xxl:col-span-4 shadow-global rounded-md p-6">
+                        <div class="grid grid-cols-2 gap-4 md:gap-7 mb-2">
+                            <div class="col-start-1 col-span-7">
+                                <h4 class="d2c_card_title mb-0">Total Investment</h4>
+                            </div>
+                            <div class="col-start-8 col-span-5 flex items-center justify-end">
+                                <!-- dropdown -->
+                                <div class="relative">
+                                    <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                       <span class="ml-1"><i class="fas fa-ellipsis-h"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="d2c_card_title_1">2.53360251 BTC</h3>
+                        <!-- chart -->
+                        <div id="d2c_total_investment_chart"></div>
+                    </div>
+                    <div class="d2c_card xl:col-start-1 col-span-12 xxl:col-start-5 xxl:col-span-4 shadow-global rounded-md xl:order-3 xxl:order-2 xxl:pb-4">
+                        <div class="grid grid-cols-2 gap-4 md:gap-7 mb-2">
+                            <div class="col-start-1 col-span-7">
+                                <h4 class="d2c_card_title mb-0">Yearly Investment</h4>
+                            </div>
+                            <div class="col-start-8 col-span-5 flex items-center justify-end">
+                                <!-- dropdown -->
+                                <div class="relative">
+                                    <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                       <span class="ml-1"><i class="fas fa-ellipsis-h"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="d2c_card_title_1">1.53360675 BTC</h3>
+                        <!-- chart -->
+                        <div id="d2c_yearly_investment_chart"></div>
+                    </div>
+                    <div class="d2c_card col-start-1 xl:col-start-7 xxl:col-start-9 col-span-12 xl:col-span-6 xxl:col-span-4 shadow-global rounded-md xl:order-2 xxl:order-3 xxl:pb-4">
+                        <div class="grid grid-cols-2 gap-4 md:gap-7 mb-2">
+                            <div class="col-start-1 col-span-7">
+                                <h4 class="d2c_card_title mb-0">Monthly Investment</h4>
+                            </div>
+                            <div class="col-start-8 col-span-5 flex items-center justify-end">
+                                <!-- dropdown -->
+                                <div class="relative">
+                                    <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                       <span class="ml-1"><i class="fas fa-ellipsis-h"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="d2c_card_title_1">1.13360817 BTC</h3>
+                        <!-- chart -->
+                        <div id="d2c_monthly_investment_chart"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 md:gap-7 mt-4 md:mt-7">
+                    <div class="col-start-1 col-span-12 xl:col-span-6 xxl:col-span-5">
+                        <div class="d2c_card">
+                            <h4 class="d2c_card_title">Transfer</h4>
+                            <!-- Tab Button -->
+                            <div class="d2c_tabs_wrapper inline-flex min-w-full">
+                                <button class="tab-button capitalize font-bold w-1/2 text-lg" data-d2c-tab="tab1">Send</button>
+                                <button class="tab-button capitalize font-bold w-1/2 text-lg" data-d2c-tab="tab2">Receive</button>
+                            </div>
+                            <!-- Tab Button -->
+
+                            <!-- Tab 1 -->
+                            <div id="tab1" class="tab-content hidden mt-6">
+                                <h4 class="mb-2">Currency</h4>
+                                <div class="grid grid-cols-12">
+                                    <!-- show button wrapper -->
+                                    <div class="col-start-1 col-span-5 flex items-center bg-primary-shade-5 rounded p-[5px] mt-2 md:mt-0 w-full mr-auto md:w-4/5">
+                                        <div class="flex items-center rounded w-1/2">
+                                            <!-- Select menu div contains custom arrow -->
+                                            <div class="d2c_select_wrapper">
+                                                <!-- Select menu -->
+                                                <select class="text-primary bg-white mb-0 transition-all cursor-pointer rounded-sm outline-0 appearance-none px-4 xxl:px-5 pe-5 md:pe-6 xxl:pe-8 py-2 text-xs-1 md:text-lg font-bold uppercase">
+                                                    <option selected>BTC</option>
+                                                    <option value="bth" class="p-2">BTH</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-xs-1 md:text-lg text-primary font-bold w-1/2 text-center">2.23</p>
+                                    </div>
+
+                                    <div class="col-start-6 col-span-2 flex items-center justify-center text-secondary text-sm md:text-xl">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <!-- show button wrapper -->
+                                    <div class="col-start-8 col-span-5 flex items-center bg-primary-shade-5 rounded p-[5px] mt-2 md:mt-0 w-full md:w-4/5 ml-auto">
+                                        <div class="flex items-center rounded w-1/2">
+                                            <!-- Select menu div contains custom arrow -->
+                                            <div class="d2c_select_wrapper">
+                                                <!-- Select menu -->
+                                                <select class="text-primary bg-white mb-0 transition-all cursor-pointer rounded-sm outline-0 appearance-none px-4 xxl:px-5 pe-5 md:pe-6 xxl:pe-8 py-2 text-xs-1 md:text-lg font-bold uppercase">
+                                                    <option selected>USD</option>
+                                                    <option value="bth" class="p-2">BTH</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-xs-1 md:text-lg text-primary font-bold w-1/2 text-center">6.23</p>
+                                    </div>
+                                </div>
+
+                                <form action="#" class="validation mt-6" novalidate>
+                                    <div class="mb-6">
+                                        <label for="number" class="form-label">Amount</label>
+                                        <div class="mt-2">
+                                            <input id="number" type="number" class="form-control" placeholder="$4,502" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="d2c_btn w-full">Transfer</button>
+                                </form>
+                            </div>
+
+                            <!-- Tab 2 -->
+                            <div id="tab2" class="tab-content hidden mt-6">
+                                <h4 class="mb-2">Currency</h4>
+                                <div class="grid grid-cols-12">
+                                    <!-- show button wrapper -->
+                                    <div class="col-start-1 col-span-5 flex items-center bg-primary-shade-5 rounded p-[5px] mt-2 md:mt-0 w-full mr-auto md:w-4/5">
+                                        <div class="flex items-center rounded w-1/2">
+                                            <!-- Select menu div contains custom arrow -->
+                                            <div class="d2c_select_wrapper">
+                                                <!-- Select menu -->
+                                                <select class="text-primary bg-white mb-0 transition-all cursor-pointer rounded-sm outline-0 appearance-none px-4 xxl:px-5 pe-5 md:pe-6 xxl:pe-8 py-2 text-xs-1 md:text-lg font-bold uppercase">
+                                                    <option selected>BTC</option>
+                                                    <option value="bth" class="p-2">BTH</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-xs-1 md:text-lg text-primary font-bold w-1/2 text-center">2.23</p>
+                                    </div>
+
+                                    <div class="col-start-6 col-span-2 flex items-center justify-center text-secondary text-sm md:text-xl">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <!-- show button wrapper -->
+                                    <div class="col-start-8 col-span-5 flex items-center bg-primary-shade-5 rounded p-[5px] mt-2 md:mt-0 w-full md:w-4/5 ml-auto">
+                                        <div class="flex items-center rounded w-1/2">
+                                            <!-- Select menu div contains custom arrow -->
+                                            <div class="d2c_select_wrapper">
+                                                <!-- Select menu -->
+                                                <select class="text-primary bg-white mb-0 transition-all cursor-pointer rounded-sm outline-0 appearance-none px-4 xxl:px-5 pe-5 md:pe-6 xxl:pe-8 py-2 text-xs-1 md:text-lg font-bold uppercase">
+                                                    <option selected>BTC</option>
+                                                    <option value="bth" class="p-2">BTH</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-xs-1 md:text-lg text-primary font-bold w-1/2 text-center">6.23</p>
+                                    </div>
+                                </div>
+
+                                <form action="#" class="validation mt-6" novalidate>
+                                    <div class="mb-6">
+                                        <label class="form-label">Amount</label>
+                                        <div class="mt-2">
+                                            <input type="number" class="form-control" placeholder="$6,502" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="d2c_btn w-full">Add Money</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- investment chart right content -->
+                    <div class="col-start-1 xxl:col-start-6 col-span-12 xl:col-span-6 xxl:col-span-7">
+                        <div class="d2c_card">
+                            <h4 class="d2c_card_title">Investment</h4>
+                            <div class="grid md:grid-cols-5">
+                                <div class="col-start-1 md:col-span-2">
+                                    <div class="relative">
+                                        <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                            Bitcoin/BTC <span class="ml-1"><i class="fas fa-angle-down"></i></span>
+                                        </div>
+                                        <div class="dropdown-menu hidden absolute left-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                            <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                            <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                            <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-lg font-bold">$54,82,251</h4>
+                                </div>
+                                <div class="col-start-1 col-span-5 md:col-start-3 md:col-span-3 mt-4 md:mt-0">
+                                    <div class="flex row flex-wrap w-full md:justify-end">
+                                        <button class="d2c_btn_group rounded-lg rounded-r-none p-2 text-sm md:text-base font-bold" type="button">
+                                            1h
+                                        </button>
+                                        <button class="d2c_btn_group p-2 text-sm md:text-base font-bold" type="button">
+                                            6h
+                                        </button>
+                                        <button class="d2c_btn_group p-2 text-sm md:text-base font-bold" type="button">
+                                            12h
+                                        </button>
+                                        <button class="d2c_btn_group p-2 text-sm md:text-base font-bold" type="button">
+                                            24h
+                                        </button>
+                                        <button class="d2c_btn_group p-2 text-sm md:text-base font-bold" type="button">
+                                            1d
+                                        </button>
+                                        <button class="d2c_btn_group rounded-lg rounded-l-none border-r p-2 text-sm md:text-base font-bold" type="button">
+                                            1w
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- chart -->
+                            <div id="d2c_investment_chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+        <!-- Main Body -->
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- apexchart js link -->
+    <script src="../public/lib/apexcharts/apexcharts.min.js"></script>
+    <script src="../public/assets/js/chart/investmentHistoryChart.js"></script>
+    <!-- Main Js Config -->
+    <script src="../public/assets/js/main.js"></script>
+</body>
+
+</html>
+
+<!--
+    Template Name: {{CryptoTrakX}}
+    Template URL: {{https://designtocodes.com/product/cryptotrakx-tailwind-crypto-dashboard}}
+    Description: {{Take Control of Your Crypto Portfolio with CryptoTrakX Tailwind Crypto Dashboard! Keep track of all your cryptocurrencies with ease using it.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ CryptoTrakX }} 
+-->

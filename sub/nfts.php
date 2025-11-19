@@ -13,6 +13,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 <script>
 let once = true;
+//let allowedDomains = ["https://icptest.nebula3gamefi.com:8080", "https://icplive.nebula3gamefi.com:8080"];
 
 let totalSupplyNormalCustom;
 let totalSupplyRareCustom;
@@ -20,7 +21,7 @@ let totalSupplyEpicCustom;
 let totalSupplyUniqueCustom;
 let totalSupplyLegendaryCustom;
 
-window.addEventListener('message', function(event) {
+window.addEventListener('message',async function(event) {
 	if (allowedDomains.includes(event.origin)) {
 		if ( /*(event.data.LoggedIn === true || event.data.LoggedIn === false) &&*/ once === true ) {
 			once = false;
@@ -31,10 +32,10 @@ window.addEventListener('message', function(event) {
 			const data = <?php echo $info?>;
 
 			totalSupplyNormalCustom		= Number(event.data.totalSupplyNormalCustom);
-			totalSupplyRareCustom		= Number(event.data.totalSupplyRareCustom) + 5556;
-			totalSupplyEpicCustom		= Number(event.data.totalSupplyEpicCustom) + 7778;
-			totalSupplyUniqueCustom		= Number(event.data.totalSupplyUniqueCustom) + 8889;
-			totalSupplyLegendaryCustom	= Number(event.data.totalSupplyLegendaryCustom) + 9445;
+			totalSupplyRareCustom		= Number(event.data.totalSupplyRareCustom) + 5554;
+			totalSupplyEpicCustom		= Number(event.data.totalSupplyEpicCustom) + 7776;
+			totalSupplyUniqueCustom		= Number(event.data.totalSupplyUniqueCustom) + 8887;
+			totalSupplyLegendaryCustom	= Number(event.data.totalSupplyLegendaryCustom) + 9442;
 
 			const game_code = "mm";
 			
@@ -45,9 +46,12 @@ window.addEventListener('message', function(event) {
 			    Unique: totalSupplyUniqueCustom,
 			    Legend: totalSupplyLegendaryCustom
 			};
+			
+			const items = [];
+			const promises = [];
 
 			for (var rarity in totalSupplyMap) {
-			    if (totalSupplyMap.hasOwnProperty(rarity)) {
+			    if (totalSupplyMap.hasOwnProperty(rarity) && totalSupplyMap[rarity] != 0) {
 			        for (var id = getIdStart(rarity); id <= totalSupplyMap[rarity]; id++) {
 			            var level = 0;
 			            var breeding = 5;
@@ -56,41 +60,68 @@ window.addEventListener('message', function(event) {
 			                level = selectedToken.m_level;
 			                breeding = selectedToken.m_breeding;
 			            }
-			            var newBlock = '<div class="nft-item" data-category="' + game_code + '" data-rarity="' + rarity + '">' +
-										    '<figure class="lazyload">' +
-												'<img loading="lazy" src="https://<?php echo $HOST;?>.nebula3gamefi.com/img_remote/test/game/mm/' + rarity.toLowerCase() +'.png" alt="" class="lazyload--loaded" style="z-index:1">'+
-										        '<img loading="lazy"  src="https://cdn.aurorahunt.xyz/nft/mm/img/' + id + '.png" alt="" />' +
-										        '<noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>' +
-										    '</figure>' +
-										    '<div class="main-nfts__info nft-info">' +
-										        '<h3 class="nft-info__title">Mining Maze</h3>' +
-										        '<ul>' +
-										            '<li><span>' + rarity + '</span><span>#' + id + '</span></li>' +
-										            '<li><span>Breeding Count</span><span>(' + breeding + '/5)</span></li>' +
-										            '<li><span>Current Level</span><span>(' + level + '/5)</span></li>'+
-										        '</ul>' +
-										    '</div>' +
-										'</div><!-- .nft-item -->'
-			            $('.sub-nft-list').append(newBlock);
 
-			        }
-			    }
+						(function(rarity, id, level, breeding, game_code) {
+
+							promises.push(
+							  get_NFTImage(`https://cdn.nebula3gamefi.com/nft/${game_code}/json/${id}.json`).then(NFTImage => {
+							    const newBlock = `<div class="nft-item" data-category="${game_code}" data-rarity="${rarity}">
+							      <figure class="lazyload">
+									<img loading="lazy" src="https://<?php echo $HOST?>.nebula3gamefi.com/img_remote/live/game/mm/${rarity.toLowerCase()}.png" alt=""		 class="lazyload--loaded" style="z-index:1">
+							        <img src="${NFTImage}" alt="" />
+							        <noscript><img src="${NFTImage}" alt="" /></noscript>
+							      </figure>
+							      <div class="main-nfts__info nft-info">
+							        <h3 class="nft-info__title">Mining Maze</h3>
+							        <ul>
+							          <li><span>${rarity}</span><span>#${id}</span></li>
+							          <li><span>Breeding Count</span><span>(${breeding}/5)</span></li>
+							          <li><span>Current Level</span><span>(${level}/5)</span></li>
+							        </ul>
+							      </div>
+							    </div><!-- .nft-item -->`;
+
+							    items[id] = newBlock;
+							  })
+							);
+						})(rarity, id, level, breeding, game_code);
+					}
+				}
 			}
+
+
+			Promise.all(promises).then(() => {
+			  $('.sub-nft-list').append(items.join(''));
+			});
 
 			function getIdStart(rarity) {
 			    switch (rarity) {
 			        case 'Basic':
-			            return 1;
+			            return 0;
 			        case 'Rare':
-			            return 5556;
+			            return 5555;
 			        case 'Epic':
-			            return 7778;
+			            return 7777;
 			        case 'Unique':
-			            return 8889;
+			            return 8888;
 			        case 'Legend':
-			            return 9445;
+			            return 9443;
 			        default:
 			            return 1;
+			    }
+			}
+
+			async function get_NFTImage(json_url) {
+			    try {
+			        const response = await fetch(json_url);
+
+			        const data = await response.json(); 
+			        const image = data.image; 
+			        return image; 
+			    } catch (error) {
+			        console.error('Error fetching JSON:', error);
+			       
+			        return null; 
 			    }
 			}
 
@@ -125,7 +156,7 @@ window.addEventListener('message', function(event) {
                                     <button type="button" class="nfts-filter__button"><span>Games</span></button>
                                     <div class="nfts-filter__content">
                                         <ul>
-                                            <li><label class="custom-checkbox">Mining Maze<input type="checkbox" class="categoryCheckbox" value="mm"><span class="checkmark"></span></label></li>
+                                            <li><label class="custom-checkbox">Mining Maze (TBA)<input type="checkbox" class="categoryCheckbox" value="mm"><span class="checkmark"></span></label></li>
                                             <!--li><label class="custom-checkbox">Claw Machine<input type="checkbox" class="categoryCheckbox" value="clwmc"><span class="checkmark"></span></label></li-->
                                         </ul>
                                     </div><!-- .nfts-filter__content -->
@@ -160,7 +191,7 @@ window.addEventListener('message', function(event) {
                 </div><!-- .nfts-filter-popup -->
 
                 <div class="sub-nft-list">
-
+                    <div class="no-list"><p>Currently, no project data are available</p></div>
                     <!--div class="nft-item">
                         <figure class="lazyload">
                             <img loading="lazy" data-unveil="https://dummyimage.com/282x282/333/fff" src="../assets/images/blank.gif" alt="" />

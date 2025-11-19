@@ -131,6 +131,8 @@
     .global-menu-util__member a span:before {font-size:16rem;}
     #menu > li > a {font-size:18rem;}
 
+    .wallet-contents .wallet-asset {font-size:20rem;}
+    .wallet-btn {font-size:16rem;}
     .wallet-addr-form__title {font-size:20rem;}
     .mypage-popup {padding:30rem;}
     .mypage-popup__head {padding-bottom:30rem;}
@@ -138,6 +140,8 @@
 
     .tickets-title { font-size: 26rem; }
     .tickets-desc {font-size:16rem;}
+    
+    .before-connect-wallet {font-size: 22rem;}
 
     /* FOOTER */
     .footer-menu li a {font-size: 14rem;}
@@ -185,10 +189,21 @@
     .wallet-addr-form__input {padding:10rem;}
     .wallet-addr-form__input figure { width: 26rem; height: 26rem;}
     .wallet-addr-form__fee {padding:14rem 10rem;}
-    .wallet-btn {font-size:16rem;}
+    .wallet-btn {font-size:15rem; padding: 15rem 10rem;}
+    .wallet-tabs .tabs-menu li .tab-item {font-size:16rem;}
     .wallet-contents {padding:20rem;}
-    .wallet-contents .wallet-asset {font-size:20rem;}
+    .wallet-contents .wallet-asset {font-size:18rem;padding: 14rem 12rem 15rem;}
+    .assets-title {font-size:16rem;}
+    .tokens-item b {font-size:14rem; margin-left:5rem;}
+    .tokens-item span { font-size: 14rem; margin-right:2rem;}
+    .tokens-item figure { width: 30rem; height: 30rem;}
+    .assets-item .custom-radio, .tokens-item .custom-radio {padding-top:6rem; padding-bottom:6rem;}
+    .multi-wallet__key .wallet-key {padding: 8rem 10rem 8rem;}
     .multi-wallet__key .copy-text { font-size: 13rem;}
+    .multi-wallet__key .clipboard-js {font-size:13rem;}
+    .multi-wallet__key-connect {gap:5rem;}
+    .multi-wallet__key-connect figure { width: 30rem; height: 30rem;}
+    .multi-wallet__key-connect p {font-size: 15rem; }
     .sign-popup__contents { width: calc(100% - 20rem); height: calc(100% - 20rem); border-radius:12rem;}
     .mypage-popup { padding: 30rem 20rem;}
     .mypage-popup__head h2 { font-size: 18rem;}
@@ -199,6 +214,19 @@
     .mypage-tickets__contents:before {height:90rem;}
     .tickets-title { font-size: 20rem; }
     .tickets-desc {font-size:15rem;}
+    
+    .chain-connect-wallet__title {font-size: 20rem;}
+    .before-connect-wallet { padding: 20rem;}
+    .wallet-connect__list {margin-top:20rem;}
+    .wallet-connect__item {padding:10rem;}
+    .wallet-connect__item + .wallet-connect__item {margin-top:8rem;}
+    .wallet-connect__item p {font-size:16rem;}
+    
+    .switch {height:26rem;}
+    .switch .switch-body { width: 55rem; height: 26rem;}
+    .switch .switch-switch { width: 20rem; height: 20rem;}
+    .switch .switch-bgd {width: 55rem; }
+    
 
     /* FOOTER */
     .footer-menu { gap: 13rem 10rem;}

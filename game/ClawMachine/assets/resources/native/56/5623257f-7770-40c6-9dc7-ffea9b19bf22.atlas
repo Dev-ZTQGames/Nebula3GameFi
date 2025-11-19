@@ -1,0 +1,153 @@
+
+0018_kort_ani_idle_floewr.png
+size: 491,518
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Kote_L_blush
+  rotate: false
+  xy: 296, 2
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: -1
+Kote_L_ear
+  rotate: false
+  xy: 360, 147
+  size: 100, 90
+  orig: 100, 90
+  offset: 0, 0
+  index: -1
+Kote_L_eye
+  rotate: true
+  xy: 475, 331
+  size: 22, 14
+  orig: 22, 14
+  offset: 0, 0
+  index: -1
+Kote_L_hand
+  rotate: true
+  xy: 286, 135
+  size: 82, 66
+  orig: 82, 66
+  offset: 0, 0
+  index: -1
+Kote_R_hand
+  rotate: true
+  xy: 286, 135
+  size: 82, 66
+  orig: 82, 66
+  offset: 0, 0
+  index: -1
+Kote_P_flower
+  rotate: false
+  xy: 360, 239
+  size: 113, 114
+  orig: 113, 114
+  offset: 0, 0
+  index: -1
+Kote_P_flower stem
+  rotate: true
+  xy: 156, 2
+  size: 49, 138
+  orig: 49, 138
+  offset: 0, 0
+  index: -1
+Kote_R_blush
+  rotate: false
+  xy: 413, 10
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: -1
+Kote_R_ear
+  rotate: true
+  xy: 354, 61
+  size: 84, 96
+  orig: 84, 96
+  offset: 0, 0
+  index: -1
+Kote_R_eye
+  rotate: false
+  xy: 240, 326
+  size: 21, 16
+  orig: 21, 16
+  offset: 0, 0
+  index: -1
+Kote_Y_flower
+  rotate: false
+  xy: 156, 53
+  size: 119, 119
+  orig: 119, 119
+  offset: 0, 0
+  index: -1
+Kote_Y_flower stem
+  rotate: false
+  xy: 286, 219
+  size: 72, 141
+  orig: 73, 141
+  offset: 0, 0
+  index: -1
+Kote_body
+  rotate: false
+  xy: 156, 174
+  size: 128, 139
+  orig: 128, 139
+  offset: 0, 0
+  index: -1
+Kote_feet
+  rotate: true
+  xy: 277, 53
+  size: 80, 60
+  orig: 80, 60
+  offset: 0, 0
+  index: -1
+Kote_head
+  rotate: false
+  xy: 2, 315
+  size: 236, 201
+  orig: 236, 201
+  offset: 0, 0
+  index: -1
+Kote_mouse
+  rotate: false
+  xy: 240, 344
+  size: 41, 16
+  orig: 41, 16
+  offset: 0, 0
+  index: -1
+Kote_potted plants
+  rotate: false
+  xy: 394, 355
+  size: 93, 161
+  orig: 93, 161
+  offset: 0, 0
+  index: -1
+Kote_tail
+  rotate: false
+  xy: 347, 9
+  size: 64, 50
+  orig: 64, 50
+  offset: 0, 0
+  index: -1
+flower_pink
+  rotate: false
+  xy: 2, 159
+  size: 152, 154
+  orig: 154, 156
+  offset: 1, 1
+  index: -1
+flower_red
+  rotate: false
+  xy: 240, 362
+  size: 152, 154
+  orig: 154, 156
+  offset: 1, 1
+  index: -1
+flower_yellow
+  rotate: false
+  xy: 2, 3
+  size: 152, 154
+  orig: 154, 156
+  offset: 1, 1
+  index: -1

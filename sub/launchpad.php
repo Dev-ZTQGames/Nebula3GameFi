@@ -1,7 +1,7 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
-	$query_lanuchpad = mysqli_query($connect, "SELECT m_index, m_title, m_game_code, m_chain, m_main_banner_img, m_status, m_start FROM GamesNFTLaunchpad");
+	$query_lanuchpad = mysqli_query($connect, "SELECT m_index, m_title, m_game_code, m_chain, m_main_banner_img, m_status, m_start FROM GamesNFTLaunchpad ORDER BY m_sort ASC, m_index DESC");
 	
 	$live = $upcoming = $prev = array();
 
@@ -52,14 +52,14 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <div id="container" class="page-launchpad">
     <div class="article-header">
         <div class="article-header__inner wrap">
-            <h2 class="article-title">Launchpad</h2>
+            <h2 class="article-title"><?php echo $lang['Launchpad']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
     <div class="article-body">
         <div class="wrap">
             <div class="launchpad-wrap">
-                <h2>Live Projects</h2>
+                <h2><?php echo $lang['LiveProjects']; ?></h2>
 				<?php
 				if (empty($live)) {
 				    echo '<p class="no-list"><span>Currently, no project data are available</span></p>';
@@ -78,8 +78,12 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 								    <div class="launchpad-info">
 								        <p class="goods">';
 									if ($row['m_chain'] == 'ICP') echo '<i><img src="../assets/images/symbol-icp.svg" alt=""></i>';
+									if ($row['m_chain'] == 'IMX') echo '<i><img src="../assets/images/symbol-imx.svg" alt=""></i>';
+									if ($row['m_chain'] == 'KAIA') echo '<i><img src="../assets/images/symbol-kaia.svg" alt=""></i>';
+                                    if ($row['m_chain'] == 'STRK') echo '<i><img src="../assets/images/symbol-strk.svg" alt=""></i>';
+                                    if ($row['m_chain'] == 'BNB') echo '<i><img src="../assets/images/symbol-bnb.svg" alt=""></i>';
 									echo '<span>'.$row['m_chain'].'</span></p>
-								        <h3>'.$row['m_title'].'  Minting</h3>
+								        <h3>'.$row['m_title'].'</h3>
 								    </div><!-- .launchpad-info -->
 									</a>
 								</div>';
@@ -90,7 +94,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             </div><!-- .launchpad-wrap -->
 
             <div class="launchpad-wrap">
-                <h2>Upcoming Projects</h2>
+                <h2><?php echo $lang['UpcomingProjects']; ?></h2>
 				<?php
 				if (empty($upcoming)) {
 				    echo '<p class="no-list"><span>Currently, no project data are available</span></p>';
@@ -109,8 +113,12 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 								    <div class="launchpad-info">
 								        <p class="goods">';
 									if ($row['m_chain'] == 'ICP') echo '<i><img src="../assets/images/symbol-icp.svg" alt=""></i>';
+									if ($row['m_chain'] == 'IMX') echo '<i><img src="../assets/images/symbol-imx.svg" alt=""></i>';
+									if ($row['m_chain'] == 'KAIA') echo '<i><img src="../assets/images/symbol-kaia.svg" alt=""></i>';
+                                    if ($row['m_chain'] == 'STRK') echo '<i><img src="../assets/images/symbol-strk.svg" alt=""></i>';
+                                    if ($row['m_chain'] == 'BNB') echo '<i><img src="../assets/images/symbol-bnb.svg" alt=""></i>';
 									echo '<span>'.$row['m_chain'].'</span></p>
-								        <h3>'.$row['m_title'].'  Minting</h3>
+								        <h3>'.$row['m_title'].'</h3>
 								    </div><!-- .launchpad-info -->
 									'./*</a>*/'
 								</div>';
@@ -121,7 +129,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             </div><!-- .launchpad-wrap -->
 
             <div class="launchpad-wrap">
-                <h2>Previous Projects</h2>
+                <h2><?php echo $lang['PreviousProjects']; ?></h2>
                 <?php
 				if (empty($prev)) {
 				    echo '<p class="no-list"><span>Currently, no project data are available</span></p>';
@@ -129,7 +137,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				    echo "<div class='nft-launchpad__list'>";
 					foreach($prev as $row) {
 						echo '<div class="launchpad-item">
-								<a href="launchpad-view.php?idx='.$row['m_index'].'">
+								'./*<a href="launchpad-view.php?idx='.$row['m_index'].'">*/'
 								    <div class="launchpad-img">
 								        <figure class="lazyload">
 								            <img loading="lazy" data-unveil="'.$row['m_main_banner_img'].'" src="../assets/images/blank.gif" alt="" />
@@ -140,10 +148,14 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 								    <div class="launchpad-info">
 								        <p class="goods">';
 									if ($row['m_chain'] == 'ICP') echo '<i><img src="../assets/images/symbol-icp.svg" alt=""></i>';
+									if ($row['m_chain'] == 'IMX') echo '<i><img src="../assets/images/symbol-imx.svg" alt=""></i>';
+									if ($row['m_chain'] == 'KAIA') echo '<i><img src="../assets/images/symbol-kaia.svg" alt=""></i>';
+                                    if ($row['m_chain'] == 'STRK') echo '<i><img src="../assets/images/symbol-strk.svg" alt=""></i>';
+                                    if ($row['m_chain'] == 'BNB') echo '<i><img src="../assets/images/symbol-bnb.svg" alt=""></i>';
 									echo '<span>'.$row['m_chain'].'</span></p>
-								        <h3>'.$row['m_title'].'  Minting</h3>
+								        <h3>'.$row['m_title'].'</h3>
 								    </div><!-- .launchpad-info -->
-									</a>
+									'./*</a>*/'
 								</div>';
 					}
 					echo "</div><!-- .nft-launchpad__list -->";

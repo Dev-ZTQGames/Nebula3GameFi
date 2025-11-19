@@ -9,6 +9,24 @@
 	$proc2		= escape_string(trim($_REQUEST['proc2']));
 
 	
+	if ( $proc1 == "region" ) {
+
+		$ip = get_client_ip();
+		$ip_info = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip));
+		$region = strtolower($ip_info['geoplugin_countryCode']);
+		if ($region == "kr") {
+			$array = array("result" => "0", "msg" => "-9999");
+		}
+		else {
+			$array = array("result" => "1", "msg" => "1010");	
+		}
+		$json_result = json_encode($array);
+		print($json_result);
+	
+		output_log($json_result, "API");
+		exit;
+	}
+	
 	if ( $status == "debug" )	{
 		echo "status : " . $status . "<br><br>";
 		print_r($_REQUEST);
@@ -155,6 +173,9 @@
 			else {
 				$real_usn = $info['usn'];
 			}
+
+			//ICP OnChain-Data N3QE token minting  /includes/config.php
+			mintN3QEToken("N3_GET_EXP", $serial_array["id"]);
 			
 			$lang_code = $info_game["m_lang_code"];
 			$game_code = $info_game["m_game_code"];
@@ -180,7 +201,10 @@
 
 
 	// logout mode
-	if ( $serial_array["mode"] == "logout" )	{				
+	if ( $serial_array["mode"] == "logout" )	{	
+		//ICP OnChain-Data N3QE token minting  /includes/config.php
+		mintN3QEToken("N3_GET_EXP_TOTAL", $serial_array["id"]);
+
 		$array = array("result" => "1", "msg" => "1020");	// logout success
 		$json_result = json_encode($array);
 		print($json_result);
@@ -204,6 +228,9 @@
 		$info = $row;
 
 		if ( $count > 0 )	{
+			//ICP OnChain-Data N3QE token minting  /includes/config.php
+			mintN3QEToken("N3_REWARD_CERTIFICATION", $serial_array["id"]);
+
 			// id is existed
 			$temp_usn		= $info["usn"];
 			$temp_login_id	= $serial_array["id"];

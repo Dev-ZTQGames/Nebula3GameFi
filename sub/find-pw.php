@@ -3,7 +3,7 @@
 <div id="container" class="page-find-pw">
     <div class="article-header">
         <div class="article-header__inner wrap-narrow">
-            <h2 class="article-title">Forget the password</h2>
+            <h2 class="article-title"><?php echo $lang['Forgetpassword']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -12,7 +12,7 @@
             <div class="find-user-info">
                 <div class="form-field-wrap">
                     <div class="form-field-item required">
-                        <label class="form-label" for="find-id"><span>ID</span></label>
+                        <label class="form-label" for="find-id"><span><?php echo $lang['ID']; ?></span></label>
                         <div class="form-input__wrap">
 							<input type="hidden" id="idchk_commit" value="">
                             <input type="text" class="form-input" id="find-id" required>
@@ -21,7 +21,7 @@
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item form-email required">
-                        <label class="form-label" for="find-email"><span>E-Mail</span></label>
+                        <label class="form-label" for="find-email"><span><?php echo $lang['EMail']; ?></span></label>
                         <div class="form-input__wrap">
                             <div class="form-input__inner">
 								<input type="hidden" id="emailchk_commit" value="">
@@ -31,7 +31,7 @@
                     </div><!-- .form-field-item -->
                 </div><!-- .form-field-wrap -->
             </div>
-            <div class="btn-wrap center btn-confirm"><a href="javascript:void(0);" onclick="check_find_pw();" class="btn-basic btn-primary">OK</a></div>
+            <div class="btn-wrap center btn-confirm"><a href="javascript:void(0);" onclick="check_find_pw();" class="btn-basic btn-primary"><?php echo $lang['OK']; ?></a></div>
         </div><!-- .wrap-narrow -->
     </div><!-- .article-body -->
 </div><!-- #container -->
@@ -129,14 +129,14 @@ function check_find_pw(){
 
 	if ( id == "" || !isValidLoginId(id) || chk_login_id != "Y" ) {
 			swal({
-				text: '<?php echo $lang['ID_Check']; ?>',
-				buttons: '<?php echo $lang['Confirm']; ?>',
+				text: "<?php echo $lang['ID_Check']; ?>",
+				buttons: "<?php echo $lang['confirm']; ?>",
 			})	
 			$('#find-id').focus();
 		} else if (email == "" || !isValidEmail(email) || chk_email_id != "Y" ) {
 			swal({
-				text: '<?php echo $lang['Email_Check']; ?>',
-				buttons: '<?php echo $lang['Confirm']; ?>',
+				text: "<?php echo $lang['Email_Check']; ?>",
+				buttons: "<?php echo $lang['confirm']; ?>",
 			})	
 			$('#find-email').focus();
 		} else {
@@ -153,14 +153,14 @@ function check_find_pw(){
 				   if(args.includes('incorrect')){
 					   loading();
 						swal({
-							text: '<?php echo $lang['Not_Match_Info']; ?>',
-							buttons: '<?php echo $lang['Confirm']; ?>',
+							text: "<?php echo $lang['Not_Match_Info']; ?>",
+							buttons: "<?php echo $lang['confirm']; ?>",
 						})					
 				   } else if(args.includes('fail')){
 						loading();
 						swal({
-							text: '<?php echo $lang['Not_Exist_ID']; ?>',
-							buttons: '<?php echo $lang['Confirm']; ?>',
+							text: "<?php echo $lang['Not_Exist_ID']; ?>",
+							buttons: "<?php echo $lang['confirm']; ?>",
 						})					
 				   } else if(args.includes('ok')){
 			//		showLoadingBar();
@@ -168,8 +168,8 @@ function check_find_pw(){
 				   } else {
 			//		   loading();
 						swal({
-							text: '<?php echo $lang['Not_Valid_Email']; ?>',
-							buttons: '<?php echo $lang['Confirm']; ?>',
+							text: "<?php echo $lang['Not_Valid_Email']; ?>",
+							buttons: "<?php echo $lang['confirm']; ?>",
 						})							
 				   }
 			   },
@@ -195,8 +195,8 @@ function go_search(id,email) {
 	   complete: function (){
 	//	loading();
 		swal({
-			text: '<?php echo $lang['Send_Email']; ?>',
-			buttons: '<?php echo $lang['Confirm']; ?>',
+			text: "<?php echo $lang['Send_Email']; ?>",
+			buttons: "<?php echo $lang['confirm']; ?>",
 		})	
 	   },
   });	

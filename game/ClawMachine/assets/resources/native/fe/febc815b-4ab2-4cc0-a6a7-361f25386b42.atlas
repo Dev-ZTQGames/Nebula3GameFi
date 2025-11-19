@@ -1,0 +1,139 @@
+
+0034_nomi_ani_idle_server.png
+size: 733,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Nomi_Down_bowtie
+  rotate: true
+  xy: 588, 40
+  size: 51, 43
+  orig: 51, 43
+  offset: 0, 0
+  index: -1
+Nomi_L_blush
+  rotate: true
+  xy: 705, 73
+  size: 37, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+Nomi_L_ear
+  rotate: false
+  xy: 439, 87
+  size: 109, 116
+  orig: 109, 116
+  offset: 0, 0
+  index: -1
+Nomi_L_eye
+  rotate: false
+  xy: 564, 2
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+Nomi_L_feet
+  rotate: false
+  xy: 444, 27
+  size: 76, 58
+  orig: 76, 58
+  offset: 0, 0
+  index: -1
+Nomi_L_hand
+  rotate: false
+  xy: 371, 3
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1
+Nomi_Love_big
+  rotate: false
+  xy: 633, 17
+  size: 58, 48
+  orig: 58, 48
+  offset: 0, 0
+  index: -1
+Nomi_R_blush
+  rotate: false
+  xy: 693, 4
+  size: 38, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+Nomi_R_ear
+  rotate: false
+  xy: 550, 93
+  size: 81, 110
+  orig: 81, 110
+  offset: 0, 0
+  index: -1
+Nomi_R_eye
+  rotate: false
+  xy: 537, 3
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+Nomi_R_feet
+  rotate: false
+  xy: 633, 67
+  size: 70, 43
+  orig: 70, 43
+  offset: 0, 0
+  index: -1
+Nomi_R_hand
+  rotate: false
+  xy: 522, 27
+  size: 64, 58
+  orig: 64, 58
+  offset: 0, 0
+  index: -1
+Nomi_Top_bowtie
+  rotate: false
+  xy: 278, 6
+  size: 91, 69
+  orig: 91, 69
+  offset: 0, 0
+  index: -1
+Nomi_head
+  rotate: false
+  xy: 2, 9
+  size: 274, 194
+  orig: 274, 194
+  offset: 0, 0
+  index: -1
+Nomi_line
+  rotate: false
+  xy: 491, 4
+  size: 44, 21
+  orig: 44, 21
+  offset: 0, 0
+  index: -1
+Nomi_mouse
+  rotate: false
+  xy: 444, 3
+  size: 45, 22
+  orig: 45, 22
+  offset: 0, 0
+  index: -1
+Nomi_plate
+  rotate: false
+  xy: 633, 112
+  size: 97, 91
+  orig: 97, 91
+  offset: 0, 0
+  index: -1
+Nomi_tongue
+  rotate: false
+  xy: 693, 31
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+Nomi_uniform
+  rotate: false
+  xy: 278, 77
+  size: 159, 126
+  orig: 159, 126
+  offset: 0, 0
+  index: -1

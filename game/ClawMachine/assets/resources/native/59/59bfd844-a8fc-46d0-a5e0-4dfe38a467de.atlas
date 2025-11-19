@@ -1,0 +1,167 @@
+
+0093_haru_ani_idle_office worker.png
+size: 731,294
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Haru_D_sweat
+  rotate: true
+  xy: 30, 9
+  size: 30, 25
+  orig: 32, 27
+  offset: 1, 1
+  index: -1
+Haru_L_blush
+  rotate: false
+  xy: 677, 151
+  size: 52, 52
+  orig: 52, 52
+  offset: 0, 0
+  index: -1
+Haru_L_ear
+  rotate: false
+  xy: 619, 4
+  size: 89, 91
+  orig: 89, 91
+  offset: 0, 0
+  index: -1
+Haru_L_eye
+  rotate: false
+  xy: 672, 205
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Haru_L_eyebrow
+  rotate: true
+  xy: 2, 9
+  size: 30, 26
+  orig: 30, 26
+  offset: 0, 0
+  index: -1
+Haru_L_feet
+  rotate: true
+  xy: 587, 194
+  size: 98, 61
+  orig: 98, 61
+  offset: 0, 0
+  index: -1
+Haru_L_hand
+  rotate: false
+  xy: 371, 10
+  size: 92, 74
+  orig: 92, 74
+  offset: 0, 0
+  index: -1
+Haru_R_blush
+  rotate: false
+  xy: 677, 98
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+Haru_R_ear
+  rotate: true
+  xy: 587, 97
+  size: 95, 88
+  orig: 95, 88
+  offset: 0, 0
+  index: -1
+Haru_R_eye
+  rotate: false
+  xy: 650, 204
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+Haru_R_eyebrow
+  rotate: true
+  xy: 57, 10
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+Haru_R_feet
+  rotate: true
+  xy: 307, 8
+  size: 76, 62
+  orig: 76, 62
+  offset: 0, 0
+  index: -1
+Haru_R_hand
+  rotate: false
+  xy: 650, 227
+  size: 58, 65
+  orig: 58, 65
+  offset: 0, 0
+  index: -1
+Haru_U_sweat
+  rotate: true
+  xy: 109, 15
+  size: 24, 19
+  orig: 26, 21
+  offset: 1, 1
+  index: -1
+Haru_body
+  rotate: true
+  xy: 441, 89
+  size: 203, 144
+  orig: 203, 144
+  offset: 0, 0
+  index: -1
+Haru_coat
+  rotate: true
+  xy: 2, 41
+  size: 251, 126
+  orig: 251, 126
+  offset: 0, 0
+  index: -1
+Haru_head
+  rotate: false
+  xy: 130, 86
+  size: 309, 206
+  orig: 309, 206
+  offset: 0, 0
+  index: -1
+Haru_line
+  rotate: false
+  xy: 109, 2
+  size: 21, 11
+  orig: 21, 11
+  offset: 0, 0
+  index: -1
+Haru_nose
+  rotate: true
+  xy: 694, 208
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+Haru_paper
+  rotate: false
+  xy: 130, 18
+  size: 175, 66
+  orig: 175, 66
+  offset: 0, 0
+  index: -1
+Haru_tail
+  rotate: false
+  xy: 465, 2
+  size: 89, 85
+  orig: 89, 85
+  offset: 0, 0
+  index: -1
+Haru_tongue
+  rotate: false
+  xy: 86, 11
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+Haru_whitecircle
+  rotate: true
+  xy: 556, 14
+  size: 73, 61
+  orig: 73, 61
+  offset: 0, 0
+  index: -1

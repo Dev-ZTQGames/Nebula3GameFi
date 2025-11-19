@@ -1,0 +1,146 @@
+
+0111_tina_ani_idle_hospital.png
+size: 723,388
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_L_medicine
+  rotate: false
+  xy: 658, 62
+  size: 39, 40
+  orig: 41, 42
+  offset: 1, 1
+  index: -1
+Baloo_R_medicine
+  rotate: true
+  xy: 658, 15
+  size: 45, 32
+  orig: 47, 34
+  offset: 1, 1
+  index: -1
+Tina_L_blush
+  rotate: false
+  xy: 387, 20
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+Tina_L_ear
+  rotate: false
+  xy: 445, 96
+  size: 104, 119
+  orig: 104, 119
+  offset: 0, 0
+  index: -1
+Tina_L_eye
+  rotate: false
+  xy: 699, 81
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Tina_L_feet
+  rotate: true
+  xy: 542, 9
+  size: 85, 58
+  orig: 85, 58
+  offset: 0, 0
+  index: -1
+Tina_L_hand
+  rotate: false
+  xy: 449, 5
+  size: 91, 89
+  orig: 91, 89
+  offset: 0, 0
+  index: -1
+Tina_R_blush
+  rotate: false
+  xy: 602, 38
+  size: 54, 60
+  orig: 54, 60
+  offset: 0, 0
+  index: -1
+Tina_R_ear
+  rotate: false
+  xy: 551, 100
+  size: 102, 115
+  orig: 102, 115
+  offset: 0, 0
+  index: -1
+Tina_R_eye
+  rotate: false
+  xy: 2, 2
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+Tina_R_feet
+  rotate: true
+  xy: 655, 133
+  size: 84, 60
+  orig: 84, 60
+  offset: 0, 0
+  index: -1
+Tina_R_hand
+  rotate: true
+  xy: 641, 219
+  size: 77, 80
+  orig: 77, 80
+  offset: 0, 0
+  index: -1
+Tina_body
+  rotate: false
+  xy: 2, 24
+  size: 312, 362
+  orig: 312, 362
+  offset: 0, 0
+  index: -1
+Tina_bottle
+  rotate: false
+  xy: 641, 298
+  size: 71, 88
+  orig: 71, 88
+  offset: 0, 0
+  index: -1
+Tina_bottle1
+  rotate: false
+  xy: 655, 104
+  size: 57, 27
+  orig: 71, 88
+  offset: 0, 61
+  index: -1
+Tina_bottle2
+  rotate: false
+  xy: 316, 2
+  size: 69, 78
+  orig: 71, 88
+  offset: 1, 1
+  index: -1
+Tina_box
+  rotate: false
+  xy: 316, 82
+  size: 127, 133
+  orig: 127, 133
+  offset: 0, 0
+  index: -1
+Tina_line
+  rotate: false
+  xy: 387, 2
+  size: 46, 16
+  orig: 46, 16
+  offset: 0, 0
+  index: -1
+Tina_nose
+  rotate: false
+  xy: 602, 6
+  size: 54, 30
+  orig: 54, 30
+  offset: 0, 0
+  index: -1
+Tina_skirt
+  rotate: false
+  xy: 316, 217
+  size: 323, 169
+  orig: 323, 169
+  offset: 0, 0
+  index: -1

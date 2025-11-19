@@ -5,6 +5,11 @@ $email		 = escape_string(trim($_REQUEST['email']));
 $lang_code	 = escape_string(trim($_REQUEST['lang_code']));
 $num	 = escape_string(trim($_REQUEST['num']));
 
+$check = checkEmailDomainMX($email);
+if($check == false) {
+	exit;
+}
+
 //$num = sprintf('%06d',mt_rand(000000,999999));
 
 $fp = fopen($_SERVER['DOCUMENT_ROOT'].'/mail/mail_01.htm', "r"); 

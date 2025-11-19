@@ -7,7 +7,14 @@ dotenv.config({ path: '../../.env' });
 
 export default defineConfig({
   build: {
+	target: 'es2022',
     emptyOutDir: true,
+	rollupOptions: {
+      input: {
+        main: './index.html',
+        starknet: './starknet.html',
+      },
+    },
   },
   optimizeDeps: {
     esbuildOptions: {

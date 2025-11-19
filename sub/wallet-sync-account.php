@@ -16,21 +16,21 @@ if ( $info['m_account'] ) {
 <div id="container" class="page-sync-account">
     <div class="article-header">
         <div class="article-header__inner wrap">
-            <h2 class="article-title">SYNCHRONIZED ACCOUNT</h2>
+            <h2 class="article-title"><?php echo $lang['SYNCHRONIZEDACCOUNT']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
     <div class="article-body">
         <div class="wrap">
             <div class="sync-account">
-                <b class="sync-account__title">Nebula wallet</b>
+                <b class="sync-account__title"><?php echo $lang['Nebulawallet']; ?></b>
                 <div class="sync-account__dsec">
-                    <p>Please enter your BNB Mainnet wallet address.</p>
-                    <p class="caution-message"><span>[Caution] Once synchronized, the wallet address cannot be changed.</span></p>
-                    <p>※ Please enter the address carefully to ensure proper synchronization.</p>
+                    <p><?php echo $lang['PleaseEnterBNBAdress']; ?></p>
+                    <p class="caution-message"><span>[<?php echo $lang['Caution']; ?>] <?php echo $lang['WalletAddressCantChanged']; ?></span></p>
+                    <p><?php echo $lang['EnterAddress']; ?></p>
                 </div>
                 <input type="text" class="sync-account__input" id="account" value="<?php echo $SyncAccount; ?>">
-                <button type="button" class="btn-basic btn-primary btn-sync-account" id="sync_account"><span>Sync Wallet Address</span></button>
+                <button type="button" class="btn-basic btn-primary btn-sync-account" id="sync_account"><span><?php echo $lang['SyncWalletAddress']; ?></span></button>
             </div>
         </div><!-- .wrap -->
     </div><!-- .article-body -->
@@ -39,17 +39,19 @@ if ( $info['m_account'] ) {
 <script>
 
 $("#sync_account").on('click',function(){
+	const hex_account = $("#account").val();
+	if (isValidHexString(hex_account)) {
 	$.ajax({
 	   type:"POST",        
 	   url:"/includes/proc_baviWallet.php",     
-	   data : ({mode:"ch0010",account:$("#account").val()}),
+	   data : ({mode:"ch0010",account:hex_account}),
 	   timeout : 5000,  
 	   cache : false,        
 	   success: function whenSuccess(args){
 		switch(args.trim()){
 			 case("sync_done"):
 				 swal({
-					text: "Sync wallet successfully!",
+					text: "<?php echo $lang['SyncWalletsuccessfully']; ?>",
 					buttons: "<?php echo $lang['Confirm']; ?>",
 				 }).then(function(){
 				 		location.href = "/";
@@ -58,17 +60,30 @@ $("#sync_account").on('click',function(){
 			 break;
 			 case("already_used"):
 				swal({
-					text: "This wallet address is already in use!",
+					text: "<?php echo $lang['WalletAddressUse']; ?>",
 					buttons: "<?php echo $lang['Confirm']; ?>",
 				});
 			 break;
 		  }
 	   },
 	   error: function whenError(e){
-		console.log("code : " + e.status + "message : " + e.responseText);
+		console.log("<?php echo $lang['code']; ?> : " + e.status + "<?php echo $lang['message']; ?> : " + e.responseText);
 	  }
 	});
+	} else {
+		swal({
+			text: "Format error",
+			buttons: "<?php echo $lang['Confirm']; ?>",
+		});
+	}
 });
+
+function isValidHexString(input) {
+
+  const regex = /^0x[a-fA-F0-9]{40}$/;
+
+  return regex.test(input);
+}
 
 </script>
 

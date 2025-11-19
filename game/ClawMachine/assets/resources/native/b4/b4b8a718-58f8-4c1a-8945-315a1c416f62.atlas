@@ -1,0 +1,160 @@
+
+0097_asha_ani_idle_office worker.png
+size: 189,383
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 57, 146
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+Asha_L_blush
+  rotate: false
+  xy: 96, 21
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Asha_L_ear
+  rotate: true
+  xy: 117, 130
+  size: 42, 64
+  orig: 42, 64
+  offset: 0, 0
+  index: -1
+Asha_L_eye
+  rotate: false
+  xy: 173, 113
+  size: 14, 15
+  orig: 14, 15
+  offset: 0, 0
+  index: -1
+Asha_L_eyebrow
+  rotate: false
+  xy: 44, 18
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+Asha_L_feet
+  rotate: false
+  xy: 57, 108
+  size: 48, 36
+  orig: 48, 36
+  offset: 0, 0
+  index: -1
+Asha_L_hand
+  rotate: false
+  xy: 153, 43
+  size: 34, 35
+  orig: 34, 35
+  offset: 0, 0
+  index: -1
+Asha_R_blush
+  rotate: false
+  xy: 119, 21
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Asha_R_ear
+  rotate: false
+  xy: 146, 279
+  size: 40, 65
+  orig: 40, 65
+  offset: 0, 0
+  index: -1
+Asha_R_eye
+  rotate: false
+  xy: 173, 96
+  size: 14, 15
+  orig: 14, 15
+  offset: 0, 0
+  index: -1
+Asha_R_feet
+  rotate: true
+  xy: 146, 346
+  size: 35, 41
+  orig: 35, 41
+  offset: 0, 0
+  index: -1
+Asha_R_hand
+  rotate: false
+  xy: 113, 44
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+Asha_bag
+  rotate: true
+  xy: 58, 44
+  size: 62, 53
+  orig: 62, 53
+  offset: 0, 0
+  index: -1
+Asha_body
+  rotate: false
+  xy: 2, 206
+  size: 113, 69
+  orig: 113, 69
+  offset: 0, 0
+  index: -1
+Asha_bowtie
+  rotate: true
+  xy: 2, 30
+  size: 73, 54
+  orig: 73, 54
+  offset: 0, 0
+  index: -1
+Asha_drink
+  rotate: false
+  xy: 2, 105
+  size: 53, 99
+  orig: 53, 99
+  offset: 0, 0
+  index: -1
+Asha_head
+  rotate: false
+  xy: 2, 277
+  size: 142, 104
+  orig: 142, 104
+  offset: 0, 0
+  index: -1
+Asha_nose
+  rotate: false
+  xy: 2, 2
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+Asha_tail
+  rotate: true
+  xy: 117, 174
+  size: 101, 70
+  orig: 101, 70
+  offset: 0, 0
+  index: -1
+Asha_tongue
+  rotate: true
+  xy: 142, 23
+  size: 18, 24
+  orig: 18, 24
+  offset: 0, 0
+  index: -1
+Nomi_Love_big
+  rotate: false
+  xy: 113, 80
+  size: 58, 48
+  orig: 58, 48
+  offset: 0, 0
+  index: -1
+Nomi_Love_smaill
+  rotate: false
+  xy: 58, 13
+  size: 36, 29
+  orig: 36, 29
+  offset: 0, 0
+  index: -1

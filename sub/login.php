@@ -65,7 +65,7 @@ if( $query == "login" ){
 <div id="container" class="page-login">
     <div class="article-header">
         <div class="article-header__inner login-wrap">
-            <h2 class="article-title">Login</h2>
+            <h2 class="article-title"><?php echo $lang['Login']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -79,24 +79,24 @@ if( $query == "login" ){
 			<input type="hidden" id="pwchk_commit" value="">
                 <div class="login-form__field">
                     <div class="form-field__item">
-                        <label class="form-label" for="login_id"><span>ID</span></label>
+                        <label class="form-label" for="login_id"><span><?php echo $lang['ID']; ?></span></label>
                         <input type="text" class="form-input" id="login_id" name="login_id">
                     </div><!-- .form-field__item -->
                     <div class="form-field__item">
-                        <label class="form-label" for="login_pw"><span>Password</span></label>
+                        <label class="form-label" for="login_pw"><span><?php echo $lang['Password']; ?></span></label>
                         <input type="password" class="form-input" id="login_pw" name="login_pw">
                     </div><!-- .form-field__item -->
                 </div>
-                <p class="valid-message valid-message--error capsLock_on" id="capsLock_on" style="display:none;"><i class="icon"></i><span>Caps lock is on</span></p>
-                <p class="valid-message valid-message--error" id="valid_message_error" style="display:none;"><i class="icon" ></i><span>The account or password you entered is incorrect, please enter again.</span></p>
-                <button class="btn-basic btn-login btn-primary" type="button" onclick="login_check();"><span>Login</span></button>
+                <p class="valid-message valid-message--error capsLock_on" id="capsLock_on" style="display:none;"><i class="icon"></i><span><?php echo $lang['Capslockison']; ?></span></p>
+                <p class="valid-message valid-message--error" id="valid_message_error" style="display:none;"><i class="icon" ></i><span><?php echo $lang['AccountPasswordIncorrect']; ?></span></p>
+                <button class="btn-basic btn-login btn-primary" type="button" onclick="login_check();"><span><?php echo $lang['Login']; ?></span></button>
 			</form>
             </div>
-            <div class="or">or</div>
-            <div class="signup"><a href="./signup.php" class="btn-basic btn-signup btn-primary"><span>Sign up</span></a></div>
+			<div class="or">or</div>
+            <div class="signup"><a href="./signup.php" class="btn-basic btn-signup btn-primary"><span><?php echo $lang['Signup']; ?></span></a></div>
             <ul class="login-helper">     
-                <li><a href="./find-id.php"><span>Forget your account</span></a></li>
-                <li><a href="./find-pw.php"><span>Forget the password</span></a></li>
+                <li><a href="./find-id.php"><span><?php echo $lang['Forgetaccount']; ?></span></a></li>
+                <li><a href="./find-pw.php"><span><?php echo $lang['Forgetpassword']; ?></span></a></li>
             </ul>
         </div><!-- .wrap -->
     </div><!-- .article-body -->

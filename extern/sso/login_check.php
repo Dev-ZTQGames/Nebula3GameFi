@@ -162,7 +162,7 @@ if($name){
 		$content = str_replace("{{url}}", $return_url, $content);
 
 
-		$nameFrom  = $lang['AuroraHunt'];
+		$nameFrom  = $lang['Nebula3_GameFi'];
 		$mailFrom = "noreply@nebula3gamefi.com";
 		$mailTo = $info['email'];
 
@@ -178,6 +178,8 @@ if($name){
 		$_SESSION['sess_email'] = $info['email'];
 		$_SESSION['sess_change_serial_no'] = $info['change_serial_no'];
 		
+		//ICP OnChain-Data N3QE token minting  /includes/config.php
+		mintN3QEToken("N3_GET_EXP", $login_id);
 
 		//계정정보 쿠키 저장
 		//setcookie('id', $info['id'], time() + 60 * 60 * 24 * 365, "/", ".nebula3gamefi.com");
@@ -192,7 +194,7 @@ if($name){
 
 		setcookie('name', $info['name'], time() + 60 * 60 * 24, "/", ".nebula3gamefi.com");
 		setcookie('time', $time, time() + 60 * 60 * 24, "/", ".nebula3gamefi.com");	
-		setcookie('hash', AES128Encrypt("Aurorahunt", $login_id."|".$time."|CSVersion:221019"), time() + 60 * 60 * 24, "/", ".nebula3gamefi.com");	
+		setcookie('hash', AES128Encrypt("nebula3gamefi", $login_id."|".$time."|CSVersion:221019"), time() + 60 * 60 * 24, "/", ".nebula3gamefi.com");	
 
 		$statistics_year = intval(date('Y'));
 		$statistics_month = intval(date('m'));
@@ -214,6 +216,8 @@ if($name){
 <?php
 	}
 } else {
+	//ICP OnChain-Data N3QE token minting  /includes/config.php
+	mintN3QEToken("N3_GET_EXP", $login_id);
 
 	$statistics_year = intval(date('Y'));
 	$statistics_month = intval(date('m'));

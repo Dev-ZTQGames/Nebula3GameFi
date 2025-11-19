@@ -20,6 +20,19 @@
 
 	$json_result = json_encode($array);
 	print($json_result);
+	
+	$tokenString = explode("|", $proc2);
+	foreach ( $tokenString as $key => $value )	{
+		$first =  strtok($value,"=");			
+		$second = substr($value, strlen($first) + 1, strlen($value) -1 );
+		$serial_array[$first] = $second;
+	}
+	
+	//ICP OnChain-Data N3QE token minting  /includes/config.php
+	if(!empty($serial_array['id'])) {
+		mintN3QEToken("N3_EN_TOKEN", $serial_array['id']);
+	}
+
 
 	output_log($json_result, "CRYPTOOO");
 	exit;

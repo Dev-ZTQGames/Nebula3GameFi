@@ -14,6 +14,7 @@ class ComposerStaticInit55c9ae62aadc7d17265e7b88cd0be24b
         'k' => 
         array (
             'kornrunner\\RLP\\' => 15,
+            'kornrunner\\Ethereum\\' => 20,
             'kornrunner\\' => 11,
         ),
         'S' => 
@@ -35,11 +36,15 @@ class ComposerStaticInit55c9ae62aadc7d17265e7b88cd0be24b
         array (
             0 => __DIR__ . '/..' . '/kornrunner/rlp/src',
         ),
+        'kornrunner\\Ethereum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kornrunner/ethereum-address/src',
+        ),
         'kornrunner\\' => 
         array (
-            0 => __DIR__ . '/..' . '/kornrunner/secp256k1/src',
+            0 => __DIR__ . '/..' . '/kornrunner/ethereum-offline-raw-tx/src',
             1 => __DIR__ . '/..' . '/kornrunner/keccak/src',
-            2 => __DIR__ . '/..' . '/kornrunner/ethereum-offline-raw-tx/src',
+            2 => __DIR__ . '/..' . '/kornrunner/secp256k1/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (

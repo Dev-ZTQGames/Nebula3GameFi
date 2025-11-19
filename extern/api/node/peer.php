@@ -281,9 +281,9 @@ if ( $mode == "NFTInfo" ) {
 		    $rarity .= "Rare|";
 		} else if ($token >= 7777 && $token <= 8887) {
 		    $rarity .= "Epic|";
-		} else if ($token >= 8888 && $token <= 9443) {
+		} else if ($token >= 8888 && $token <= 9442) {
 		    $rarity .= "Unique|";
-		} else if ($token >= 9444 && $token <= 9554) {
+		} else if ($token >= 9443 && $token <= 9553) {
 		    $rarity .= "Legend|";
 		}
 	}
@@ -322,6 +322,7 @@ if ( $mode == "Consume" ) {
 		print($json_result);
 
 		output_log($json_result, "NODE");
+		exit;
 	}
 
 	$info_checkWallet = array();
@@ -386,14 +387,22 @@ if ( $mode == "Reward" ) {
 		$response = curl_return_json($url);
 
 		if (isset($response['result']['Ok'])) {
+			$data = $response['result']['Ok'];
+			$array = array("receipt" =>"$data");
+			$data = json_encode($array);
+
+			$ChainHistory_query = "INSERT INTO AccountsChainHistory (m_login_id, m_token, m_method, m_amount, m_data, m_date) VALUE ('".$login_id."', 'BAT', '" . $mode . "', " . $amount/100000000 . ", '" . $data . "', NOW() )";
+			$que_ChainHistory = mysqli_query($connect, $ChainHistory_query);
+
 			$array = array("result" => "1", "msg" => "Request OK, Success.", "status" => '1');
-			echo json_encode($array);
-			exit;
+		} else {
+			$array = array("result" => "1", "msg" => "Request OK, Success.", "status" => '0');
 		}
 
-		$array = array("result" => "1", "msg" => "Request OK, Success.", "status" => '0');
-		echo json_encode($array);
-		exit;
+		$json_result = json_encode($array);
+		print($json_result);
+
+		output_log($json_result, "NODE");
 	}
 }
 ?>

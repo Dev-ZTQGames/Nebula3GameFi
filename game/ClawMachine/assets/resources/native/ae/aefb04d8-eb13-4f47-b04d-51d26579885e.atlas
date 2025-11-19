@@ -1,0 +1,167 @@
+
+0118_kort_ani_idle_hospital.png
+size: 809,212
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_symbol
+  rotate: false
+  xy: 554, 4
+  size: 64, 39
+  orig: 66, 41
+  offset: 1, 1
+  index: -1
+Kort_L_blush
+  rotate: false
+  xy: 686, 11
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+Kort_L_coat
+  rotate: true
+  xy: 242, 9
+  size: 95, 106
+  orig: 95, 106
+  offset: 0, 0
+  index: -1
+Kort_L_collar
+  rotate: false
+  xy: 498, 2
+  size: 54, 43
+  orig: 54, 43
+  offset: 0, 0
+  index: -1
+Kort_L_ear
+  rotate: true
+  xy: 522, 109
+  size: 101, 105
+  orig: 101, 105
+  offset: 0, 0
+  index: -1
+Kort_L_eye
+  rotate: false
+  xy: 435, 2
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Kort_L_feet
+  rotate: false
+  xy: 635, 55
+  size: 69, 53
+  orig: 69, 53
+  offset: 0, 0
+  index: -1
+Kort_L_hand
+  rotate: true
+  xy: 498, 47
+  size: 60, 70
+  orig: 60, 70
+  offset: 0, 0
+  index: -1
+Kort_R_blush
+  rotate: false
+  xy: 730, 12
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+Kort_R_coat
+  rotate: false
+  xy: 724, 110
+  size: 83, 100
+  orig: 83, 100
+  offset: 0, 0
+  index: -1
+Kort_R_collar
+  rotate: false
+  xy: 635, 10
+  size: 49, 43
+  orig: 49, 43
+  offset: 0, 0
+  index: -1
+Kort_R_ear
+  rotate: false
+  xy: 629, 110
+  size: 93, 100
+  orig: 93, 100
+  offset: 0, 0
+  index: -1
+Kort_R_eye
+  rotate: false
+  xy: 456, 2
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Kort_R_feet
+  rotate: false
+  xy: 706, 56
+  size: 69, 52
+  orig: 69, 52
+  offset: 0, 0
+  index: -1
+Kort_R_hand
+  rotate: false
+  xy: 570, 45
+  size: 63, 62
+  orig: 63, 62
+  offset: 0, 0
+  index: -1
+Kort_body
+  rotate: false
+  xy: 242, 106
+  size: 137, 104
+  orig: 137, 104
+  offset: 0, 0
+  index: -1
+Kort_certificate
+  rotate: false
+  xy: 350, 8
+  size: 83, 96
+  orig: 83, 96
+  offset: 0, 0
+  index: -1
+Kort_head
+  rotate: false
+  xy: 2, 9
+  size: 238, 201
+  orig: 238, 201
+  offset: 0, 0
+  index: -1
+Kort_mouse
+  rotate: false
+  xy: 435, 23
+  size: 50, 13
+  orig: 50, 13
+  offset: 0, 0
+  index: -1
+Kort_paper
+  rotate: false
+  xy: 435, 38
+  size: 61, 79
+  orig: 61, 79
+  offset: 0, 0
+  index: -1
+Kort_shirt
+  rotate: false
+  xy: 381, 119
+  size: 139, 91
+  orig: 139, 91
+  offset: 0, 0
+  index: -1
+Kort_splint
+  rotate: true
+  xy: 777, 73
+  size: 35, 22
+  orig: 35, 22
+  offset: 0, 0
+  index: -1
+Kort_tongue
+  rotate: false
+  xy: 777, 46
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        @apply font-primary bg-white;
+    }
+    html{
+        @apply scroll-smooth;
+    }
+    p{
+        @apply  text-secondary text-base;
+    }
+    h1,h2,h3,h4,h5,h6{
+        @apply text-primary font-bold;
+    }
+    .nav-item {
+		@apply w-full relative mb-2;
+	}
+    li{
+        @apply text-secondary text-base;
+    }
+
+    hr{
+        @apply border-primary-shade-5;
+    }
+
+    ::selection{
+        @apply bg-primary text-white;
+    }
+}
+
+@layer components{
+    /* sidebar */
+    .nav-item {
+		@apply w-full relative mb-1;
+	}
+	.nav-link {
+		@apply p-3 rounded text-white text-sm capitalize font-bold flex items-center justify-between;
+	}
+	.nav-item:hover .nav-link {
+		@apply bg-[#2c5e6740] transition-colors;
+	}
+	.nav-item.active .nav-link {
+		@apply bg-[#2c5e6740];
+	}
+
+	.nav-item ul li .nav-link.active {
+		@apply bg-primary-shade-3;
+	}
+	.nav-item ul li .nav-link.active i {
+		@apply text-white;
+	}
+    [data-toggler="active"] {
+		@apply after:content-['\f107'] text-white after:text-lg;
+	}
+	.active[data-toggler="active"] {
+		@apply after:content-['\f077'] text-white after:text-sm;
+	}
+	[data-toggler="active"]::after {
+		@apply font-bold h-5 w-5 flex items-center justify-center;
+		font-family: "Font Awesome 5 Free";
+	}
+
+    .sub-menu-link {
+		@apply relative flex items-center text-white capitalize transition duration-300 text-sm font-semibold p-3;
+	}
+    .sub-menu-link span{
+        @apply opacity-0;
+    }
+    .sub-menu-link:hover span{
+        @apply opacity-100 transition-colors;
+    }
+    .sub-menu-link.active{
+        @apply bg-transparent;
+    }
+    .sub-menu-link.active span{
+        @apply opacity-100 transition-colors;
+    }
+
+    #sidebar::-webkit-scrollbar{
+        @apply hidden;
+    }
+
+    /* global form design */
+    .form-control{
+        @apply border border-primary-shade-5 text-base font-medium text-secondary placeholder:text-[#B6B5C5] placeholder:text-sm-1 placeholder:font-medium focus:outline-none w-full py-[9px] px-4 rounded;
+    }
+    .form-control.invalid-input{
+        --tw-border-opacity: 1;
+        border-color: rgb(203 52 72 / var(--tw-border-opacity));
+    }
+    .form-label{
+        @apply text-base text-primary font-bold capitalize mb-2 inline-block;
+    }
+
+    #openSideBar{
+        @apply w-12 h-10;
+    }
+
+    /* global d2c_card design  */
+    .d2c_card{
+        @apply p-5 shadow-global rounded-md;
+    }
+    .d2c_card_title{
+        @apply text-primary font-bold text-lg xxl:text-xl-1 capitalize mb-4;
+    }
+    .d2c_card_title_1{
+        @apply text-[30px] font-bold;
+    }
+
+    /* page title */
+    .d2c_title{
+        @apply text-primary text-2xl lg:text-3xl font-extrabold mb-2 capitalize;
+    }
+    /* button design */
+    .d2c_btn{
+        @apply bg-primary text-white text-lg font-semibold rounded py-2 px-6 hover:bg-secondary-shade-1 transition-colors capitalize font-primary outline-none;
+    }
+    /* authentication page social media design */
+    .d2c_social_media a{
+        @apply inline-flex items-center justify-center relative w-10 h-10 text-secondary rounded-sm-1 border border-primary-shade-5 hover:text-white hover:bg-primary transition-colors mr-2;
+    }
+    /* global table design */
+    table tr{
+        @apply border-b border-primary-shade-5;
+    }
+    table tr td:first-child{
+        @apply pl-0;
+    }
+    table td{
+        @apply py-3 px-6 text-secondary text-sm font-bold capitalize;
+    }
+    table th{
+        @apply font-bold text-left py-3 px-6 text-primary text-base capitalize;
+    }
+
+    /* tab button */
+    .d2c_tabs_wrapper{
+        @apply inline-flex p-[5px] bg-primary-shade-5 rounded-md w-full md:max-w-max;
+    }
+    .tab-button,.global_tab_btn{
+        @apply text-secondary text-xs-1 font-extrabold capitalize px-3 xxl:px-4  py-2 rounded-sm-1 hover:bg-white hover:text-primary; 
+    }
+    .tab-button.active ,.global_tab_btn.active{
+		@apply bg-white text-primary;
+	}
+    .tab-button{
+        @apply m-[1px];
+    }
+
+    /* select menu */
+    .d2c_show{
+        @apply flex items-center bg-primary-shade-5 rounded p-[5px] pl-4 mt-2 md:mt-0 min-w-full md:min-w-min;
+    }
+    .d2c_show select{
+        @apply text-primary bg-white mb-0 transition-all cursor-pointer rounded-sm outline-0 appearance-none px-3 pe-6 py-2 text-sm font-bold;
+    }
+    .d2c_select_wrapper{
+        @apply relative flex items-center justify-between after:w-[8px] after:h-[8px] after:border-primary after:border-b-2 after:border-r-2 after:transform after:rotate-45 after:absolute after:right-3 after:-mt-1;
+    }
+    .d2c_select_wrapper::after{
+        @apply z-40;
+    }
+
+    /* global button group */
+    .d2c_btn_group{
+        @apply align-middle select-none font-semibold text-center uppercase transition-all text-xs-1 md:text-base p-2 md:p-3 rounded-lg border border-primary-shade-5 text-secondary hover:text-white bg-white hover:bg-primary active:bg-primary rounded-r-none border-r-0 rounded-l-none;
+    }
+
+    /* faq tab */
+    .tab-button {
+		@apply before:content-[''] before:bg-primary-shade-5 before:h-full before:w-[1px] before:absolute before:left-[-14px] before:bottom-0 after:content-[''] after:bg-transparent after:h-[1px] after:w-[4px] after:rounded after:absolute after:-left-[16px] after:top-0 after:z-0 uppercase;
+	}
+    .tab-button.active{
+        @apply after:bg-primary after:h-full transition duration-300;
+    }
+
+    /* home page market cap item */
+    .d2c_market_cap_wrapper .d2c_item_wrapper{
+        @apply border-primary-shade-5 border-b last:border-none last:pb-0;
+    }
+
+    /* landing page css */
+    .d2c_landing_page p{
+        @apply text-base xl:text-lg ;
+    }
+    .d2c_sub_title{
+        @apply text-lg font-bold capitalize mb-2;
+    }
+
+    .d2c_navigation .nav_link{
+        @apply text-[#e8e4fb] hover:text-white px-3 lg:px-1 xl:px-2 xxl:px-3 py-2 text-base-1 font-semibold transition duration-300 capitalize;
+    }
+    .d2c_navigation .nav_link.active{
+        @apply text-white;
+    }
+
+    .d2c_navigation .d2c-btn{
+        @apply bg-transparent text-white px-8 capitalize text-sm-1 font-semibold hover:bg-white hover:text-primary;
+    }
+
+    .d2c_navigation #desktop-submenu a{
+      @apply  text-[#E8E4FB] hover:text-white;
+    }
+
+    #mobile-submenu a{
+        @apply text-[#E8E4FB] hover:text-white;
+    }
+
+    /* features card */
+    .d2c_features_card{
+        @apply px-6 py-10 text-center rounded-md shadow-global;
+    }
+
+    /* slider */
+    .d2c_testimonial_slider .slick-dots{
+        @apply -bottom-10;
+    }
+    .d2c_testimonial_slider .slick-dots li{
+        @apply w-min h-min;
+    }
+    .d2c_testimonial_slider .slick-dots li button{
+        @apply w-[10px] h-[10px] rounded-full bg-secondary transition duration-300 mt-6 before:hidden;
+    }
+    .d2c_testimonial_slider .slick-dots li.slick-active button{
+        @apply w-[15px] h-[15px] bg-primary ring-1 ring-primary border-primary;
+    }
+    /* footer */
+    .d2c_footer p{
+        @apply text-base;
+    }
+
+}
+
+@layer utilities{
+    
+}

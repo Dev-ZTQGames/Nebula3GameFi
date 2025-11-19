@@ -1,0 +1,104 @@
+
+0001_tina_ani_idle_basic.png
+size: 582,318
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Tina_L_blush
+  rotate: false
+  xy: 428, 25
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+Tina_L_ear
+  rotate: true
+  xy: 366, 212
+  size: 104, 119
+  orig: 104, 119
+  offset: 0, 0
+  index: -1
+Tina_L_eye
+  rotate: true
+  xy: 451, 2
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+Tina_L_feet
+  rotate: false
+  xy: 483, 95
+  size: 91, 61
+  orig: 91, 61
+  offset: 0, 0
+  index: -1
+Tina_L_hand
+  rotate: true
+  xy: 487, 226
+  size: 90, 93
+  orig: 90, 93
+  offset: 0, 0
+  index: -1
+Tina_R_blush
+  rotate: false
+  xy: 490, 33
+  size: 55, 60
+  orig: 55, 60
+  offset: 0, 0
+  index: -1
+Tina_R_ear
+  rotate: true
+  xy: 366, 109
+  size: 101, 115
+  orig: 101, 115
+  offset: 0, 0
+  index: -1
+Tina_R_eye
+  rotate: false
+  xy: 428, 2
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Tina_R_feet
+  rotate: true
+  xy: 366, 9
+  size: 84, 60
+  orig: 84, 60
+  offset: 0, 0
+  index: -1
+Tina_R_hand
+  rotate: true
+  xy: 487, 158
+  size: 66, 92
+  orig: 66, 92
+  offset: 0, 0
+  index: -1
+Tina_body
+  rotate: true
+  xy: 2, 4
+  size: 312, 362
+  orig: 312, 362
+  offset: 0, 0
+  index: -1
+Tina_mouth
+  rotate: false
+  xy: 490, 2
+  size: 55, 29
+  orig: 55, 29
+  offset: 0, 0
+  index: -1
+flashS
+  rotate: false
+  xy: 547, 65
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+kine2
+  rotate: true
+  xy: 428, 87
+  size: 20, 39
+  orig: 39, 52
+  offset: 11, 5
+  index: -1

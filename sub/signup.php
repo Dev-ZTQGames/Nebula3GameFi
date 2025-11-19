@@ -5,9 +5,9 @@ if ($_SESSION['sess_login_id'] != "") {
 ?>
 	<script>
 	swal({
-	  title: 'Invalid access.',
-	  text: '<?php echo "Please log out and try again."; ?>',
-	  buttons: '<?php echo $lang['Confirm']; ?>',
+	  title: "<?php echo $lang['Invalidaccess']; ?>",
+	  text: "<?php echo $lang['PleaseLogOut']; ?>",
+	  buttons: "<?php echo $lang['confirm']; ?>",
 	}).then(function(){
 		location.href='/';
 	})
@@ -107,15 +107,15 @@ if($query == "join_process"){
 <div id="container" class="page-signup">
     <div class="article-header">
         <div class="article-header__inner wrap-middle">
-            <h2 class="article-title">Sign up</h2>
+            <h2 class="article-title"><?php echo $lang['Signup']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
     <div class="article-body">
         <div class="wrap-middle">
             <div class="join-form__head">
-                <h3 class="join-form__title">Please enter membership information</h3>
-                <p class="join-form__guide"><span><i>*</i>Marked section is mandatory, so please fill it out.</span></p>
+                <h3 class="join-form__title"><?php echo $lang['EnterMembershipInfo']; ?></h3>
+                <p class="join-form__guide"><span><i>*</i><?php echo $lang['PleaseFillOut']; ?></span></p>
             </div><!-- .join-form__title -->
             <div class="join-form">
 
@@ -133,7 +133,7 @@ if($query == "join_process"){
 
                 <div class="form-field-wrap">
                     <div class="form-field-item required">
-                        <label class="form-label" for="register_name"><span>Nickname</span></label>
+                        <label class="form-label" for="register_name"><span><?php echo $lang['Nickname']; ?></span></label>
                         <div class="form-input__wrap">
                             <input type="text" class="form-input" id="register_name" name="register_name" required placeholder="Please enter within 20 words excluding special characters.">
                             <div id="valid_message_name"><!--p class="valid-message valid-message--error"><i class="icon"></i><span>error message</span></p--></div>
@@ -142,7 +142,7 @@ if($query == "join_process"){
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item required">
-                        <label class="form-label" for="register_id"><span>ID</span></label>
+                        <label class="form-label" for="register_id"><span><?php echo $lang['ID']; ?></span></label>
                         <div class="form-input__wrap">
                             <input type="text" class="form-input" id="register_id" name="register_id" required placeholder="Please enter combination of 8~16 characters and numbers">
                             <div id="valid_message_id"><!--p class="valid-message valid-message--confirm"><i class="icon"></i><span>confirm message</span></p--></div>
@@ -151,7 +151,7 @@ if($query == "join_process"){
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item required">
-                        <label class="form-label" for="join-password"><span>Password</span></label>
+                        <label class="form-label" for="join-password"><span><?php echo $lang['Password']; ?></span></label>
                         <div class="form-input__wrap">
                             <input type="password" class="form-input" id="register_pw" name="register_pw" onkeyup="check_passwd(this.value)" required placeholder="Please enter combination of 8~16 characters and numbers">
 							<div id="valid_message_pw"></div>
@@ -160,7 +160,7 @@ if($query == "join_process"){
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item required">
-                        <label class="form-label" for="join-password-check"><span>Confirm your password</span></label>
+                        <label class="form-label" for="join-password-check"><span><?php echo $lang['ConfirmPassword']; ?></span></label>
                         <div class="form-input__wrap">
                             <input type="password" class="form-input" id="register_pw_check" name="register_pw_check" required>
 							<div id="valid_message_check_pw"></div>
@@ -169,19 +169,19 @@ if($query == "join_process"){
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item form-email required">
-                        <label class="form-label" for="register_email"><span>E-Mail</span></label>
+                        <label class="form-label" for="register_email"><span><?php echo $lang['EMail']; ?></span></label>
                         <div class="form-input__wrap">
                             <div class="form-input__inner">
                                 <input type="text" class="form-input" id="register_email" name="register_email" required>
-                                <button type="button" class="btn-basic btn-primary btn-email-verify disabled" id="send_email_verify" onclick="email_verify();"><span>Verify your email</span></button>
+                                <button type="button" class="btn-basic btn-primary btn-email-verify disabled" id="send_email_verify" onclick="email_verify();"><span><?php echo $lang['VerifyEmail']; ?></span></button>
                             </div>
-                            <div id="valid_message_email"><p class="valid-message valid-message--info"><i class="icon"></i><span>You need an E-Mail to access to Nebula.</span></p></div>
+                            <div id="valid_message_email"><p class="valid-message valid-message--info"><i class="icon"></i><span><?php echo $lang['EMailAccess']; ?></span></p></div>
                         </div><!-- .form_input_wrap -->
                     </div><!-- .form-field-item -->
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item required form-email-vertify" style="display:none">
-                        <label class="form-label" for="email_vertify"><span>E-Mail verification code</span></label>
+                        <label class="form-label" for="email_vertify"><span><?php echo $lang['EVerificationCode']; ?></span></label>
                         <div class="form-input__wrap">
                             <div class="form-input__inner">
                                 <div class="email-vertify__input">
@@ -189,15 +189,15 @@ if($query == "join_process"){
                                     <input type="hidden" name="emailchk_cert_num" id="emailchk_cert_num">
                                     <span id="timer">0:00</span>
                                 </div>
-                                <button type="button" class="btn-basic btn-primary" id="btn_cert" onclick="email_cert_number_confirm();"><span>Verify</span></button>
-                                <button type="button" class="btn-basic btn-email-verify disabled" id="resend_email_verify"><span>Verification sent</span></a>
+                                <button type="button" class="btn-basic btn-primary" id="btn_cert" onclick="email_cert_number_confirm();"><span><?php echo $lang['Verify']; ?></span></button>
+                                <button type="button" class="btn-basic btn-email-verify disabled" id="resend_email_verify"><span><?php echo $lang['VerificationSent']; ?></span></a>
                             </div><!-- .form-input__inner -->
                         </div><!-- .form-input__wrap -->
                     </div>
                 </div><!-- .form-field-wrap -->
                 <div class="form-field-wrap">
                     <div class="form-field-item form-referral">
-                        <label class="form-label" for="join-referral"><span>My referral</span></label>
+                        <label class="form-label" for="join-referral"><span><?php echo $lang['Myreferral']; ?></span></label>
                         <div class="form-input__wrap">
                             <div class="form-input__inner">
                                 <input type="text" class="form-input" id="join-referral" name="referral" value="<?php echo $referral; ?>">
@@ -210,7 +210,7 @@ if($query == "join_process"){
 			</form>
 
             </div><!-- .join-form -->
-            <div class="btn-wrap center btn-confirm"><a href="#" class="btn-basic btn-primary" onclick="join_check();">Sign up</a></div>
+            <div class="btn-wrap center btn-confirm"><a href="#" class="btn-basic btn-primary" onclick="join_check();"><?php echo $lang['Signup']; ?></a></div>
         </div><!-- .wrap -->
     </div><!-- .article-body -->
 </div><!-- #container -->
@@ -315,40 +315,40 @@ if($query == "join_process"){
 
 		if (join_pw == "" || !isValidPassword(join_pw)) {
 			swal({
-			  text: '<?php echo $lang['Please_Confirm_Password']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['Please_Confirm_Password']; ?>",
+			  buttons: "<?php echo $lang['confirm']; ?>",
 			})
 			return false;
 		} 
 
 		if (join_pw != check_pw) {
 			swal({
-			  text: '<?php echo $lang['Password_Not_Match']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['Password_Not_Match']; ?>",
+			  buttons: "<?php echo $lang['Confirm']; ?>",
 			})
 			return false;
 		}
 
 		if (email == "" || !isValidEmail(email)) {
 			swal({
-			  text: '<?php echo $lang['Email_Check']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['Email_Check']; ?>",
+			  buttons: "<?php echo $lang['Confirm']; ?>",
 			})
 			return false;
 		} 		
 		
 		if ( $("#idchk_commit").val() != "Y" ) {
 			swal({
-			  text: '<?php echo $lang['ID_Check']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['ID_Check']; ?>",
+			  buttons: "<?php echo $lang['Confirm']; ?>",
 			})
 			return false;
 		} 
 
 		if (  $("#emailchk_commit").val() != "Y" ) {
 			swal({
-			  text: '<?php echo $lang['Check your email verification']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['Check your email verification']; ?>",
+			  buttons: "<?php echo $lang['Confirm']; ?>",
 			})
 			return false;
 		}
@@ -521,8 +521,8 @@ if($query == "join_process"){
 
 		if ( !isValidEmail(email) ) {
 			swal({
-			  text: '<?php echo $lang['Email_Check']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['Email_Check']; ?>",
+			  buttons: "<?php echo $lang['confirm']; ?>",
 			})
 			return;
 		}
@@ -540,11 +540,11 @@ if($query == "join_process"){
 					break;
 				case("false"):
 					swal({
-						text: email+', <?php echo $lang['Signed_Up_Same_Email']; ?>',
+						text: email+", <?php echo $lang['Signed_Up_Same_Email']; ?>",
 						buttons: {
-							cancel : '<?php echo $lang['Cancel']; ?>',
+							cancel : "<?php echo $lang['Cancel']; ?>",
 							confirm : {
-								text : '<?php echo $lang['Confirm']; ?>',
+								text : "<?php echo $lang['confirm']; ?>",
 								value : 'catch'
 							},
 						},
@@ -558,8 +558,8 @@ if($query == "join_process"){
 				 break;
 				case("bad_character"):
 					swal({
-					  text: '<?php echo $lang['Email_Check']; ?>',
-					  buttons: '<?php echo $lang['Confirm']; ?>',
+					  text: "<?php echo $lang['Email_Check']; ?>",
+					  buttons: "<?php echo $lang['confirm']; ?>",
 					})
 					$("#send_email_verify").removeClass('disabled');
 					break;
@@ -567,8 +567,8 @@ if($query == "join_process"){
 		   },
 		   error: function whenError(e){    // ERROR FUNCTION
 			swal({
-			  text: '<?php echo $lang['Try_Again_Later']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  text: "<?php echo $lang['Try_Again_Later']; ?>",
+			  buttons: "<?php echo $lang['confirm']; ?>",
 			})
 			//alert("code : " + e.status + "\r\nmessage : " + e.responseText);
 		   }
@@ -604,7 +604,7 @@ if($query == "join_process"){
 		//	$("#email_vertify").val(num);
 			swal({
 			  text: email+', <?php echo $lang['Verification_Code_Sending_Text']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  buttons: '<?php echo $lang['confirm']; ?>',
 			  closeOnClickOutside: false,
 			  closeOnEsc: false,
 			}).then(function(isConfirm) {
@@ -662,7 +662,7 @@ if($query == "join_process"){
 			$("#emailchk_cert_num").val(num);
 			swal({
 			  text: email+', <?php echo $lang['Verification_Code_Resending_Text']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  buttons: '<?php echo $lang['confirm']; ?>',
 			}).then(function(isConfirm) {
 			  if (isConfirm) {
 				  $('#resend_email_verify').addClass('disabled');
@@ -712,7 +712,7 @@ if($query == "join_process"){
 			//alert
 			swal({
 			  text: '<?php echo $lang['Not_Match_Verification_Code']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  buttons: '<?php echo $lang['confirm']; ?>',
 			})
 		} else {
 			$('#register_email').prop('readonly', true);
@@ -721,7 +721,7 @@ if($query == "join_process"){
 			//alert
 			swal({
 			  text: '<?php echo $lang['Have_Been_Authenticated']; ?>',
-			  buttons: '<?php echo $lang['Confirm']; ?>',
+			  buttons: '<?php echo $lang['confirm']; ?>',
 			})
 			$("#btn_cert").addClass("disabled");
 			$('#timer').css("display","none");

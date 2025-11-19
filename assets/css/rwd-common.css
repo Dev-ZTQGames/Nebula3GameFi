@@ -58,6 +58,7 @@
 
     /* FORM */
     .form-field-item {gap:15rem;}
+    .valid-message {font-size:14rem;}
 
     /* SWIPER */
     .swiper-pagination-bullet span {width:12rem; height:12rem;}
@@ -89,7 +90,7 @@
     .form-input__inner {display:block;}
     .form-input {height:50rem; padding: 6rem 15rem 10rem;}
 
-    .valid-message {margin-top:6rem; font-size:14rem;}
+    .valid-message {margin-top:6rem; font-size:13rem;}
     .valid-message .icon {width: 16rem; height: 16rem; line-height: 16rem;}
 
     /* SWIPER */

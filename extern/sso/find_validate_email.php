@@ -6,8 +6,8 @@ $connect = mysqli_connect($DB_INFO['HOST'], $DB_INFO['ID'], $DB_INFO['PASS'], $D
 $Ajax_return="none";
 if ($_POST['email']){
 	$Result = preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $_POST['email']);
-
-	if( $Result == true )	 {
+	$check = checkEmailDomainMX($_POST['email']);
+	if( $Result == true && $check == true )	 {
 
 		$que = mysqli_query($connect, "SELECT login_id FROM Accounts WHERE email='".$_POST['email']."'");
 
@@ -18,6 +18,8 @@ if ($_POST['email']){
 		} else {
 			$Ajax_return="true";
 		} 
+	} else {
+		$Ajax_return = 'noId';
 	}
 }
 

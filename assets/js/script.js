@@ -264,6 +264,14 @@ function header_util_popup(){
         $('.wallet-addr-form__send-to-multi').css('display','flex');
     });
     $('.wallet-addr-form__send-to-multi .btn-cancel').on('click', function(){
+		$('#wallet-addr-form__send-to-multi__amount').val('');
+	//	if ($('input[name=nebula-]:checked').val() == 'sn3') {
+	//		$('.wallet-addr-form__fee').find('b').text("- SN3");
+	//	} else {
+	//		$('.wallet-addr-form__fee').find('b').text("- BAT");
+	//	}
+		
+		$('.wallet-addr-form__input').removeClass('active');
         $('.wallet-addr-form__send-to-multi').hide();
     });
 /*
@@ -280,6 +288,8 @@ function header_util_popup(){
         $('.wallet-addr-form__send-to-nebula').css('display','flex');
     });
     $('.wallet-addr-form__send-to-nebula .btn-cancel').on('click', function(){
+		$('#wallet-addr-form__send-to-nebula__amount').val('');
+		$('.wallet-addr-form__input').removeClass('active');
         $('.wallet-addr-form__send-to-nebula').hide();
     });
 
@@ -287,6 +297,14 @@ function header_util_popup(){
      // $('.sign-popup').show();
         $('.wallet-addr-form__send-to-nebula').hide();
     });
+	
+		
+	$('.wallet-addr-form__send-to-external-wallet .btn-cancel').on('click', function() {
+		$('.wallet-addr-form__input').removeClass('active');
+		$('#wallet-addr-form__send-to-external__amount').val('');
+		$('#external-addr').val('');
+		$('.wallet-addr-form__send-to-external-wallet').hide();
+	});
 
 }
 
@@ -586,6 +604,7 @@ function main_visual() {
       },
     });
     swiperCenter.controller.control = swiperTextSide;
+    swiperTextSide.controller.control = swiperCenter;
 
 
     /*/ Play, Pause

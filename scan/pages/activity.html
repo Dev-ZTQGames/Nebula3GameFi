@@ -1,0 +1,242 @@
+<?php include "../header.html";?>
+
+            <div class="p-6 lg:p-8">
+                <div class="d2c_card">
+                    <h4 class="d2c_card_title">CryptoTrakX History</h4>
+                    <div class="grid grid-cols-12 gap-2">
+                        <!-- Tab Button -->
+                        <div class="d2c_tabs_wrapper flex-wrap inline-flex col-start-1 col-span-12 md:col-span-3">
+                            <button class="tab-button capitalize" data-d2c-tab="tab1">Buy</button>
+                            <button class="tab-button capitalize" data-d2c-tab="tab2">Sell</button>
+                        </div>
+                        <!-- Tab Button -->
+
+                        <div class="md:flex col-start-1 col-span-12 md:col-start-4 md:col-span-9">
+                            <div class="ml-auto md:mr-4">
+                                <div class="flex row flex-wrap w-full">
+                                    <button class="d2c_btn_group rounded-lg rounded-r-none" type="button">
+                                        All
+                                    </button>
+                                    <button class="d2c_btn_group" type="button">
+                                        1m
+                                    </button>
+                                    <button class="d2c_btn_group" type="button">
+                                        3m
+                                    </button>
+                                    <button class="d2c_btn_group" type="button">
+                                        6m
+                                    </button>
+                                    <button class="d2c_btn_group" type="button">
+                                    1m
+                                    </button>
+                                    <button class="d2c_btn_group rounded-lg rounded-l-none border-r" type="button">
+                                        ytd
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- show button wrapper -->
+                            <div class="d2c_show ml-0">
+                                <p class="mb-0 text-sm me-2 font-bold">Show</p>
+                                <div class="flex items-center justify-end w-full rounded">
+                                    <!-- Select menu div contains custom arrow -->
+                                    <div class="d2c_select_wrapper">
+                                        <!-- Select menu -->
+                                        <select>
+                                            <option selected>10</option>
+                                            <option value="25" class="p-2">25</option>
+                                            <option value="50" class="p-2">50</option>
+                                            <option value="100" class="p-2">100</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <!-- Tab 1 -->
+                        <div id="tab1" class="tab-content hidden">
+                            <!-- History table -->
+                            <div class="overflow-x-auto pt-4">
+                                <table class="border-collapse w-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="min-w-[12rem] pl-0">Transaction ID</th>
+                                            <th class="min-w-[12rem]">Type</th>
+                                            <th class="min-w-[10rem]">Currency</th>
+                                            <th class="min-w-[8rem]">Side</th>
+                                            <th class="min-w-[12rem]">Amount</th>
+                                            <th class="min-w-[10rem]">Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#565845522</td>
+                                            <td>Royalty Free Income</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566241 BTC</td>
+                                            <td>22 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845523</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566562 BTC</td>
+                                            <td>23 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845524</td>
+                                            <td>Royalty Free Income</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566444 BTC</td>
+                                            <td>24 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845525</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566889 BTC</td>
+                                            <td>25 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845526</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566772 BTC</td>
+                                            <td>26 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845527</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566134 BTC</td>
+                                            <td>27 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845528</td>
+                                            <td>Royalty Free Income</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566452 BTC</td>
+                                            <td>29 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Tab 1 -->
+
+                        <!-- Tab 2 -->
+                        <div id="tab2" class="tab-content hidden">
+                            <!-- History table -->
+                            <div class="overflow-x-auto pt-4">
+                                <table class="border-collapse w-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="min-w-[12rem] pl-0">Transaction ID</th>
+                                            <th class="min-w-[12rem]">Type</th>
+                                            <th class="min-w-[10rem]">Currency</th>
+                                            <th class="min-w-[8rem]">Side</th>
+                                            <th class="min-w-[12rem]">Amount</th>
+                                            <th class="min-w-[10rem]">Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#565845525</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566889 BTC</td>
+                                            <td>25 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845526</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566772 BTC</td>
+                                            <td>26 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845527</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566134 BTC</td>
+                                            <td>27 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845528</td>
+                                            <td>Royalty Free Income</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566452 BTC</td>
+                                            <td>29 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845522</td>
+                                            <td>Royalty Free Income</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566241 BTC</td>
+                                            <td>22 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845523</td>
+                                            <td>Withdraw</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566562 BTC</td>
+                                            <td>23 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#565845524</td>
+                                            <td>Royalty Free Income</td>
+                                            <td>Bitcoin</td>
+                                            <td>Sell</td>
+                                            <td>0.24566444 BTC</td>
+                                            <td>24 Feb 2024</td>
+                                            <td>Complete</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Tab 2 -->
+                    </div>
+                </div>
+                <!-- card end div -->
+            </div>
+
+<?php include "../footer.html";?>
+
+<!--
+    Template Name: {{CryptoTrakX}}
+    Template URL: {{https://designtocodes.com/product/cryptotrakx-tailwind-crypto-dashboard}}
+    Description: {{Take Control of Your Crypto Portfolio with CryptoTrakX Tailwind Crypto Dashboard! Keep track of all your cryptocurrencies with ease using it.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ CryptoTrakX }} 
+-->

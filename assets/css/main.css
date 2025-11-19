@@ -5,6 +5,8 @@
 /* **************************************** *
  * COMMON
  * **************************************** */
+.page-home .main-container {overflow-x:visible;}
+
 /* SECTION */
 .main-section { }
 .main-section {margin-top:160rem;}
@@ -92,6 +94,7 @@
  * **************************************** */
 /* .main-nfts__list {padding-bottom:30rem;}
 .main-nfts__list .swiper-scrollbar {left:0; width:100%; background:#444;} */
+.main-nfts {overflow: hidden;}
 .nft-item {width:100%; max-width:281.5rem; border-radius:12rem; overflow:hidden; -webkit-mask-image: -webkit-radial-gradient(white, black);margin-right:28rem;}
 .nft-item:last-child {margin-right:0;}
 .nft-item figure {padding-top:100%;}
@@ -119,8 +122,8 @@
 .launchpad-info {padding:20rem; background:#2C2C2C;}
 .launchpad-info h3 { font-size:20rem; font-weight:700; color:#fff; margin-top:10rem;overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal;}
 .launchpad-info .goods {font-size:16rem; display:flex; align-items:center; color:#ddd}
-.launchpad-info .goods i { display:inline-block; margin-right: 7rem; width: 20rem; height: 20rem; background: #f4f4f4; overflow: hidden; border-radius: 50%; overflow: hidden;text-align:center;}
-.launchpad-info .goods i img {display:block; width:100%; height:100%; padding:3rem;}
+.launchpad-info .goods i { display:inline-block; margin-right: 7rem; width: 20rem; height: 20rem; overflow: hidden; border-radius: 50%; overflow: hidden;text-align:center;}
+.launchpad-info .goods i img {display:block; width:100%; height:100%;}
 
 
 

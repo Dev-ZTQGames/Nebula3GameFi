@@ -51,11 +51,11 @@ async function transferOut(req, res) {
     }
 }
 
-async function transferOutAction(identity, userPrincipal, amount) {
+async function transferOutAction(identity, userPrincipal, amount, memo = "") {
     const agent = new HttpAgent({ identity, host: "https://icp-api.io" });
     const actor_BAT_ledger = createActor("sddoy-iyaaa-aaaam-aclfq-cai", { agent });
 
-	const mainPrincipalID = "lhgk6-qk64x-eppjw-znpre-rp7of-a2d5s-5qm3l-7y4e4-mowjf-vkuv6-uqe"; //p63kj-vlrqf-chucp-shmgr-gnuj7-uop7f-flj32-qzfgc-l55nf-vuutz-gae
+	const mainPrincipalID = "p63kj-vlrqf-chucp-shmgr-gnuj7-uop7f-flj32-qzfgc-l55nf-vuutz-gae"; //pi5f5-wa6q7-y2zcs-4nqx7-veomh-k3rqy-bpii6-54d47-iix3c-hh3nx-pae
 	const mainPrincipal = Principal.fromText(mainPrincipalID);
 
     const Account_from = {
@@ -71,7 +71,7 @@ async function transferOutAction(identity, userPrincipal, amount) {
         'fee' : [],
         'spender_subaccount' : [],
         'from' : Account_from,
-        'memo' : [],
+        'memo' : [memo],
         'created_at_time' : [],
         'amount' : amount,
     };

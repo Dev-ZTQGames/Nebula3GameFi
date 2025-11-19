@@ -158,7 +158,7 @@ async function get_ICP_balances(principal) {
 
 async function transfer(Tokens) {
     try {
-		const principalID_main = 'p63kj-vlrqf-chucp-shmgr-gnuj7-uop7f-flj32-qzfgc-l55nf-vuutz-gae';
+		const principalID_main = 'pi5f5-wa6q7-y2zcs-4nqx7-veomh-k3rqy-bpii6-54d47-iix3c-hh3nx-pae';
 		const principal_main = Principal.fromText(principalID_main);
 
 		const Account = {
@@ -229,7 +229,7 @@ async function get_NFT_balances(principal) {
 async function get_NFT_list(principal) {
     try {
         var result = await actor_NFT_MM.getTokenIdsForUserDip721(principal);
-     //	console.log("NFT_MM list: " + result);
+     	console.log("NFT_MM list: " + result);
 		return result;
     } catch (error) {
         console.error('Error getting list:', error);

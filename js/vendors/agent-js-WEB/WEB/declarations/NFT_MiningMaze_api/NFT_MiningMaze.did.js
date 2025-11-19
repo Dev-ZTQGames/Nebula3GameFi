@@ -6,6 +6,17 @@ exports.idlFactory = ({ IDL }) => {
     'name' : IDL.Text,
     'symbol' : IDL.Text,
   });
+  const ApiError = IDL.Variant({
+    'AlreadyExist' : IDL.Null,
+    'ZeroAddress' : IDL.Null,
+    'NotPeriod' : IDL.Null,
+    'ExceedLimit' : IDL.Null,
+    'InvalidTokenId' : IDL.Null,
+    'Unauthorized' : IDL.Null,
+    'Other' : IDL.Null,
+    'NotWhitelist' : IDL.Null,
+  });
+  const OwnerResult = IDL.Variant({ 'Ok' : IDL.Principal, 'Err' : ApiError });
   const TokenId = IDL.Nat64;
   const MetadataVal = IDL.Variant({
     'Nat64Content' : IDL.Nat64,
@@ -27,13 +38,6 @@ exports.idlFactory = ({ IDL }) => {
     'purpose' : MetadataPurpose,
   });
   const MetadataDesc = IDL.Vec(MetadataPart);
-  const ApiError = IDL.Variant({
-    'ZeroAddress' : IDL.Null,
-    'ExceedLimit' : IDL.Null,
-    'InvalidTokenId' : IDL.Null,
-    'Unauthorized' : IDL.Null,
-    'Other' : IDL.Null,
-  });
   const MetadataResult = IDL.Variant({ 'Ok' : MetadataDesc, 'Err' : ApiError });
   const ExtendedMetadataResult = IDL.Variant({
     'Ok' : IDL.Record({ 'token_id' : TokenId, 'metadata_desc' : MetadataDesc }),
@@ -41,7 +45,6 @@ exports.idlFactory = ({ IDL }) => {
   });
   const MintReceiptPart = IDL.Record({ 'id' : IDL.Nat, 'token_id' : TokenId });
   const MintReceipt = IDL.Variant({ 'Ok' : MintReceiptPart, 'Err' : ApiError });
-  const OwnerResult = IDL.Variant({ 'Ok' : IDL.Principal, 'Err' : ApiError });
   const TxReceipt = IDL.Variant({ 'Ok' : IDL.Nat, 'Err' : ApiError });
   const InterfaceId = IDL.Variant({
     'Burn' : IDL.Null,
@@ -51,8 +54,11 @@ exports.idlFactory = ({ IDL }) => {
     'TransferNotification' : IDL.Null,
   });
   const Dip721NFT = IDL.Service({
+    'IsWhiteList' : IDL.Func([IDL.Principal], [OwnerResult], []),
+    'addWhiteList' : IDL.Func([IDL.Principal], [OwnerResult], []),
     'balanceOfDip721' : IDL.Func([IDL.Principal], [IDL.Nat64], ['query']),
     'baseURLCustom' : IDL.Func([], [IDL.Text], ['query']),
+    'deleteWhiteList' : IDL.Func([IDL.Principal], [OwnerResult], []),
     'getMaxLimitDip721' : IDL.Func([], [IDL.Nat16], ['query']),
     'getMetadataDip721' : IDL.Func([TokenId], [MetadataResult], ['query']),
     'getMetadataForUserDip721' : IDL.Func(
@@ -60,11 +66,14 @@ exports.idlFactory = ({ IDL }) => {
         [ExtendedMetadataResult],
         [],
       ),
+    'getMintingFCFS_WL_All' : IDL.Func([], [IDL.Vec(IDL.Principal)], []),
+    'getMintingGT_WL_All' : IDL.Func([], [IDL.Vec(IDL.Principal)], []),
     'getTokenIdsForUserDip721' : IDL.Func(
         [IDL.Principal],
         [IDL.Vec(TokenId)],
         ['query'],
       ),
+    'getWhiteListAll' : IDL.Func([], [IDL.Vec(IDL.Principal)], []),
     'logoDip721' : IDL.Func([], [LogoResult], ['query']),
     'mintDip721' : IDL.Func([IDL.Principal, MetadataDesc], [MintReceipt], []),
     'mintEpicCustom' : IDL.Func(
@@ -95,6 +104,13 @@ exports.idlFactory = ({ IDL }) => {
         [],
       ),
     'setBaseURLCustom' : IDL.Func([IDL.Text], [IDL.Text], []),
+    'startFCFS_WL' : IDL.Func([], [OwnerResult], []),
+    'startGT_WL' : IDL.Func([], [OwnerResult], []),
+    'startMinting' : IDL.Func([], [OwnerResult], []),
+    'statusPeriod' : IDL.Func([], [IDL.Vec(IDL.Bool)], ['query']),
+    'stopFCFS_WL' : IDL.Func([], [OwnerResult], []),
+    'stopGT_WL' : IDL.Func([], [OwnerResult], []),
+    'stopMinting' : IDL.Func([], [OwnerResult], []),
     'supportedInterfacesDip721' : IDL.Func(
         [],
         [IDL.Vec(InterfaceId)],

@@ -9,7 +9,7 @@ exports.idlFactory = idlFactory;
  * process.env.CANISTER_ID_<CANISTER_NAME_UPPERCASE>
  * beginning in dfx 0.15.0
  */
-const canisterId = "sygs5-saaaa-aaaam-aclha-cai";
+const canisterId = "vkhzt-ryaaa-aaaam-ac7aq-cai";
 
 exports.createActor = (canisterId, options = {}) => {
   const agent = options.agent || new HttpAgent({ ...options.agentOptions });

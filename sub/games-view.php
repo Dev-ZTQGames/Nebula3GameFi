@@ -23,6 +23,8 @@ switch($row_games['m_category2']) {
 	break;
 	case '5': $category2 = "RTS";
 	break;
+	case '6': $category2 = "SPORTS";
+	break;
 }
 
 $info['m_chain'] = $row_games['m_chain'];
@@ -30,19 +32,31 @@ $info['m_chain'] = $row_games['m_chain'];
 $sub_banner = explode(",",$info['m_sub_banner']);
 
 $icon_i = $icon_o = $icon_pc = $icon_web = "";
-if($info['m_platform_icon_i'] !== 'Y'){
+if($info['m_platform_icon_i'] > 1){
 	$icon_i = "coming-soon";
 }
-if($info['m_platform_icon_o'] !== 'Y'){
+if($info['m_platform_icon_o'] > 1){
 	$icon_o = "coming-soon";
 }
-if($info['m_platform_icon_pc'] !== 'Y'){
+if($info['m_platform_icon_pc'] > 1){
 	$icon_pc = "coming-soon";
 }
-if($info['m_platform_icon_web'] !== 'Y'){
+if($info['m_platform_icon_web'] > 1){
 	$icon_web = "coming-soon";
 }
 
+if($info['m_platform_icon_i'] < 3){
+	$icon_i .= " active";
+}
+if($info['m_platform_icon_o'] < 3){
+	$icon_o .= " active";
+}
+if($info['m_platform_icon_pc'] < 3){
+	$icon_pc .= " active";
+}
+if($info['m_platform_icon_web'] < 3){
+	$icon_web .= " active";
+}
 
 $que = mysqli_query($connect, "SELECT m_token_id, m_level, m_breeding FROM AccountsNFTData"); 
 $list = array();
@@ -65,7 +79,7 @@ let totalSupplyEpicCustom;
 let totalSupplyUniqueCustom;
 let totalSupplyLegendaryCustom;
 
-window.addEventListener('message', function(event) {
+window.addEventListener('message',async function(event) {
 	if (allowedDomains.includes(event.origin)) {
 		if ( /*(event.data.LoggedIn === true || event.data.LoggedIn === false) &&*/ once === true ) {
 			once = false;
@@ -73,15 +87,15 @@ window.addEventListener('message', function(event) {
 			iframe.contentWindow.postMessage('totalSupply', '*');
 		}
 		if (event.data.NFT_totalSupply === true) {
-			const data = <?php echo $info_nft; ?>;
+			const data = <?php echo $info_nft?>;
 
 			totalSupplyNormalCustom		= Number(event.data.totalSupplyNormalCustom);
-			totalSupplyRareCustom		= Number(event.data.totalSupplyRareCustom) + 5556;
-			totalSupplyEpicCustom		= Number(event.data.totalSupplyEpicCustom) + 7778;
-			totalSupplyUniqueCustom		= Number(event.data.totalSupplyUniqueCustom) + 8889;
-			totalSupplyLegendaryCustom	= Number(event.data.totalSupplyLegendaryCustom) + 9445;
+			totalSupplyRareCustom		= Number(event.data.totalSupplyRareCustom) + 5554;
+			totalSupplyEpicCustom		= Number(event.data.totalSupplyEpicCustom) + 7776;
+			totalSupplyUniqueCustom		= Number(event.data.totalSupplyUniqueCustom) + 8887;
+			totalSupplyLegendaryCustom	= Number(event.data.totalSupplyLegendaryCustom) + 9442;
 
-			const game_code = "<?php echo $game_code; ?>";
+			const game_code = "mm";
 			
 			var totalSupplyMap = {
 			    Basic: totalSupplyNormalCustom,
@@ -90,10 +104,13 @@ window.addEventListener('message', function(event) {
 			    Unique: totalSupplyUniqueCustom,
 			    Legend: totalSupplyLegendaryCustom
 			};
+			
+			const items = [];
+			const promises = [];
 
 			for (var rarity in totalSupplyMap) {
-			    if (totalSupplyMap.hasOwnProperty(rarity)) {
-			        for (var id = getIdStart(rarity); id <= totalSupplyMap[rarity]; id++) {
+			    if (totalSupplyMap.hasOwnProperty(rarity) && totalSupplyMap[rarity] != 0) {
+			        for (var id = getIdStart(rarity); id < totalSupplyMap[rarity]; id++) {
 			            var level = 0;
 			            var breeding = 5;
 			            var selectedToken = data.find(item => item.m_token_id === id.toString());
@@ -101,41 +118,68 @@ window.addEventListener('message', function(event) {
 			                level = selectedToken.m_level;
 			                breeding = selectedToken.m_breeding;
 			            }
-			            var newBlock = '<div class="nft-item" data-category="' + game_code + '" data-rarity="' + rarity + '">' +
-										    '<figure class="lazyload">' +
-												'<img loading="lazy" src="https://<?php echo $HOST; ?>.nebula3gamefi.com/img_remote/test/game/mm/' + rarity.toLowerCase() +'.png" alt="" class="lazyload--loaded" style="z-index:1">' +
-										        '<img loading="lazy" src="https://cdn.aurorahunt.xyz/nft/mm/img/' + id + '.png" alt="" />' +
-										        '<noscript><img loading="lazy" src="https://dummyimage.com/282x282/333/fff" alt="" /></noscript>' +
-										    '</figure>' +
-										    '<div class="main-nfts__info nft-info">' +
-										        '<h3 class="nft-info__title">Mining Maze</h3>' +
-										        '<ul>' +
-										            '<li><span>' + rarity + '</span><span>#' + id + '</span></li>' +
-										            '<li><span>Breeding Count</span><span>(' + breeding + '/5)</span></li>' +
-										            '<li><span>Current Level</span><span>(' + level + '/5)</span></li>'+
-										        '</ul>' +
-										    '</div>' +
-										'</div><!-- .nft-item -->'
-			            $('.sub-nft-list').append(newBlock);
 
-			        }
-			    }
+						(function(rarity, id, level, breeding, game_code) {
+
+							promises.push(
+							  get_NFTImage(`https://cdn.nebula3gamefi.com/nft/${game_code}/json/${id}.json`).then(NFTImage => {
+							    const newBlock = `<div class="nft-item" data-category="${game_code}" data-rarity="${rarity}">
+							      <figure class="lazyload">
+									<img loading="lazy" src="https://<?php echo $HOST?>.nebula3gamefi.com/img_remote/live/game/mm/${rarity.toLowerCase()}.png" alt=""		 class="lazyload--loaded" style="z-index:1">
+							        <img src="${NFTImage}" alt="" />
+							        <noscript><img src="${NFTImage}" alt="" /></noscript>
+							      </figure>
+							      <div class="main-nfts__info nft-info">
+							        <h3 class="nft-info__title">Mining Maze</h3>
+							        <ul>
+							          <li><span>${rarity}</span><span>#${id}</span></li>
+							          <li><span>Breeding Count</span><span>(${breeding}/5)</span></li>
+							          <li><span>Current Level</span><span>(${level}/5)</span></li>
+							        </ul>
+							      </div>
+							    </div><!-- .nft-item -->`;
+
+							    items[id] = newBlock;
+							  })
+							);
+						})(rarity, id, level, breeding, game_code);
+					}
+				}
 			}
+
+
+			Promise.all(promises).then(() => {
+			  $('.sub-nft-list').append(items.join(''));
+			});
 
 			function getIdStart(rarity) {
 			    switch (rarity) {
 			        case 'Basic':
-			            return 1;
+			            return 0;
 			        case 'Rare':
-			            return 5556;
+			            return 5555;
 			        case 'Epic':
-			            return 7778;
+			            return 7777;
 			        case 'Unique':
-			            return 8889;
+			            return 8888;
 			        case 'Legend':
-			            return 9445;
+			            return 9443;
 			        default:
 			            return 1;
+			    }
+			}
+
+			async function get_NFTImage(json_url) {
+			    try {
+			        const response = await fetch(json_url);
+
+			        const data = await response.json(); 
+			        const image = data.image; 
+			        return image; 
+			    } catch (error) {
+			        console.error('Error fetching JSON:', error);
+			       
+			        return null; 
 			    }
 			}
 
@@ -203,7 +247,7 @@ window.addEventListener('message', function(event) {
                                             <figure class="lazyload">
                                                 <?php /* 유튜브 썸네일 이미지 주소 가져오기 : https://img.youtube.com/vi/{★YouTube video ID}/hqdefault.jpg */?>
                                                 <img loading="lazy" data-unveil="https://img.youtube.com/vi/<?php echo $info['m_main_banner_video']?>/hqdefault.jpg" src="../assets/images/blank.gif" alt="" />
-                                                <noscript><img loading="lazy" src="https://img.youtube.com/vi/7ijwiqxvKVc/hqdefault.jpg" alt="" /></noscript>
+                                                <noscript><img loading="lazy" src="https://img.youtube.com/vi/<?php echo $info['m_main_banner_video']?>/hqdefault.jpg" alt="" /></noscript>
                                             </figure>
                                             <i class="video-icon"></i>
                                         </button>
@@ -250,7 +294,14 @@ window.addEventListener('message', function(event) {
                             <ul>
                                 <li><p>Developer</p><b><?php echo $info['g_title']; ?></b></li>
                                 <li><p>Genre</p><b><?php echo $category2; ?></b></li>
-                                <li><p>Chain</p><b class="goods"><i><img src="../assets/images/symbol-icp.svg" alt=""></i><span><?php echo $info['m_chain']; ?></span></b></li>
+                                <li><p>Chain</p><b class="goods">
+									<?php if ($info['m_chain'] == 'TBA') {?><span><?php echo $info['m_chain']; ?></span><?php } ?>
+									<?php if ($info['m_chain'] == 'ICP') {?><i><img src="../assets/images/symbol-icp.svg" alt=""></i><span><?php echo $info['m_chain']; ?></span><?php } ?>
+									<?php if ($info['m_chain'] == 'KAIA') {?><i><img src="../assets/images/symbol-kaia.svg" alt=""></i><span><?php echo $info['m_chain']; ?></span><?php } ?>
+									<?php if ($info['m_chain'] == 'IMX') {?><i><img src="../assets/images/symbol-imx.svg" alt=""></i><span><?php echo $info['m_chain']; ?></span><?php } ?>
+									<?php if ($info['m_chain'] == 'STRK') {?><i><img src="../assets/images/symbol-strk.svg" alt=""></i><span><?php echo $info['m_chain']; ?></span><?php } ?>
+									<?php if ($info['m_chain'] == 'BNB') {?><i><img src="../assets/images/symbol-bnb.svg" alt=""></i><span><?php echo $info['m_chain']; ?></span><?php } ?>
+									</b></li>
                             </ul>
                             <div class="game-view__info-desc"><?php echo $info['m_content']; ?></div>
                         </div>
@@ -283,17 +334,27 @@ window.addEventListener('message', function(event) {
                         </div>
                         <div class="game-view__info-device">
                             <ul class="device-list">
-                                <li class="device-browser <?php echo $icon_web; ?>"><p><span>Browser</span><?php if($icon_web) echo "<span>Coming Soon</span>"; ?></p></li>
-                                <li class="device-pc <?php echo $icon_pc; ?>"><p><span>PC</span><?php if($icon_pc) echo "<span>Coming Soon</span>"; ?></p></li>
-                                <li class="device-android <?php echo $icon_o; ?>"><p><span>Android</span><?php if($icon_o) echo "<span>Coming Soon</span>"; ?></p></li>
-                                <li class="device-ios <?php echo $icon_i; ?>"><p><span>ios</span><?php if($icon_i) echo "<span>Coming Soon</span>"; ?></p></li>
+								<?php
+								if($game_code == 'tfsf') {
+								?>
+								<li class="device-browser <?php echo $icon_web; ?>"><a href="http://bridge.dappportal.io/dapp/N6790c223a22d5728142a97ea" target="_blank"><p><span>Browser</span><?php if(str_contains($icon_web, "coming-soon")) echo "<span>Coming Soon</span>"; ?></p></a></li>
+								<?php
+								} else {
+								?>
+                                <li class="device-browser <?php echo $icon_web; ?>"><p><span>Browser</span><?php if(str_contains($icon_web, "coming-soon")) echo "<span>Coming Soon</span>"; ?></p></li>
+								<?php
+								}
+								?>
+                                <li class="device-pc <?php echo $icon_pc; ?>"><p><span>PC</span><?php if(str_contains($icon_pc, "coming-soon")) echo "<span>Coming Soon</span>"; ?></p></li>
+                                <li class="device-android <?php echo $icon_o; ?>"><p><span>Android</span><?php if(str_contains($icon_o, "coming-soon")) echo "<span>Coming Soon</span>"; ?></p></li>
+                                <li class="device-ios <?php echo $icon_i; ?>"><p><span>ios</span><?php if(str_contains($icon_i, "coming-soon")) echo "<span>Coming Soon</span>"; ?></p></li>
                             </ul>
                         </div>
 						<?php
 						$ip = get_client_ip();
 						$ip_info = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip));
-						$region = strtolower($ip_info['geoplugin_countryCode']);
-						if ($region == "kr") {
+						$client_region = strtolower($ip_info['geoplugin_countryCode']);
+						if ($client_region == "kr" || $client_region == "cn") {
 						?>
 						<div>
 							<a href="javascript:void(0);" class="btn-basic btn-primary btn-play disabled"><span>Game Play</span></a>
@@ -314,14 +375,64 @@ window.addEventListener('message', function(event) {
 								<a href="javascript:void(0);" onclick="window.open('<?php echo str_replace('HOST',$HOST,$info['m_game_url']); ?>','','menubar=1');" class="btn-basic btn-primary btn-play"><span>Game Play</span></a>
 						<?php
 								}
+							} else if ($game_code == 'tfsf' || $game_code == 'clwmc') {
+								$query_wallet = mysqli_query($connect, "SELECT * FROM AccountsChain WHERE m_login_id = '" . $_SESSION['sess_login_id'] . "' AND m_symbol = '".$info['m_chain']."'");
+								$info_wallet = mysqli_fetch_array($query_wallet);
+
+								if ($info_wallet['m_index'] == "" && $game_code == 'tfsf') {
+						?>
+								<?php /* 기존코드<a href="javascript:void(0);" onclick="swal({text: 'To play the game, you need to connect your kaia wallet.',	buttons: 'Confirm',	});" class="btn-basic btn-primary btn-play"><span>Game Play</span></a> */ ?>
+                                <a href="#chain-connect-popup" class="btn-chain-connect btn-basic btn-primary btn-play"><span>Game Play</span></a>
+						<?php
+								} else {
+						?>
+								<a href="javascript:void(0);" onclick="window.open('<?php echo str_replace('HOST',$HOST,$info['m_game_url']); ?>','','menubar=1');" id="start_game" class="btn-basic btn-primary btn-play"><span>Game Play</span></a>
+
+						<?php
+									if($info_wallet['m_index'] == "" && $game_code == 'clwmc') {
+										?>
+								<script>
+								    $("#start_game").on("mousedown", function() {
+									    createAccount();
+									});
+									function createAccount() {
+										$.ajax({
+											type:"POST",        
+											url:"/includes/proc_starknetWallet.php",     
+											data : ({mode:"ch0015"}),
+											timeout : 30000,  
+											cache : false,     
+											async : true,
+											success: function whenSuccess(args){
+
+											console.log(args);
+
+										   },
+										   error: function whenError(e){
+												console.log("<?php echo $lang['code']; ?> : " + e.status + "<?php echo $lang['message']; ?> : " + e.responseText);
+										   }
+										});
+									}
+								</script>
+										<?php	
+									}
+								}
+							
 							} else {
+
+								if($info['m_game_url']) {
 						?>
 							<a href="javascript:void(0);" onclick="window.open('<?php echo str_replace('HOST',$HOST,$info['m_game_url']); ?>','','menubar=1');" class="btn-basic btn-primary btn-play"><span>Game Play</span></a>
 						<?php
+								} else {
+						?>
+							<a href="javascript:void(0);" class="btn-basic btn-primary btn-play disabled"><span>Game Play</span></a>
+						<?php
+								}
 							}
 						} else if ($row_games['m_badge'] == '2') {
 						?>
-							<a href="javascript:void(0);" class="btn-basic btn-primary btn-play"><span>Coming Soon</span></a>
+							<a href="javascript:void(0);" class="btn-basic btn-primary btn-play disabled"><span>Coming Soon</span></a>
 						<?php
 						} else {
 						?>
@@ -334,7 +445,7 @@ window.addEventListener('message', function(event) {
             </div><!-- .wrap -->
         </div><!-- .game-view__main -->
 		<?php
-			if ($game_code == "mm") {
+			if ( $game_code == "tfsf" || $game_code == "mm") {
 		?>
         <div class="game-view__announcement">
             <div class="wrap">
@@ -342,15 +453,15 @@ window.addEventListener('message', function(event) {
                     <div class="game-view-section__head">
                         <h2 class="game-view-section__head__title">ANNOUNCEMENT</h2>
 						<?php
-							$show = true;
-							if ($game_code == 'mm') {
-								$link_view_more = 'https://medium.com/test-4formonth/game1/home';
-							} else if ($game_code == 'clwmc') {
-								$link_view_more = 'https://medium.com/test-4formonth/game2/home';
-							} else {
+						//	$show = true;
+						//	if ($game_code == 'mm') {
+						//		$link_view_more = 'https://medium.com/test-4formonth/game1/home';
+						//	} else if ($game_code == 'clwmc') {
+						//		$link_view_more = 'https://medium.com/test-4formonth/game2/home';
+						//	} else {
 								$show = false;
 								$link_view_more = 'javascript:void(0);';
-							}
+						//	}
 						?>
                         <div class="btn-more"><a href="<?php echo $link_view_more; ?>" <?php if($show) echo 'target="_blank"'; ?>><span>VIEW MORE</span></a></div>
                     </div>
@@ -361,25 +472,25 @@ window.addEventListener('message', function(event) {
 								$query_news = mysqli_query($connect, "SELECT * FROM News WHERE m_game_code = '" . $game_code . "' ORDER BY m_index DESC LIMIT 3");
 
 								while ( $row = mysqli_fetch_array($query_news) ) {
-									$info = $row;
+									$info_new = $row;
 
 									$timestamp = strtotime($info['m_date']);
 									$time = date("d F Y", $timestamp);
 
 									$datetime = date("Y-m-d", $timestamp);
 
-									$link = $info['m_link'] ? $info['m_link'] : "javascript:void(0);";
-									$img_url = $info['m_img_url'] ? $info['m_img_url'] : "https://dummyimage.com/526x296/333/fff";
+									$link = $info_new['m_link'] ? $info_new['m_link'] : "javascript:void(0);";
+									$img_url = $info_new['m_img_url'] ? $info_new['m_img_url'] : "https://dummyimage.com/526x296/333/fff";
 							?>
                                 <div class="announcement-item swiper-slide">
-                                    <a href="<?php echo $link;?>" <?php if ($info['m_link'] !== "") echo "target='_blank'";?>>
+                                    <a href="<?php echo $link;?>" <?php if ($info_new['m_link'] !== "") echo "target='_blank'";?>>
                                         <figure class="lazyload">
                                             <img loading="lazy" data-unveil="<?php echo $img_url; ?>" src="../assets/images/blank.gif" alt="" />
                                             <noscript><img loading="lazy" src="https://dummyimage.com/526x296/333/fff" alt="" /></noscript>
                                         </figure>
                                         <div class="announcement-info">
-                                            <h3 class="announcement-info__title"><?php echo $info['m_title']; ?></h3>
-                                            <div class="announcement-info__desc"><?php echo $info['m_descrpition']; ?></div>
+                                            <h3 class="announcement-info__title"><?php echo $info_new['m_title']; ?></h3>
+                                            <div class="announcement-info__desc"><?php echo $info_new['m_descrpition']; ?></div>
                                             <time datetime="<?php echo $datetime; ?>"><span><?php echo $time; ?></span></time>
                                         </div>
                                     </a>
@@ -398,7 +509,9 @@ window.addEventListener('message', function(event) {
                 </div><!-- .game-view__announcement__inner -->
             </div><!-- .wrap -->
         </div><!-- .game-view__announcement -->
-
+		<?php
+			/*
+		?>
         <div class="game-view__nfts">
             <div class="wrap">
                 <div class="game-view-section__head">
@@ -451,6 +564,7 @@ window.addEventListener('message', function(event) {
             </div><!-- .wrap -->
         </div><!-- .game-view__nfts -->
 		<?php
+			*/
 			}	
 		?>
     </div><!-- .article-body -->
@@ -467,8 +581,57 @@ window.addEventListener('message', function(event) {
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 
+<?php
+
+if($info['m_chain'] == "KAIA") {
+	$wallet_name = "Kaia Wallet";
+	$symbol = "kaia";
+} else if($info['m_chain'] == "STRK") {
+	$wallet_name = "Braavos";
+	$symbol = "braavos";
+}
+?>
+<div id="chain-connect-popup" class="chain-connect-popup mfp-hide">
+    <div class="chain-connect-wallet">
+        <h2 class="chain-connect-wallet__title">Wallet Connection</h2>
+        <ul class="wallet-connect__list">
+            <li class="wallet-connect__item">
+                <figure><img src="../assets/images/symbol-<?php echo $symbol; ?>.svg" alt=""></figure>
+                <p><?php echo $wallet_name;?></p>
+                <label class="switch">
+                    <input type="checkbox" id="current_connect">
+                    <span class="switch-body">
+                        <span class="switch-switch"></span>
+                        <span class="switch-track">
+                            <span class="switch-bgd"></span>
+                            <span class="switch-bgd switch-bgd-negative"></span>
+                        </span>
+                    </span>
+                </label>
+            </li>
+        </ul>
+        <div class="chain-connect-guide"><p class="valid-message valid-message--error"><i class="icon"></i><span>To play the game, you need to connect your <?php echo $info['m_chain']; ?> wallet.</span></p></div>
+    </div>
+</div>
+
 <script>
 $(document).ready(function() {
+    
+    $('.btn-chain-connect').magnificPopup({
+        type: 'inline',
+        fixedContentPos: true,
+        fixedBgPos: true,
+        closeBtnInside: true,
+        callbacks: {
+            open: function() {
+                $('body').addClass('mfp-popup-open');
+            },
+            afterClose: function() {
+                $('body').removeClass('mfp-popup-open');
+            }
+        },
+        midClick: true
+    })
 
     $('.categoryCheckbox, .rarityCheckbox').change(function(){
         var selectedCategories = $('.categoryCheckbox:checked').map(function() {
@@ -500,6 +663,42 @@ $(document).ready(function() {
             $(this).toggle(nftNumber.indexOf(value) > -1 || value === "");
         });
     });
+
+	$("#current_connect").click(function() {
+		<?php
+			if(strtoupper($info['m_chain']) == "KAIA") {
+		//		echo "connectKaia();";
+		?>
+				if (typeof window.klaytn !== "undefined") {		
+					connectKaia();
+				} else {
+						
+					swal({
+							text: '<?php echo $lang["DownloadKaiaWallet"]; ?>',
+							buttons: {
+								cancel : '<?php echo $lang["Cancel"]; ?>',
+								confirm : {
+									text : '<?php echo $lang["confirm"]; ?>',
+									value : 'catch'
+								},
+							},
+						}).then(function(value){
+							if(value == 'catch'){
+								window.open("https://www.kaiawallet.io/", "_blank");
+
+								return false;
+							}
+							
+					});
+					
+				}
+		<?php
+			}
+		//	else if(strtoupper($info['m_chain']) == "STRK") {
+		//		echo "connectBraavos();";
+		//	}
+		?>
+	});
 });
 
     function needLogin() {
@@ -514,7 +713,7 @@ $(document).ready(function() {
             },
         }).then(function(value){
             if(value == 'catch'){
-                location.href='/sub/login.php?return_path=<?php echo $return_url; ?>';
+                location.href='/sub/login-intro.php?return_path=<?php echo $return_url; ?>';
             }
         })
     }

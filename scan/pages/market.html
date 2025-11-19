@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:description" content="Take Control of Your Crypto Portfolio with CryptoTrakX Tailwind Crypto Dashboard! Keep track of all your cryptocurrencies with ease using it.">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" property="og:title" content="CryptoTrakX: Tailwind Crypto Dashboard - Free Download">
+    <meta property="og:image" content="https://designtocodes.com/wp-content/uploads/2024/04/CryptoTrackX-Dashboard-Thumbnai-01.jpg">
+    <link rel="icon" href="../public/assets/images/logo/favicon.png" type="image/gif" sizes="16x16">
+    <title>Market - CryptoTrakX Tailwind Dashboard</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+</head>
+
+ <body>
+    
+    <!-- Preloader Start -->
+    <div class="preloader h-full fixed w-full z-50 bg-white transition duration-300">
+        <img src="../public/assets/images/preloader.gif" class="max-w-[12rem] md:max-w-[20rem] block absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4" alt="Loading">
+    </div>
+    <!-- Preloader End -->
+
+    <div class="flex flex-no-wrap h-screen">
+
+        <!-- Sidebar starts -->
+        <aside class="bg-primary w-full md:w-96 pt-5 fixed lg:relative h-screen overflow-y-auto lg:flex flex-col justify-between -translate-x-full lg:translate-x-0 transition-transform duration-500 z-10" id="sidebar">
+            <nav class="px-8">
+                <div class="flex items-center justify-between">
+                    <a href="../index.html"><img class="max-w-[14rem]" src="../public/assets/images/logo/logo.png" alt="Logo"></a>
+                    <button id="closeSideBar" class="text-white lg:hidden">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <ul class="mt-12">
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-home"></i></span> Overview </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./exchange.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-money-check-alt"></i></span> Exchange </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item active">
+                        <a href="./market.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-chart-line"></i></span> Market </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./wallet.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-wallet"></i></span> wallet </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./investmenthistory.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-network-wired"></i></span> Investment History </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./transaction.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-list-alt"></i></span> Transaction </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./activity.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-poll"></i></span> Activity </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./performance.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-money-check"></i></span> Performance </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="./profile.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-user"></i></span> profile </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="../pages/landingpage.html" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="far fa-file-alt"></i></span> landing page </span>
+                        </a>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"  data-toggler="active" data-tdg-dropdown="dropdown1">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-question-circle"></i></span> Help & Support </span>
+                        </a>
+                        <!-- Sub Menu -->
+                        <ul class="mt-2 hidden" data-tdg-dropdownItem="down-element1">
+                            <li>
+                                <a class="sub-menu-link" href="./faq.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./contact.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> Contact us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./blank.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> Blank
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggler="active" data-tdg-dropdown="dropdown1">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-unlock-alt"></i></span> Authentication</span>
+                        </a>
+
+                        <!-- Sub Menu -->
+                        <ul class="mt-2 hidden" data-tdg-dropdownItem="down-element1">
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/login.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> SignIn
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/registration.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> SignUp
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/resetpassword.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> Forget Password
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/404.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> 404
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-menu-link" href="./authentication/505.html">
+                                    <span class="inline-flex text-sm w-6"><i class="fas fa-angle-double-right"></i></span> 505
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Pro Banner -->
+            <div class="px-8">
+                <ul>
+                    <!-- Menu Item -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span><span class="inline-block text-sm w-6"><i class="fas fa-cog"></i></span> Settings </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Pro Banner -->
+
+        </aside>
+
+        <!-- Main Body -->
+        <aside class="w-full overflow-y-auto">
+            <!-- Top Navbar -->
+            <nav   class="py-4 shadow-global">
+                <div class="flex items-center justify-between px-4">
+                    <div class="inline-flex items-center">
+                        <button class="bg-primary-shade-4 text-primary hover:bg-primary-shade-2 hover:text-primary rounded transition-colors shadow-std py-2 px-3 lg:hidden mr-2" id="openSideBar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <!-- Search Input -->
+                        <div class="hidden md:flex">
+                            <form class="validation" novalidate>
+                                <div class="bg-white rounded flex items-center">
+                                    <span class="bg-white rounded p-1">
+                                        <button class="bg-primary-2 text-primary-shade-4 px-3 py-2 rounded hover:bg-primary hover:text-accent transition-colors" type="submit"><i class="fas fa-search"></i></button>
+                                    </span>
+
+                                    <input type="text" autocomplete="off" class="bg-white font-medium form-control border-0 w-auto h-auto flex items-center px-2 py-2 text-sm rounded  pl-0" name="search" placeholder="Search" required data-error-message="Please enter a valid text.">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="flex md:hidden relative dropdown">
+                            <button class="bg-white text-primary hover:bg-primary hover:text-white rounded transition-colors py-2 px-3" data-dropdown-label="btn"><i class="fas fa-search"></i></button>
+
+                            <div class="absolute left-0 top-12 hidden z-10" data-dropdown-item="item">
+                                <form class="validation" novalidate>
+                                    <div class="bg-white rounded border border-primary flex items-center">
+                                        <input type="text" autocomplete="off" class="bg-white font-medium w-auto h-auto flex items-center px-2 py-3 text-sm-1 rounded focus:outline-none form-control" name="search" placeholder="Search" required data-error-message="Please enter a valid text.">
+
+                                        <span class="bg-white rounded p-1"> 
+                                            <button class="bg-primary-shade-1 text-primary px-3 py-2 rounded hover:bg-primary-shade-1 hover:text-secondary transition-colors" type="submit"><i class="fas fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Search Input -->
+                    </div>
+
+                    <div class="flex items-center">
+                        <button class="text-primary-shade-4 hover:text-primary rounded transition-colors py-2 px-3 mr-4">
+                            <i class="fas fa-bell fa-shake"></i>
+                        </button>
+                        <!-- Profile Menu -->
+                        <div class="relative dropdown pl-4 before:content-[''] before:absolute before:h-8 before:w-0.5 before:top-1/2 before:-translate-y-1/2 before:-left-1 before:bg-primary-shade-4">
+                            <button data-dropdown-label="btn" class="flex items-center text-sm  bg-white p-2 rounded focus:outline-none transition duration-150 ease-in-out">
+                                <img class="rounded-full h-8 w-8 object-cover" src="../public/assets/images/avatar/avatar_1.png" alt="avatar image">
+                                <span class="ml-2 text-primary text-sm-1 font-semibold hidden lg:block">Leslie Alexander</span>
+                                <span class="ml-2 text-primary-shade-4">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <ul class="px-4 w-[10rem] lg:w-full bg-white border border-primary-shade-4 hover:border-primary absolute rounded right-0 top-2 text-left shadow-std mt-10 hidden" data-dropdown-item="item">
+                                <li class="text-secondary hover:text-primary transition-colors duration-500 text-base pt-2">
+                                    <a href="../pages/profile.html">
+                                        <i class="fas fa-user"></i>
+                                        <span class="ml-2">User Profile</span>
+                                    </a>
+                                </li>
+                                <li class="text-secondary hover:text-primary transition-colors duration-500 text-base pt-2 last:pb-2">
+                                    <a href="#">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span class="ml-2">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Profile Menu -->
+
+                    </div>
+                </div>
+            </nav>
+            <!-- Top Navbar -->
+
+
+            <div class="p-6 lg:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-4 gap-4 md:gap-7">
+                    <div class="d2c_card">
+                        <div class="grid grid-cols-2 gap-4 md:gap-7 mb-0">
+                            <div>
+                                <h4 class="d2c_card_title mb-0">Market Sentiment</h4>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <!-- dropdown -->
+                                <div class="relative">
+                                    <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                       <span class="mx-1">Bitcoin/BTC</span><i class="fas fa-angle-down"></i>
+                                    </div>
+                                    <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- chart -->
+                        <div id="d2c_market_sentiment_chart"></div>
+                        <!-- progress item -->
+                        <div class="progress">
+                            <div class="w-full bg-primary-shade-5 rounded h-2.5 flex mb-1">
+                                <div class="bg-primary h-2.5 rounded w-11/12"></div>
+                            </div>
+                            <div class="text-sm text-primary font-bold flex items-center justify-between">
+                                <div>
+                                    <span>73%</span>
+                                    <p class="text-sm-1 mb-0">Long</p>
+                                </div>
+                                <div>
+                                    <span>91%</span>
+                                    <p class="text-sm-1 mb-0">Short</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- market data -->
+                    <div class="d2c_card">
+                        <div class="grid grid-cols-2 gap-4 md:gap-7 mb-2">
+                            <div>
+                                <h4 class="d2c_card_title mb-0">Market Data</h4>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <!-- dropdown -->
+                                <div class="relative">
+                                    <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                       <span class="ml-1"><i class="fas fa-ellipsis-h"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-6 items-center">
+                            <div class="w-3/5">
+                                <h4 class="text-xs-1 font-bold text-secondary">Current ETH Gas Price</h4>
+                                <h3 class="d2c_card_title_1 text-base">23 Gwei ≈ 0.984 USD</h3>
+                            </div>
+                            <!-- chart -->
+                            <div id="d2c_market_chart_1" class="w-2/5"></div>
+                        </div>
+
+                        <div class="flex items-center mt-6">
+                            <div class="w-3/5">
+                                <h4 class="text-xs-1 font-bold text-secondary">Trading Vol.</h4>
+                                <h3 class="d2c_card_title_1 text-base">-39.94% 153.35 B USDT</h3>
+                            </div>
+                            <!-- chart -->
+                            <div id="d2c_market_chart_2" class="w-2/5"></div>
+                        </div>
+
+                    </div>
+                    <!-- trending section -->
+                    <div class="d2c_card">
+                        <div class="grid grid-cols-2 gap-4 md:gap-7 mb-2">
+                            <div>
+                                <h4 class="d2c_card_title mb-0">Trending Sectors</h4>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <!-- dropdown -->
+                                <div class="relative">
+                                    <div class="dropdown-btn rounded text-primary-shade-4 cursor-pointer">
+                                       <span class="ml-1"><i class="fas fa-ellipsis-h"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                        <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="border-collapse w-full">
+                                <tbody>
+                                    <tr class="border-0">
+                                        <td class="capitalize">FTX Holdings</td>
+                                        <td class="text-right pr-0">2.54%</td>
+                                    </tr>
+                                    <tr class="border-0">
+                                        <td class="capitalize">Layer 1 (L1)</td>
+                                        <td class="text-right pr-0">3.33%</td>
+                                    </tr>
+                                    <tr class="border-0">
+                                        <td class="capitalize">Ethereum Ecosystem</td>
+                                        <td class="text-right pr-0">1.02%</td>
+                                    </tr>
+                                    <tr class="border-0">
+                                        <td class="capitalize">Smart Contract Platform</td>
+                                        <td class="text-right pr-0">5.25%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <!-- bitcoin -->
+                        <div class="d2c_card shadow-global rounded-md px-4 xxl:px-6 py-10 h-full">
+                            <div class="grid grid-cols-3 gap-4 md:gap-7 mb-2">
+                                <div class="col-start-1 col-span-2 flex flex-row">
+                                    <div>
+                                        <div class="w-11 h-11 bg-primary-shade-6 text-primary rounded text-2xl-1 flex items-center justify-center mr-2">
+                                            <i class="fab fa-btc"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="d2c_card_title mb-0 text-base-1 font-bold">Bitcoin</h4>
+                                        <p class="text-xs-1 font-bold mb-0 uppercase">BTC</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- dropdown -->
+                                    <div class="relative">
+                                        <div class="dropdown-btn rounded text-primary cursor-pointer text-2xl-1 text-end">
+                                           <span class="ml-1"><i class="fas fa-sort-up"></i></span>
+                                        </div>
+                                        <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                            <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                            <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                            <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 md:gap-7 mt-6 md:mt-10">
+                                <div>
+                                    <h3 class="d2c_card_title_1">$5,22,250</h3>
+                                    <h4 class="text-base font-extrabold mt-4">+2.75%</h4>
+                                </div>
+                                <!-- chart -->
+                                <div id="d2c_market_chart_3"></div>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 md:gap-7 mt-4 md:mt-7">
+                    <div class="col-start-1 col-span-12 xxl:col-span-9">
+                        <div class="d2c_card">
+                            <h4 class="d2c_card_title">Market Sentiment</h4>
+                            <div class="grid grid-cols-12 gap-2">
+                                <!-- Tab Button -->
+                                <div class="d2c_tabs_wrapper flex-wrap inline-flex col-start-1 col-span-12 md:col-start-1 md:col-span-8">
+                                    <button class="tab-button" data-d2c-tab="tab1">btc</button>
+                                    <button class="tab-button" data-d2c-tab="tab2">eth</button>
+                                    <button class="tab-button" data-d2c-tab="tab3">neo</button>
+                                </div>
+                                <!-- Tab Button -->
+
+                                <div class="md:flex col-start-1 col-span-12 md:col-start-9 md:col-span-4">
+                                    <!-- show button wrapper -->
+                                    <div class="d2c_show ml-auto">
+                                        <p class="mb-0 text-sm me-2 font-bold">Show</p>
+                                        <div class="flex items-center justify-end w-full rounded">
+                                            <!-- Select menu div contains custom arrow -->
+                                            <div class="d2c_select_wrapper">
+                                                <!-- Select menu -->
+                                                <select>
+                                                    <option selected>10</option>
+                                                    <option value="25" class="p-2">25</option>
+                                                    <option value="50" class="p-2">50</option>
+                                                    <option value="100" class="p-2">100</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 1 -->
+                            <div id="tab1" class="tab-content hidden">
+                                <div class="overflow-x-auto pt-4">
+                                    <table class="border-collapse w-full">
+                                        <thead>
+                                            <tr>
+                                                <th class="pl-0">Coin</th>
+                                                <th class="min-w-[12rem]">Market cap</th>
+                                                <th>Price</th>
+                                                <th class="min-w-[10rem]">Change (24h)</th>
+                                                <th class="min-w-[10rem]">High (24h)</th>
+                                                <th class="min-w-[8rem]">Low (24h)</th>
+                                                <th  class="min-w-[14rem]">Volume (24h)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Litecoin</td>
+                                                <td>$17,437,122.05</td>
+                                                <td>$17,745.91</td>
+                                                <td>3.24566</td>
+                                                <td>1.55555</td>
+                                                <td>8.33333</td>
+                                                <td>$16,232,454,88889 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tether</td>
+                                                <td>$2,056,894.05</td>
+                                                <td>$1,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>2.66755</td>
+                                                <td>3.24566</td>
+                                                <td>$11,747,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ripple</td>
+                                                <td>$4,455,894.05</td>
+                                                <td>$7,232.91</td>
+                                                <td>0.77778</td>
+                                                <td>0.24566</td>
+                                                <td>0.23345</td>
+                                                <td>$12,122,800,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dashcoin</td>
+                                                <td>$14,232,990.12</td>
+                                                <td>$17,232.11</td>
+                                                <td>0.66776</td>
+                                                <td>1.24566</td>
+                                                <td>0.22334</td>
+                                                <td>$13,232,111,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Litecoin</td>
+                                                <td>$17,437,122.05</td>
+                                                <td>$17,745.91</td>
+                                                <td>3.24566</td>
+                                                <td>1.55555</td>
+                                                <td>8.33333</td>
+                                                <td>$16,232,454,88889 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tether</td>
+                                                <td>$2,056,894.05</td>
+                                                <td>$1,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>2.66755</td>
+                                                <td>3.24566</td>
+                                                <td>$11,747,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- tab 2 -->
+                            <div id="tab2" class="tab-content hidden">
+                                <div class="overflow-x-auto pt-4">
+                                    <table class="border-collapse w-full">
+                                        <thead>
+                                            <tr>
+                                                <th class="pl-0">Coin</th>
+                                                <th class="min-w-[12rem]">Market cap</th>
+                                                <th>Price</th>
+                                                <th class="min-w-[10rem]">Change (24h)</th>
+                                                <th class="min-w-[10rem]">High (24h)</th>
+                                                <th class="min-w-[8rem]">Low (24h)</th>
+                                                <th  class="min-w-[10rem]">Volume (24h)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tether</td>
+                                                <td>$2,056,894.05</td>
+                                                <td>$1,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>2.66755</td>
+                                                <td>3.24566</td>
+                                                <td>$11,747,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Litecoin</td>
+                                                <td>$17,437,122.05</td>
+                                                <td>$17,745.91</td>
+                                                <td>3.24566</td>
+                                                <td>1.55555</td>
+                                                <td>8.33333</td>
+                                                <td>$16,232,454,88889 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Litecoin</td>
+                                                <td>$17,437,122.05</td>
+                                                <td>$17,745.91</td>
+                                                <td>3.24566</td>
+                                                <td>1.55555</td>
+                                                <td>8.33333</td>
+                                                <td>$16,232,454,88889 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tether</td>
+                                                <td>$2,056,894.05</td>
+                                                <td>$1,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>2.66755</td>
+                                                <td>3.24566</td>
+                                                <td>$11,747,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ripple</td>
+                                                <td>$4,455,894.05</td>
+                                                <td>$7,232.91</td>
+                                                <td>0.77778</td>
+                                                <td>0.24566</td>
+                                                <td>0.23345</td>
+                                                <td>$12,122,800,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dashcoin</td>
+                                                <td>$14,232,990.12</td>
+                                                <td>$17,232.11</td>
+                                                <td>0.66776</td>
+                                                <td>1.24566</td>
+                                                <td>0.22334</td>
+                                                <td>$13,232,111,00010 BTC</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- Tab 3 -->
+                            <div id="tab3" class="tab-content hidden">
+                                <div class="overflow-x-auto pt-4">
+                                    <table class="border-collapse w-full">
+                                        <thead>
+                                            <tr>
+                                                <th class="pl-0">Coin</th>
+                                                <th class="min-w-[12rem]">Market cap</th>
+                                                <th>Price</th>
+                                                <th class="min-w-[10rem]">Change (24h)</th>
+                                                <th class="min-w-[10rem]">High (24h)</th>
+                                                <th class="min-w-[8rem]">Low (24h)</th>
+                                                <th  class="min-w-[10rem]">Volume (24h)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tether</td>
+                                                <td>$2,056,894.05</td>
+                                                <td>$1,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>2.66755</td>
+                                                <td>3.24566</td>
+                                                <td>$11,747,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Litecoin</td>
+                                                <td>$17,437,122.05</td>
+                                                <td>$17,745.91</td>
+                                                <td>3.24566</td>
+                                                <td>1.55555</td>
+                                                <td>8.33333</td>
+                                                <td>$16,232,454,88889 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ethereum</td>
+                                                <td>$4,345,894.05</td>
+                                                <td>$10,213.91</td>
+                                                <td>0.67890</td>
+                                                <td>0.45656</td>
+                                                <td>0.23476</td>
+                                                <td>$19,889,344,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bitcoin</td>
+                                                <td>$10,056,894.05</td>
+                                                <td>$3,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>0.44532</td>
+                                                <td>0.22333</td>
+                                                <td>$28,56,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Litecoin</td>
+                                                <td>$17,437,122.05</td>
+                                                <td>$17,745.91</td>
+                                                <td>3.24566</td>
+                                                <td>1.55555</td>
+                                                <td>8.33333</td>
+                                                <td>$16,232,454,88889 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tether</td>
+                                                <td>$2,056,894.05</td>
+                                                <td>$1,745.91</td>
+                                                <td>1.24566</td>
+                                                <td>2.66755</td>
+                                                <td>3.24566</td>
+                                                <td>$11,747,400,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dashcoin</td>
+                                                <td>$14,232,990.12</td>
+                                                <td>$17,232.11</td>
+                                                <td>0.66776</td>
+                                                <td>1.24566</td>
+                                                <td>0.22334</td>
+                                                <td>$13,232,111,00010 BTC</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ripple</td>
+                                                <td>$4,455,894.05</td>
+                                                <td>$7,232.91</td>
+                                                <td>0.77778</td>
+                                                <td>0.24566</td>
+                                                <td>0.23345</td>
+                                                <td>$12,122,800,00010 BTC</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- tab 3 end -->
+
+                            <!-- pagination -->
+                            <div class="flex sm:flex-1 items-center justify-center md:justify-end mt-6">
+                                <div>
+                                    <nav class="isolate inline-flex" aria-label="Pagination">
+                                        <a href="#" class="relative z-10 inline-flex items-center w-9 h-9 justify-center text-sm font-semibold text-[#B6B5C5] hover:text-white border border-primary-shade-5 hover:bg-primary transition duration-300 rounded-l">
+                                            <span class="sr-only">Previous</span>
+                                            <i class="fas fa-angle-left"></i>
+                                        </a>
+                                        <a href="#" aria-current="page" class="relative z-10 inline-flex items-center w-9 h-9 justify-center  text-sm font-semibold text-[#B6B5C5] hover:text-white border border-primary-shade-5 hover:bg-primary transition duration-300">1</a>
+                                        <a href="#" class="relative z-10 inline-flex items-center w-9 h-9 justify-center  text-sm font-semibold text-[#B6B5C5] hover:text-white border border-primary-shade-5 hover:bg-primary transition duration-300">2</a>
+                                        <a href="#" class="relative z-10 inline-flex items-center w-9 h-9 justify-center  text-sm font-semibold text-[#B6B5C5] hover:text-white border border-primary-shade-5 hover:bg-primary transition duration-300">3</a>
+                                        <a href="#" class="relative z-10 inline-flex items-center w-9 h-9 justify-center text-sm font-semibold text-[#B6B5C5] hover:text-white border border-primary-shade-5 hover:bg-primary active:bg-primary transition duration-300 rounded-r">
+                                            <span class="sr-only">Next</span>
+                                            <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-start-1 col-span-12 xxl:col-start-10 xxl:col-span-3">
+                        <div class="grid grid-cols-12 gap-4 md:gap-7">
+                            <!-- Ethereum -->
+                            <div class="d2c_card shadow-global rounded-md px-4 xxl:px-6 py-10 col-start-1 col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12">
+                                <div class="grid grid-cols-3 gap-4 md:gap-7 mb-2">
+                                    <div class="col-start-1 col-span-2 flex flex-row">
+                                        <div>
+                                            <div class="w-11 h-11 bg-primary-shade-6 text-primary rounded text-2xl-1 flex items-center justify-center mr-2">
+                                                <i class="fab fa-btc"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="d2c_card_title mb-0 text-base-1 font-bold">Ethereum</h4>
+                                            <p class="text-xs-1 font-bold mb-0 uppercase">ETH</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- dropdown -->
+                                        <div class="relative">
+                                            <div class="dropdown-btn rounded text-primary cursor-pointer text-2xl-1 text-end">
+                                            <span class="ml-1"><i class="fas fa-sort-up"></i></span>
+                                            </div>
+                                            <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 md:gap-7 mt-7">
+                                    <div>
+                                        <h3 class="d2c_card_title_1 text-2xl xxl:text-[30px]">$36,95,584</h3>
+                                        <h4 class="text-base font-extrabold">+0.32%</h4>
+                                    </div>
+                                    <!-- chart -->
+                                    <div id="d2c_market_chart_4"></div>
+                                </div>
+                            </div>
+                            <!-- tether usdt card -->
+                            <div class="d2c_card shadow-global rounded-md px-4 xxl:px-6 py-10 col-start-1 col-span-12 md:col-start-7 md:col-span-6 xl:col-start-5 xl:col-span-4 xxl:col-start-1 xxl:col-span-12">
+                                <div class="grid grid-cols-3 gap-4 md:gap-7 mb-2">
+                                    <div class="col-start-1 col-span-2 flex flex-row">
+                                        <div>
+                                            <div class="w-11 h-11 bg-primary-shade-6 text-primary rounded text-2xl-1 flex items-center justify-center mr-2">
+                                                <i class="fab fa-btc"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="d2c_card_title mb-0 text-base-1 font-bold">Tether USDt</h4>
+                                            <p class="text-xs-1 font-bold mb-0 uppercase">usdt</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- dropdown -->
+                                        <div class="relative">
+                                            <div class="dropdown-btn rounded text-primary cursor-pointer text-2xl-1 text-end">
+                                            <span class="ml-1"><i class="fas fa-sort-up"></i></span>
+                                            </div>
+                                            <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 md:gap-7 mt-7">
+                                    <div>
+                                        <h3 class="d2c_card_title_1 text-2xl xxl:text-[30px]">$2,244,380</h3>
+                                        <h4 class="text-base font-extrabold">+8.13%</h4>
+                                    </div>
+                                    <!-- chart -->
+                                    <div id="d2c_market_chart_5"></div>
+                                </div>
+                            </div>
+                            <!-- binance card -->
+                            <div class="d2c_card shadow-global rounded-md px-4 xxl:px-6 py-10 col-start-1 col-span-12 xl:col-start-9 xl:col-span-4 xxl:col-start-1 xxl:col-span-12">
+                                <div class="grid grid-cols-3 gap-4 md:gap-7 mb-2">
+                                    <div class="col-start-1 col-span-2 flex flex-row">
+                                        <div>
+                                            <div class="w-11 h-11 bg-primary-shade-6 text-primary rounded text-2xl-1 flex items-center justify-center mr-2">
+                                                <i class="fab fa-btc"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="d2c_card_title mb-0 text-base-1 font-bold">Binance</h4>
+                                            <p class="text-xs-1 font-bold mb-0 uppercase">BNb</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- dropdown -->
+                                        <div class="relative">
+                                            <div class="dropdown-btn rounded text-primary cursor-pointer text-2xl-1 text-end">
+                                            <span class="ml-1"><i class="fas fa-sort-up"></i></span>
+                                            </div>
+                                            <div class="dropdown-menu hidden absolute right-0 w-36 bg-white z-40 rounded-md shadow-global py-2">
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 1</a>
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 2</a>
+                                                <a href="#" class="block px-4 py-2 text-primary hover:text-secondary font-semibold transition-colors">Option 3</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 md:gap-7 mt-6">
+                                    <div>
+                                        <h3 class="d2c_card_title_1 text-2xl xxl:text-[30px]">$92,892.93</h3>
+                                        <h4 class="text-base font-extrabold">+1.25%</h4>
+                                    </div>
+                                    <!-- chart -->
+                                    <div id="d2c_market_chart_6"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+        <!-- Main Body -->
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- apexchart js link -->
+    <script src="../public/lib/apexcharts/apexcharts.min.js"></script>
+    <script src="../public/assets/js/chart/marketchart.js"></script>
+    <!-- Main Js Config -->
+    <script src="../public/assets/js/main.js"></script>
+</body>
+
+</html>
+
+<!--
+    Template Name: {{CryptoTrakX}}
+    Template URL: {{https://designtocodes.com/product/cryptotrakx-tailwind-crypto-dashboard}}
+    Description: {{Take Control of Your Crypto Portfolio with CryptoTrakX Tailwind Crypto Dashboard! Keep track of all your cryptocurrencies with ease using it.}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{ CryptoTrakX }} 
+-->

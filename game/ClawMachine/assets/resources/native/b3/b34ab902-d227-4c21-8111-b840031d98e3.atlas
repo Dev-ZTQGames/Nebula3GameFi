@@ -1,0 +1,188 @@
+
+0017_asha_ani_idle_floewr.png
+size: 782,142
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Asha_Down_hat
+  rotate: false
+  xy: 316, 65
+  size: 109, 75
+  orig: 109, 75
+  offset: 0, 0
+  index: -1
+Asha_L_blush
+  rotate: false
+  xy: 444, 2
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+Asha_R_blush
+  rotate: false
+  xy: 444, 2
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+Asha_L_ear
+  rotate: true
+  xy: 2, 2
+  size: 40, 64
+  orig: 40, 64
+  offset: 0, 0
+  index: -1
+Asha_L_eye
+  rotate: false
+  xy: 198, 44
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+Asha_L_feet
+  rotate: false
+  xy: 717, 7
+  size: 44, 28
+  orig: 44, 28
+  offset: 0, 0
+  index: -1
+Asha_L_hand
+  rotate: true
+  xy: 753, 42
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+Asha_P_flower
+  rotate: false
+  xy: 444, 21
+  size: 43, 43
+  orig: 45, 45
+  offset: 1, 1
+  index: -1
+Asha_P_flower2
+  rotate: false
+  xy: 489, 21
+  size: 43, 43
+  orig: 45, 45
+  offset: 1, 1
+  index: -1
+Asha_R_ear
+  rotate: true
+  xy: 68, 2
+  size: 40, 64
+  orig: 40, 64
+  offset: 0, 0
+  index: -1
+Asha_R_eye
+  rotate: false
+  xy: 212, 44
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+Asha_R_feet
+  rotate: false
+  xy: 670, 7
+  size: 45, 28
+  orig: 45, 28
+  offset: 0, 0
+  index: -1
+Asha_R_hand
+  rotate: false
+  xy: 753, 71
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+Asha_Top_bowtie
+  rotate: false
+  xy: 134, 5
+  size: 52, 37
+  orig: 52, 37
+  offset: 0, 0
+  index: -1
+Asha_Top_hat
+  rotate: false
+  xy: 2, 44
+  size: 194, 96
+  orig: 194, 96
+  offset: 0, 0
+  index: -1
+Asha_Y_flower
+  rotate: true
+  xy: 329, 10
+  size: 53, 63
+  orig: 53, 63
+  offset: 0, 0
+  index: -1
+Asha_Y_flower2
+  rotate: true
+  xy: 394, 12
+  size: 51, 48
+  orig: 53, 63
+  offset: 1, 9
+  index: -1
+Asha_basket
+  rotate: false
+  xy: 529, 72
+  size: 78, 68
+  orig: 78, 68
+  offset: 0, 0
+  index: -1
+Asha_body
+  rotate: false
+  xy: 198, 58
+  size: 116, 82
+  orig: 116, 82
+  offset: 0, 0
+  index: -1
+Asha_down_bowtie
+  rotate: false
+  xy: 188, 9
+  size: 54, 33
+  orig: 54, 33
+  offset: 0, 0
+  index: -1
+Asha_grip
+  rotate: false
+  xy: 534, 7
+  size: 73, 63
+  orig: 73, 63
+  offset: 0, 0
+  index: -1
+Asha_hat
+  rotate: false
+  xy: 244, 5
+  size: 83, 51
+  orig: 83, 51
+  offset: 0, 0
+  index: -1
+Asha_head
+  rotate: false
+  xy: 609, 37
+  size: 142, 103
+  orig: 142, 103
+  offset: 0, 0
+  index: -1
+Asha_nose
+  rotate: true
+  xy: 753, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+Asha_ribbon
+  rotate: false
+  xy: 609, 6
+  size: 59, 29
+  orig: 59, 29
+  offset: 0, 0
+  index: -1
+Asha_tail
+  rotate: false
+  xy: 427, 66
+  size: 100, 74
+  orig: 100, 74
+  offset: 0, 0
+  index: -1

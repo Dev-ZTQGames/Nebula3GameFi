@@ -26,6 +26,8 @@
     .game-view__control .swiper-slide { width: calc(20% - 9.5rem);}
     .game-view-section__head__title { font-size: 32rem; }
 
+    .game-view__slider {height:auto}
+
 }
 
 
@@ -73,6 +75,7 @@
     .game-view__info {margin-top:60rem;}
 
     .game-view__announcement {padding:90rem 0;}
+    .game-view__announcement:last-child {margin-bottom:-120rem;}
     .game-view__announcement__inner {display:block;}
     .game-view-section__head__title {font-size:28rem;}
     .game-view__announcement .game-view-section__contents {width:100%; margin-top:30rem;}
@@ -115,6 +118,7 @@
     .nfts-filter-popup__confirm { margin-top:30rem;}
 
     /* LAUNCHPAD */
+    .nft-launchpad__list { margin: 0rem -14rem -14rem;}
     .launchpad-view {gap:30rem;}
     .launchpad-view__tit__info h3 { font-size: 20rem;}
     .launchpad-view__info .desc { font-size: 16rem;}
@@ -160,6 +164,11 @@
     .sync-account {padding:40rem;}
     .sync-account__title {font-size:32rem;}
     .btn-sync-account {margin-top:50rem;}
+
+    /* Terms and Policies */
+    .policy-content h2 {font-size:24rem;margin-top:50rem;}
+    .policy-content h3 {font-size:18rem;}
+
 }   
 
 
@@ -178,7 +187,7 @@
 
     /* GAMES */
     .tabs-checkbox {gap:12rem; margin-bottom:40rem;}
-    .tabs-checkbox__list {gap:12rem; }
+    .tabs-checkbox__list {gap:11rem; }
     .tabs-checkbox__list + .tabs-checkbox__list {margin-top:12rem; margin-left:142rem;}
     .tabs-checkbox__list li {width:130rem;}
     .tab-checkbox input + span { padding: 14rem 26rem; font-size: 14rem;}
@@ -201,7 +210,10 @@
     .page-page-games-view .device-list li { width: calc(25% - 12rem);}
     .game-view-section__head {margin-bottom:20rem;}
     .game-view__announcement {padding:80rem 0;}
+    .game-view__announcement:last-child {margin-bottom:-100rem;}
     .game-view-section__contents .announcement-item {max-width:320rem;}
+    
+    .chain-connect-wallet__title {font-size: 22rem;}
     
     /* NFTS */
     .sub-nft-list { margin: -8rem;}
@@ -212,6 +224,7 @@
     .nfts-filter-popup .mfp-close { top: 6rem; right: 6rem;}
 
     /* LAUNCHPAD */
+    .nft-launchpad__list { margin: 0rem -8rem -8rem;}
     .launchpad-view {display:block;}
     .launchpad-view__right { margin-top: 30rem; margin-left:0;}
     .launchpad-view__tit__info h3 {  font-size: 18rem;}
@@ -246,6 +259,10 @@
 
     /* LOGIN */
     .login-wrap { max-width: inherit; margin: 0 25rem;}
+    .login-list {gap:10rem;}
+    .login-item {font-size:16rem;}
+    .login-item > i:before {font-size:23rem;}
+    .login-item--google > i:before {width: 22rem; height: 23rem;}
 
     /* JOIN */
     .join-form__head {display:block;}
@@ -306,6 +323,12 @@
     .swap-select__container .selectric .label:before { width: 26rem; height: 26rem;}
     .swap-select__container .selectric .button {height:54rem;}
 
+    /* Terms and Policies */
+    .policy-content { font-size: 16rem;}
+    .policy-content h2 {font-size:22rem;margin-top:40rem;}
+    .policy-content h3 {font-size:17rem;}
+    .policy-content p + h3, .policy-content ul + h3 { margin-top: 30rem;}
+
 }
 
 
@@ -352,7 +375,12 @@
     .page-page-games-view .device-list li { width: calc(50% - 8rem);}
     .game-view-section__contents .announcement-item {max-width:280rem;}
     .game-view__announcement {padding:50rem 0;}
+    .game-view__announcement:last-child {margin-bottom:-80rem;}
     .game-view__nfts .nfts-filter-popup-open { margin-left: 10rem;}
+    
+    .chain-connect-wallet { padding: 20rem;}
+    .chain-connect-wallet__title {font-size: 20rem;}
+    .chain-connect-guide {margin-top:10rem;}
     
 
     /* NFTS */
@@ -372,7 +400,8 @@
     .nfts-filter-popup__confirm { margin-top: 20rem;}
 
     /* LAUNCHPAD */
-    .launchpad-wrap h2 {font-size: 20rem;}
+    .nft-launchpad__list { margin:0;}
+    .page-launchpad .launchpad-wrap h2 {font-size: 22rem; margin-bottom:20rem;}
     .launchpad-view__mint-info { padding-top: 25rem; margin-top: 30rem;}
     .launchpad-view__tit__info h3 { font-size: 16rem;}
     .launchpad-view__btn a, .launchpad-view__btn button {font-size:16rem;}
@@ -418,6 +447,11 @@
     .login-helper {margin-top:8rem;}
     .login-helper li:after {height:10rem; margin-top: -5rem;}
     .login-helper li a {font-size:14rem; padding: 10rem 8rem;}
+    
+    .login-item {font-size:15rem;}
+    .login-item > i:before {font-size:21rem;}
+    .login-item--google > i:before {width: 20rem; height: 21rem;}
+    .login-item--nebula > i:before {width: 20rem; height: 20rem;}
 
     /* JOIN */
     .join-form .form-field-wrap .btn-basic {width:100%; height: 50rem; padding-top: 13rem;margin-top:10rem;}
@@ -510,5 +544,26 @@
     .swap-select__container .selectric .button {height:46rem;}
     .swap-transfer button:before { font-size: 18rem;}
     .btn-swap {border-radius:6rem; margin-top:10rem;}
+
+    /* PRIVACY, TERMS */
+    .policy-content { font-size: 14rem;}
+    .policy-content h2 {font-size:18rem;margin-top:30rem; padding-bottom: 10rem;     margin-bottom: 15rem;}
+    .policy-content h3 {font-size:15rem;}
+    .policy-content p + h3, .policy-content ul + h3 { margin-top: 20rem;}
+    .policy-content p {line-height:1.4;}
+    .primary-num-list > li {line-height:1.4;}
+    
+    .policy-box__title {font-size:18rem; line-height:1.6; margin-bottom:20rem; padding-bottom:15rem;}
+    .policy-box .primary-num-list > li,
+    .policy-box .secondary-num-list > li {font-size:14rem; line-height: 1.6;}
+    .policy-box .secondary-num-list > li:before {top:5rem;font-size:14rem;}
+    .policy-box .primary-num-list > li:before {width:13rem; height:13rem; font-size:13rem; top:4rem;}
+    .policy-box p {font-size:14rem; line-height: 1.6;}
+    .policy-box li {margin-bottom:5rem;}
+    
+    .policy .basic-table th { padding: 15rem 5rem;  font-size: 13rem;}
+    .policy .basic-table td { padding: 10rem 5rem; font-size:13rem;}
+
 }
+
 
