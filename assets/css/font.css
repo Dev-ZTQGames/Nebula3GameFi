@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*
+ * File       : font.css
+ */
+
+
+/* ************************************** *
+ * Montserrat
+ * ************************************** */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/montserrat-v14-latin/montserrat-v14-latin-500.woff2') format('woff2'), 
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-500.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/montserrat-v14-latin/montserrat-v14-latin-600.woff2') format('woff2'), 
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-600.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v14-latin/montserrat-v14-latin-700.woff2') format('woff2'), 
+         url('../fonts/montserrat-v14-latin/montserrat-v14-latin-700.woff') format('woff'); 
+}
+
+
+
+/* ************************************** *
+ * nebula
+ * ************************************** */ 
+ @font-face {
+    font-family:'nebula';
+    font-style: normal;
+    font-display: block;
+    font-weight: normal;
+    src: url(../fonts/nebula/fonts/nebula.eot);
+    src: url(../fonts/nebula/fonts/nebula.woff) format('woff');
+}

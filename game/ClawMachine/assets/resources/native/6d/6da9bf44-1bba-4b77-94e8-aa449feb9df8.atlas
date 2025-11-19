@@ -1,0 +1,153 @@
+
+0031_tina_ani_idle_server.png
+size: 1034,317
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Tina_A_dust
+  rotate: false
+  xy: 935, 23
+  size: 59, 53
+  orig: 59, 53
+  offset: 0, 0
+  index: -1
+Tina_B_dust
+  rotate: true
+  xy: 898, 39
+  size: 42, 35
+  orig: 42, 35
+  offset: 0, 0
+  index: -1
+Tina_C_dust
+  rotate: false
+  xy: 898, 13
+  size: 30, 24
+  orig: 32, 26
+  offset: 1, 2
+  index: -1
+Tina_L_blush
+  rotate: false
+  xy: 941, 78
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+Tina_L_ear
+  rotate: true
+  xy: 602, 12
+  size: 104, 119
+  orig: 104, 119
+  offset: 0, 0
+  index: -1
+Tina_L_eye
+  rotate: false
+  xy: 996, 33
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Tina_L_feet
+  rotate: true
+  xy: 954, 223
+  size: 92, 61
+  orig: 92, 61
+  offset: 0, 0
+  index: -1
+Tina_L_hand
+  rotate: false
+  xy: 943, 140
+  size: 82, 81
+  orig: 82, 81
+  offset: 0, 0
+  index: -1
+Tina_Line
+  rotate: false
+  xy: 840, 2
+  size: 46, 17
+  orig: 46, 17
+  offset: 0, 0
+  index: -1
+Tina_R_blush
+  rotate: false
+  xy: 840, 21
+  size: 56, 60
+  orig: 56, 60
+  offset: 0, 0
+  index: -1
+Tina_R_ear
+  rotate: true
+  xy: 723, 15
+  size: 101, 115
+  orig: 101, 115
+  offset: 0, 0
+  index: -1
+Tina_R_eye
+  rotate: false
+  xy: 996, 55
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+Tina_R_feet
+  rotate: false
+  xy: 856, 83
+  size: 83, 61
+  orig: 83, 61
+  offset: 0, 0
+  index: -1
+Tina_R_hand
+  rotate: false
+  xy: 856, 146
+  size: 85, 84
+  orig: 85, 84
+  offset: 0, 0
+  index: -1
+Tina_apron
+  rotate: false
+  xy: 602, 221
+  size: 183, 94
+  orig: 183, 94
+  offset: 0, 0
+  index: -1
+Tina_body
+  rotate: true
+  xy: 2, 3
+  size: 312, 362
+  orig: 312, 362
+  offset: 0, 0
+  index: -1
+Tina_bowtie
+  rotate: true
+  xy: 773, 122
+  size: 97, 81
+  orig: 97, 81
+  offset: 0, 0
+  index: -1
+Tina_broom
+  rotate: false
+  xy: 602, 118
+  size: 169, 101
+  orig: 169, 101
+  offset: 0, 0
+  index: -1
+Tina_grip
+  rotate: false
+  xy: 366, 15
+  size: 234, 300
+  orig: 234, 300
+  offset: 0, 0
+  index: -1
+Tina_hairpin
+  rotate: false
+  xy: 787, 232
+  size: 165, 83
+  orig: 165, 83
+  offset: 0, 0
+  index: -1
+Tina_nose
+  rotate: true
+  xy: 1003, 84
+  size: 54, 29
+  orig: 54, 29
+  offset: 0, 0
+  index: -1

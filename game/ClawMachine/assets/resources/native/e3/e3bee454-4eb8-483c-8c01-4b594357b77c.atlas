@@ -1,0 +1,139 @@
+
+0011_tina_ani_idle_floewr.png
+size: 539,502
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Caty_note6
+  rotate: true
+  xy: 477, 321
+  size: 56, 55
+  orig: 58, 57
+  offset: 1, 1
+  index: -1
+Caty_note7
+  rotate: false
+  xy: 477, 271
+  size: 41, 48
+  orig: 43, 50
+  offset: 1, 1
+  index: -1
+Caty_note8
+  rotate: false
+  xy: 416, 40
+  size: 41, 48
+  orig: 43, 50
+  offset: 1, 1
+  index: -1
+Tina_L_blush
+  rotate: true
+  xy: 477, 440
+  size: 60, 59
+  orig: 60, 59
+  offset: 0, 0
+  index: -1
+Tina_L_ear
+  rotate: false
+  xy: 366, 90
+  size: 104, 119
+  orig: 104, 119
+  offset: 0, 0
+  index: -1
+Tina_L_eye
+  rotate: false
+  xy: 477, 217
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Tina_L_feet
+  rotate: true
+  xy: 472, 118
+  size: 91, 60
+  orig: 91, 60
+  offset: 0, 0
+  index: -1
+Tina_L_hand
+  rotate: true
+  xy: 325, 4
+  size: 84, 89
+  orig: 84, 89
+  offset: 0, 0
+  index: -1
+Tina_R_blush
+  rotate: false
+  xy: 477, 379
+  size: 55, 59
+  orig: 55, 59
+  offset: 0, 0
+  index: -1
+Tina_R_ear
+  rotate: true
+  xy: 2, 2
+  size: 102, 114
+  orig: 102, 114
+  offset: 0, 0
+  index: -1
+Tina_R_eye
+  rotate: false
+  xy: 500, 217
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Tina_R_feet
+  rotate: true
+  xy: 472, 33
+  size: 83, 60
+  orig: 83, 60
+  offset: 0, 0
+  index: -1
+Tina_R_hand
+  rotate: false
+  xy: 241, 13
+  size: 82, 91
+  orig: 82, 91
+  offset: 0, 0
+  index: -1
+Tina_body
+  rotate: true
+  xy: 2, 188
+  size: 312, 362
+  orig: 312, 362
+  offset: 0, 0
+  index: -1
+Tina_bowtie
+  rotate: false
+  xy: 118, 12
+  size: 121, 92
+  orig: 121, 92
+  offset: 0, 0
+  index: -1
+Tina_line
+  rotate: true
+  xy: 520, 272
+  size: 47, 17
+  orig: 47, 17
+  offset: 0, 0
+  index: -1
+Tina_nose
+  rotate: false
+  xy: 477, 240
+  size: 54, 29
+  orig: 54, 29
+  offset: 0, 0
+  index: -1
+Tina_skirt
+  rotate: false
+  xy: 2, 106
+  size: 361, 80
+  orig: 361, 80
+  offset: 0, 0
+  index: -1
+Tina_wreath
+  rotate: true
+  xy: 366, 211
+  size: 289, 109
+  orig: 289, 109
+  offset: 0, 0
+  index: -1

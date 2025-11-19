@@ -1,0 +1,153 @@
+
+0120_ed_ani_idle_idol.png
+size: 615,526
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ed_L_blush
+  rotate: false
+  xy: 530, 54
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+Ed_L_eye
+  rotate: false
+  xy: 392, 12
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Ed_L_feet
+  rotate: false
+  xy: 438, 2
+  size: 90, 59
+  orig: 90, 59
+  offset: 0, 0
+  index: -1
+Ed_L_hand
+  rotate: false
+  xy: 420, 63
+  size: 105, 107
+  orig: 105, 107
+  offset: 0, 0
+  index: -1
+Ed_L_line1
+  rotate: true
+  xy: 2, 2
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+Ed_L_line2
+  rotate: true
+  xy: 30, 2
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+Ed_L_line3
+  rotate: true
+  xy: 58, 2
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+Ed_R_blush
+  rotate: false
+  xy: 530, 5
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+Ed_R_ear
+  rotate: false
+  xy: 527, 107
+  size: 81, 75
+  orig: 81, 75
+  offset: 0, 0
+  index: -1
+Ed_R_eye
+  rotate: false
+  xy: 415, 12
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Ed_R_feet
+  rotate: false
+  xy: 529, 208
+  size: 84, 58
+  orig: 84, 58
+  offset: 0, 0
+  index: -1
+Ed_R_hand
+  rotate: true
+  xy: 323, 172
+  size: 94, 121
+  orig: 94, 121
+  offset: 0, 0
+  index: -1
+Ed_R_line1
+  rotate: false
+  xy: 372, 8
+  size: 18, 25
+  orig: 18, 25
+  offset: 0, 0
+  index: -1
+Ed_R_line2
+  rotate: false
+  xy: 372, 8
+  size: 18, 25
+  orig: 18, 25
+  offset: 0, 0
+  index: -1
+Ed_R_line3
+  rotate: false
+  xy: 372, 8
+  size: 18, 25
+  orig: 18, 25
+  offset: 0, 0
+  index: -1
+Ed_R_suspenders
+  rotate: true
+  xy: 446, 184
+  size: 82, 81
+  orig: 82, 81
+  offset: 0, 0
+  index: -1
+Ed_body
+  rotate: false
+  xy: 2, 170
+  size: 319, 354
+  orig: 319, 354
+  offset: 0, 0
+  index: -1
+Ed_hat
+  rotate: true
+  xy: 316, 35
+  size: 133, 102
+  orig: 133, 102
+  offset: 0, 0
+  index: -1
+Ed_nose
+  rotate: false
+  xy: 316, 3
+  size: 54, 30
+  orig: 54, 30
+  offset: 0, 0
+  index: -1
+Ed_shirt
+  rotate: false
+  xy: 2, 20
+  size: 312, 148
+  orig: 312, 148
+  offset: 0, 0
+  index: -1
+confettiBox2
+  rotate: false
+  xy: 323, 268
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+{
+    "require": {
+        "kornrunner/ethereum-offline-raw-tx": "^0.6.0",
+        "kornrunner/ethereum-address": "^0.3.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

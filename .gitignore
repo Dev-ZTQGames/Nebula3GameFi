@@ -1,0 +1,9 @@
+/admin/
+/includes/
+/img_remote/
+/js/vendors/agent-js-WEB/WEB/api/
+/.well-known/
+/scan/
+*.log
+*/node_module/*
+

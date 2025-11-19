@@ -1,0 +1,104 @@
+
+0006_leo_ani_idle_basic.png
+size: 588,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Leo_L_ear
+  rotate: false
+  xy: 466, 184
+  size: 85, 82
+  orig: 86, 82
+  offset: 1, 0
+  index: -1
+Leo_L_eye
+  rotate: false
+  xy: 391, 95
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Leo_L_feet
+  rotate: true
+  xy: 466, 19
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+Leo_L_hand
+  rotate: true
+  xy: 228, 2
+  size: 89, 75
+  orig: 89, 75
+  offset: 0, 0
+  index: -1
+Leo_R_ear
+  rotate: true
+  xy: 382, 5
+  size: 86, 82
+  orig: 86, 82
+  offset: 0, 0
+  index: -1
+Leo_R_eye
+  rotate: false
+  xy: 412, 95
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Leo_R_feet
+  rotate: true
+  xy: 525, 19
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+Leo_R_hand
+  rotate: true
+  xy: 305, 3
+  size: 88, 75
+  orig: 88, 75
+  offset: 0, 0
+  index: -1
+Leo_body
+  rotate: true
+  xy: 228, 93
+  size: 173, 161
+  orig: 173, 161
+  offset: 0, 0
+  index: -1
+Leo_head
+  rotate: true
+  xy: 2, 4
+  size: 262, 224
+  orig: 262, 224
+  offset: 0, 0
+  index: -1
+Leo_mouth
+  rotate: false
+  xy: 466, 86
+  size: 84, 45
+  orig: 84, 45
+  offset: 0, 0
+  index: -1
+Leo_tail
+  rotate: false
+  xy: 465, 133
+  size: 121, 49
+  orig: 121, 49
+  offset: 0, 0
+  index: -1
+star
+  rotate: true
+  xy: 391, 116
+  size: 74, 72
+  orig: 76, 74
+  offset: 1, 1
+  index: -1
+star2
+  rotate: true
+  xy: 391, 192
+  size: 74, 72
+  orig: 76, 74
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,153 @@
+
+0116_leo_ani_idle_hospital.png
+size: 522,388
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Leo_L_blush
+  rotate: false
+  xy: 113, 9
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+Leo_L_ear
+  rotate: true
+  xy: 89, 36
+  size: 86, 82
+  orig: 86, 82
+  offset: 0, 0
+  index: -1
+Leo_L_eye
+  rotate: false
+  xy: 166, 14
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+Leo_L_eyebrow
+  rotate: false
+  xy: 2, 2
+  size: 23, 14
+  orig: 23, 14
+  offset: 0, 0
+  index: -1
+Leo_L_feet
+  rotate: false
+  xy: 289, 130
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+Leo_L_hand
+  rotate: false
+  xy: 228, 128
+  size: 59, 59
+  orig: 59, 59
+  offset: 0, 0
+  index: -1
+Leo_R_blush
+  rotate: false
+  xy: 140, 9
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+Leo_R_ear
+  rotate: true
+  xy: 173, 37
+  size: 85, 82
+  orig: 85, 82
+  offset: 0, 0
+  index: -1
+Leo_R_eye
+  rotate: false
+  xy: 187, 15
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+Leo_R_eyebrow
+  rotate: false
+  xy: 27, 3
+  size: 22, 13
+  orig: 22, 13
+  offset: 0, 0
+  index: -1
+Leo_R_feet
+  rotate: false
+  xy: 450, 196
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+Leo_R_hand
+  rotate: true
+  xy: 370, 219
+  size: 85, 78
+  orig: 85, 78
+  offset: 0, 0
+  index: -1
+Leo_baton
+  rotate: true
+  xy: 370, 306
+  size: 80, 134
+  orig: 80, 134
+  offset: 0, 0
+  index: -1
+Leo_body
+  rotate: true
+  xy: 356, 12
+  size: 175, 161
+  orig: 188, 161
+  offset: 13, 0
+  index: -1
+Leo_book
+  rotate: true
+  xy: 2, 18
+  size: 104, 85
+  orig: 104, 85
+  offset: 0, 0
+  index: -1
+Leo_head
+  rotate: true
+  xy: 2, 124
+  size: 262, 224
+  orig: 262, 224
+  offset: 0, 0
+  index: -1
+Leo_nose
+  rotate: true
+  xy: 308, 44
+  size: 84, 45
+  orig: 84, 45
+  offset: 0, 0
+  index: -1
+Leo_symbol
+  rotate: true
+  xy: 450, 255
+  size: 49, 70
+  orig: 51, 72
+  offset: 1, 1
+  index: -1
+Leo_tail
+  rotate: true
+  xy: 257, 4
+  size: 122, 49
+  orig: 122, 49
+  offset: 0, 0
+  index: -1
+Leo_tongue
+  rotate: false
+  xy: 89, 6
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+Leo_uniform
+  rotate: true
+  xy: 228, 189
+  size: 197, 140
+  orig: 197, 140
+  offset: 0, 0
+  index: -1

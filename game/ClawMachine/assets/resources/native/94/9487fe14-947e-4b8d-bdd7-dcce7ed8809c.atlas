@@ -1,0 +1,125 @@
+
+0004_nomi_ani_idle_basic.png
+size: 812,190
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Nomi_L_blush
+  rotate: true
+  xy: 727, 94
+  size: 38, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+Nomi_L_ear
+  rotate: false
+  xy: 494, 80
+  size: 91, 108
+  orig: 91, 108
+  offset: 0, 0
+  index: -1
+Nomi_L_eye
+  rotate: false
+  xy: 759, 23
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+Nomi_L_feet
+  rotate: true
+  xy: 672, 102
+  size: 86, 53
+  orig: 86, 53
+  offset: 0, 0
+  index: -1
+Nomi_L_hand
+  rotate: false
+  xy: 299, 2
+  size: 80, 70
+  orig: 80, 70
+  offset: 0, 0
+  index: -1
+Nomi_L_suspenders
+  rotate: true
+  xy: 727, 162
+  size: 26, 83
+  orig: 26, 83
+  offset: 0, 0
+  index: -1
+Nomi_R_blush
+  rotate: true
+  xy: 732, 8
+  size: 38, 25
+  orig: 38, 25
+  offset: 0, 0
+  index: -1
+Nomi_R_ear
+  rotate: false
+  xy: 587, 82
+  size: 83, 106
+  orig: 83, 106
+  offset: 0, 0
+  index: -1
+Nomi_R_eye
+  rotate: false
+  xy: 784, 23
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+Nomi_R_feet
+  rotate: true
+  xy: 754, 48
+  size: 84, 53
+  orig: 84, 53
+  offset: 0, 0
+  index: -1
+Nomi_R_hand
+  rotate: false
+  xy: 381, 3
+  size: 78, 69
+  orig: 78, 69
+  offset: 0, 0
+  index: -1
+Nomi_R_suspenders
+  rotate: true
+  xy: 727, 134
+  size: 26, 82
+  orig: 26, 82
+  offset: 0, 0
+  index: -1
+Nomi_body
+  rotate: false
+  xy: 299, 74
+  size: 193, 114
+  orig: 194, 114
+  offset: 1, 0
+  index: -1
+Nomi_head
+  rotate: false
+  xy: 2, 5
+  size: 295, 183
+  orig: 295, 183
+  offset: 0, 0
+  index: -1
+Nomi_mouth
+  rotate: false
+  xy: 672, 83
+  size: 46, 17
+  orig: 46, 17
+  offset: 0, 0
+  index: -1
+Nomi_skirt
+  rotate: false
+  xy: 538, 4
+  size: 192, 74
+  orig: 192, 74
+  offset: 0, 0
+  index: -1
+heart (2)
+  rotate: false
+  xy: 461, 7
+  size: 75, 65
+  orig: 77, 67
+  offset: 1, 1
+  index: -1

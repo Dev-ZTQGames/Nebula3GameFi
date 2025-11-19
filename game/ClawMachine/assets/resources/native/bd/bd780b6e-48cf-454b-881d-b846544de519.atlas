@@ -1,0 +1,118 @@
+
+0019_baloo_ani_idle_floewr.png
+size: 263,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_L_eye
+  rotate: false
+  xy: 239, 17
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Baloo_L_feet
+  rotate: false
+  xy: 147, 11
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Baloo_L_hand
+  rotate: false
+  xy: 161, 60
+  size: 48, 50
+  orig: 48, 50
+  offset: 0, 0
+  index: -1
+Baloo_R_eye
+  rotate: false
+  xy: 125, 12
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+Baloo_R_feet
+  rotate: true
+  xy: 239, 2
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Baloo_R_hand
+  rotate: false
+  xy: 211, 61
+  size: 44, 49
+  orig: 44, 49
+  offset: 0, 0
+  index: -1
+Baloo_body
+  rotate: false
+  xy: 2, 58
+  size: 157, 145
+  orig: 157, 145
+  offset: 0, 0
+  index: -1
+Baloo_flower
+  rotate: false
+  xy: 161, 112
+  size: 100, 91
+  orig: 100, 91
+  offset: 0, 0
+  index: -1
+Baloo_flower stem
+  rotate: false
+  xy: 2, 33
+  size: 162, 23
+  orig: 162, 23
+  offset: 0, 0
+  index: -1
+Baloo_leaf
+  rotate: false
+  xy: 166, 13
+  size: 48, 45
+  orig: 48, 45
+  offset: 0, 0
+  index: -1
+Baloo_mouse
+  rotate: false
+  xy: 2, 4
+  size: 48, 27
+  orig: 48, 27
+  offset: 0, 0
+  index: -1
+Baloo_sweat1
+  rotate: true
+  xy: 52, 7
+  size: 24, 39
+  orig: 26, 41
+  offset: 1, 1
+  index: -1
+Baloo_sweat2
+  rotate: false
+  xy: 216, 31
+  size: 21, 28
+  orig: 23, 30
+  offset: 1, 1
+  index: -1
+Baloo_sweat3
+  rotate: true
+  xy: 93, 11
+  size: 20, 30
+  orig: 22, 32
+  offset: 1, 1
+  index: -1
+Kort_L_eye
+  rotate: true
+  xy: 216, 11
+  size: 18, 21
+  orig: 20, 23
+  offset: 1, 1
+  index: -1
+Kort_R_eye
+  rotate: false
+  xy: 239, 38
+  size: 18, 21
+  orig: 20, 23
+  offset: 0, 1
+  index: -1

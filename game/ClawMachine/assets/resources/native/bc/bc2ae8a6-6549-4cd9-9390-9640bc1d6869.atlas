@@ -1,0 +1,167 @@
+
+0115_mica_ani_idle_hospital.png
+size: 913,270
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mica_L_coat
+  rotate: false
+  xy: 454, 124
+  size: 101, 144
+  orig: 101, 144
+  offset: 0, 0
+  index: -1
+Mica_L_collar
+  rotate: false
+  xy: 752, 4
+  size: 75, 46
+  orig: 75, 46
+  offset: 0, 0
+  index: -1
+Mica_L_ear
+  rotate: true
+  xy: 648, 132
+  size: 136, 126
+  orig: 136, 126
+  offset: 0, 0
+  index: -1
+Mica_L_eye
+  rotate: false
+  xy: 454, 88
+  size: 20, 15
+  orig: 20, 15
+  offset: 0, 0
+  index: -1
+Mica_L_eyebrow
+  rotate: false
+  xy: 454, 115
+  size: 23, 7
+  orig: 23, 7
+  offset: 0, 0
+  index: -1
+Mica_L_feet
+  rotate: true
+  xy: 553, 12
+  size: 110, 74
+  orig: 110, 74
+  offset: 0, 0
+  index: -1
+Mica_L_hand
+  rotate: true
+  xy: 829, 69
+  size: 71, 75
+  orig: 71, 75
+  offset: 0, 0
+  index: -1
+Mica_R_coat
+  rotate: false
+  xy: 557, 125
+  size: 89, 143
+  orig: 89, 143
+  offset: 0, 0
+  index: -1
+Mica_R_collar
+  rotate: false
+  xy: 829, 21
+  size: 72, 46
+  orig: 72, 46
+  offset: 0, 0
+  index: -1
+Mica_R_ear
+  rotate: false
+  xy: 776, 142
+  size: 135, 126
+  orig: 135, 126
+  offset: 0, 0
+  index: -1
+Mica_R_eye
+  rotate: true
+  xy: 454, 66
+  size: 20, 15
+  orig: 20, 15
+  offset: 0, 0
+  index: -1
+Mica_R_feet
+  rotate: true
+  xy: 629, 13
+  size: 110, 74
+  orig: 110, 74
+  offset: 0, 0
+  index: -1
+Mica_R_hand
+  rotate: true
+  xy: 346, 2
+  size: 58, 67
+  orig: 58, 67
+  offset: 0, 0
+  index: -1
+Mica_body
+  rotate: false
+  xy: 2, 9
+  size: 275, 259
+  orig: 275, 259
+  offset: 0, 0
+  index: -1
+Mica_bowtie
+  rotate: true
+  xy: 415, 10
+  size: 50, 68
+  orig: 50, 68
+  offset: 0, 0
+  index: -1
+Mica_lower lip
+  rotate: false
+  xy: 454, 105
+  size: 22, 8
+  orig: 22, 8
+  offset: 0, 0
+  index: -1
+Mica_mirror
+  rotate: true
+  xy: 279, 52
+  size: 216, 62
+  orig: 216, 62
+  offset: 0, 0
+  index: -1
+Mica_mouse
+  rotate: true
+  xy: 327, 3
+  size: 47, 17
+  orig: 47, 17
+  offset: 0, 0
+  index: -1
+Mica_shirt
+  rotate: true
+  xy: 343, 62
+  size: 206, 109
+  orig: 206, 109
+  offset: 0, 0
+  index: -1
+Mica_star
+  rotate: false
+  xy: 279, 3
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+Mica_tail
+  rotate: true
+  xy: 705, 49
+  size: 81, 45
+  orig: 81, 45
+  offset: 0, 0
+  index: -1
+Mica_tooth
+  rotate: true
+  xy: 752, 52
+  size: 78, 62
+  orig: 78, 62
+  offset: 0, 0
+  index: -1
+Mica_toothblush
+  rotate: false
+  xy: 485, 10
+  size: 66, 112
+  orig: 66, 112
+  offset: 0, 0
+  index: -1

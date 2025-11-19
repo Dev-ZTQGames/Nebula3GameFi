@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>The Fox Seeks Friends | Mini Dapp</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+	<link rel="stylesheet" href="TemplateData/style_google_ad.css">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WDB3KBJ5');</script>
+	<!-- End Google Tag Manager -->
+
+	<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7JEZT7FFM"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-H7JEZT7FFM'); </script>
+  </head>
+  <body>
+  	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDB3KBJ5"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=540 height=960 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">FoxSeeksFriends</div>
+      </div>
+    </div>
+	<script src="scripts/jquery.min.js"></script>
+	<!--https://static.line-scdn.net/liff/edge/versions/2.25.1/sdk.js-->
+	<script charset="utf-8" src="scripts/line_sdk.js"></script>
+	<!--https://static.kaiawallet.io/js/dapp-portal-sdk-1.2.6.js-->
+	<script charset="utf-8" src="scripts/dapp-portal-sdk-1.3.8.js"></script>
+	<script src="scripts/main.js?v=250630"></script>
+	<script charset="utf-8" src="scripts/pako.min.js"></script>
+
+
+	
+	<script>
+		document.addEventListener('contextmenu', function(e) {
+			e.preventDefault();
+        });
+        
+
+		document.addEventListener('keydown', function(e) {
+
+			if (e.keyCode == 123) {
+				e.preventDefault();
+            }
+
+			if ((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74))) {
+				e.preventDefault();
+			}
+		});
+    </script>
+
+
+
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+	/*
+	const fileList = [
+		"catalog.json?v=" + Date.now(),		// text
+		"settings.json?v=" + Date.now(),		// text
+
+		"WebGL/catalog_2025.02.12.12.31.33.hash?v=" + Date.now(),		// text
+		"WebGL/catalog_2025.02.12.12.31.33.json?v=" + Date.now(),		// text
+		
+		"WebGL/defaultlocalgroup_assets_all_af388fb54abe9715307c51a0b2c96122.bundle?v=" + Date.now(),    // 바이너리
+
+		"WebGL/localization-assets-english(en)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-assets-japanese(ja)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-assets-korean(ko)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-assets-shared_assets_all.bundle?v=" + Date.now(),    // 바이너리
+
+		"WebGL/localization-asset-tables-english(en)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-asset-tables-japanese(ja)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-asset-tables-korean(ko)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-locales_assets_all.bundle?v=" + Date.now(),    // 바이너리
+
+		"WebGL/localization-string-tables-english(en)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-string-tables-japanese(ja)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+		"WebGL/localization-string-tables-korean(ko)_assets_all.bundle?v=" + Date.now(),    // 바이너리
+	];
+
+
+	// 디렉토리 URL과 파일 목록을 기반으로 캐시 갱신
+	async function updateCacheForFiles(directoryUrl) {
+		for (let file of fileList) {
+			const fileUrl = `${directoryUrl}/${file}`;
+			const isBinary = /(\.bundle|\.data)$/.test(file); // 바이너리 파일 확장자 패턴
+
+			try {
+				console.log("trying this...");
+				const response = await fetch(fileUrl, { cache: "reload" });
+				if (!response.ok) throw new Error(`Failed to fetch ${fileUrl}`);
+
+				const resource = isBinary ? await response.blob() : await response.text();
+
+				console.log(`${fileUrl} updated successfully!!!`);
+			} catch (error) {
+				console.error(error);
+			}
+		}
+	}
+	// 예시 실행: 지정된 URL의 모든 파일 갱신
+	updateCacheForFiles('StreamingAssets/aa');
+	*/
+
+	var lastVersion = localStorage.getItem("gameVersion");
+
+	fetch("version.json")
+		.then(response => response.json())
+		.then(data => {
+			var currentVersion = data.version;
+			console.log("currentVersion : " + currentVersion);
+			
+			if (lastVersion !== currentVersion) {
+				console.log("New version detected! Clearing cache...");
+				localStorage.setItem("gameVersion", currentVersion);
+				window.location.reload(true);
+			}
+		}
+	);
+/*
+	function showAd() {
+		var adOverlay = document.getElementById("adOverlay");
+		var adContainer = document.getElementById("adContainer");
+
+		adOverlay.style.display = "flex";
+		adContainer.innerHTML = `
+			<iframe src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-XXXXXXX&output=html&h=250&slotname=XXXXXX&adk=XXXXXXX&adf=XXXXXXX" frameborder="0" scrolling="no"></iframe>
+		`;
+	
+	}
+*/
+let timerInterval;
+	async function showAd() {
+	    const adOverlay = document.getElementById('adOverlay');
+	    const adBanner = document.getElementById('adBanner');
+
+	    adBanner.innerHTML = '';
+
+	    const ins = document.createElement('ins');
+	    ins.className = 'adsbygoogle';
+	    ins.style.display = 'inline-block';
+		ins.style.width = '300px';
+	    ins.style.height = '600px';
+	    ins.setAttribute('data-ad-client', 'ca-pub-1309590692528297');
+	    ins.setAttribute('data-ad-slot', '1906262009');
+	//	ins.setAttribute('data-ad-format', 'auto');
+	//	ins.setAttribute('data-full-width-responsive', 'true');
+
+	    adBanner.appendChild(ins);
+	    adOverlay.style.display = 'flex';
+
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		
+		/*
+	    setTimeout(() => {
+	        try {
+	            (adsbygoogle = window.adsbygoogle || []).push({});
+	        } catch (e) {
+	        //    console.error('AdSense error:', e);
+	        }
+	    }, 100);
+
+		*/
+		/*
+		const RADIUS = 13;
+		const FULL_DASH_ARRAY = 2 * Math.PI * RADIUS;
+		const TIME_LIMIT = 10; // 倒數 10 秒
+		let timeLeft = TIME_LIMIT;
+
+		const circle = document.querySelector('.circle-progress');
+		const timeText = document.getElementById('time');
+
+		circle.style.strokeDasharray = FULL_DASH_ARRAY;
+		circle.style.strokeDashoffset = 0;
+
+		function updateCircle() {
+		  const offset = FULL_DASH_ARRAY * (1 - timeLeft / TIME_LIMIT);
+		  circle.style.strokeDashoffset = offset;
+		  timeText.textContent = timeLeft;
+		}
+
+		updateCircle(); // 初始化一次
+
+		timerInterval = setInterval(() => {
+		  timeLeft--;
+		  if (timeLeft < 0) {
+		    clearInterval(timerInterval);
+		    timeText.textContent = '0';
+			hideAd();
+		    return;
+		  }
+		  updateCircle();
+		}, 1000);
+		*/
+		let result = {"status":"success","message":"Request OK, Success."};
+		return result;
+	}
+
+	function hideAd() {
+		var adOverlay = document.getElementById("adOverlay");
+		adOverlay.style.display = "none";
+	}
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/0124_CheckCookie.loader.js?v=" + Date.now();
+      var config = {
+        dataUrl: buildUrl + "/0124_CheckCookie.data.unityweb?v=" + Date.now(),
+        frameworkUrl: buildUrl + "/0124_CheckCookie.framework.js.unityweb?v=" + Date.now(),
+        codeUrl: buildUrl + "/0124_CheckCookie.wasm.unityweb?v=" + Date.now(),
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "wise",
+        productName: "FoxSeeksFriends",
+        productVersion: "0.1",
+		showBanner: unityShowBanner,
+		cacheControl: function (url) {
+          // Caching enabled for .data and .bundle files.
+          // Revalidate if file is up to date before loading from cache
+         if (url.match(/\.data/) || url.match(/\.bundle/)) {
+             return "must-revalidate";
+         }
+
+         // Caching enabled for .mp4 and .custom files
+         // Load file from cache without revalidation.
+         if (url.match(/\.mp4/) || url.match(/\.custom/)) {
+             return "immutable";
+         }
+
+         // Disable explicit caching for all other files.
+         // Note: the default browser cache may cache them anyway.
+         return "no-store";
+	    },
+      };
+
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+       config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "540px";
+        canvas.style.height = "960px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+		window.unityInstance = unityInstance;
+                loadingBar.style.display = "none";
+                fullscreenButton.onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+	/*
+	$(document).ready(function() {
+		setTimeout(() => {
+	        try {
+	            showAd();
+	        } catch (e) {
+	        //    console.error('AdSense error:', e);
+	        }
+	    }, 10000);
+	})
+	*/
+    </script>
+
+	<div id="adOverlay">
+        <div id="adContainer">
+            <button id="closeAdButton" onclick="hideAd()" style="display:block;">×</button>
+			<!--div class="timer">
+			  <svg width="30" height="30">
+			    <circle class="circle-bg" cx="15" cy="15" r="13" />
+			    <circle class="circle-progress" cx="15" cy="15" r="13" />
+			  </svg>
+			  <div class="time-text" id="time">10</div>
+			</div-->
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1309590692528297"
+			     crossorigin="anonymous"></script>
+			
+			<div id="adBanner" style="width:100%; height:auto; margin:10px 0px 10px 0px; position:relative; text-align: center;"></div>
+		</div>
+    </div>
+
+  </body>
+</html>

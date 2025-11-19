@@ -1,0 +1,125 @@
+
+0021_tina_ani_idle_pajamas.png
+size: 859,320
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Tina_L_blush
+  rotate: false
+  xy: 790, 257
+  size: 61, 61
+  orig: 61, 61
+  offset: 0, 0
+  index: -1
+Tina_L_ear
+  rotate: true
+  xy: 651, 111
+  size: 106, 121
+  orig: 106, 121
+  offset: 0, 0
+  index: -1
+Tina_L_eye
+  rotate: false
+  xy: 831, 112
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Tina_L_feet
+  rotate: true
+  xy: 560, 6
+  size: 91, 96
+  orig: 91, 96
+  offset: 0, 0
+  index: -1
+Tina_L_hand
+  rotate: false
+  xy: 459, 3
+  size: 99, 94
+  orig: 99, 94
+  offset: 0, 0
+  index: -1
+Tina_R_blush
+  rotate: false
+  xy: 777, 72
+  size: 52, 61
+  orig: 52, 61
+  offset: 0, 0
+  index: -1
+Tina_R_ear
+  rotate: true
+  xy: 658, 6
+  size: 103, 117
+  orig: 103, 117
+  offset: 0, 0
+  index: -1
+Tina_R_eye
+  rotate: false
+  xy: 831, 89
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Tina_R_feet
+  rotate: true
+  xy: 557, 99
+  size: 79, 92
+  orig: 79, 92
+  offset: 0, 0
+  index: -1
+Tina_R_hand
+  rotate: false
+  xy: 774, 135
+  size: 83, 82
+  orig: 83, 82
+  offset: 0, 0
+  index: -1
+Tina_body
+  rotate: true
+  xy: 2, 4
+  size: 314, 356
+  orig: 314, 356
+  offset: 0, 0
+  index: -1
+Tina_bowtie
+  rotate: false
+  xy: 360, 99
+  size: 195, 79
+  orig: 195, 79
+  offset: 0, 0
+  index: -1
+Tina_headband
+  rotate: false
+  xy: 360, 180
+  size: 287, 138
+  orig: 287, 138
+  offset: 0, 0
+  index: -1
+Tina_mirror
+  rotate: true
+  xy: 649, 219
+  size: 99, 139
+  orig: 99, 139
+  offset: 0, 0
+  index: -1
+Tina_mouth
+  rotate: false
+  xy: 790, 225
+  size: 56, 30
+  orig: 56, 30
+  offset: 0, 0
+  index: -1
+Tina_puff
+  rotate: false
+  xy: 360, 2
+  size: 97, 95
+  orig: 97, 95
+  offset: 0, 0
+  index: -1
+flash
+  rotate: false
+  xy: 777, 16
+  size: 54, 54
+  orig: 56, 56
+  offset: 1, 1
+  index: -1

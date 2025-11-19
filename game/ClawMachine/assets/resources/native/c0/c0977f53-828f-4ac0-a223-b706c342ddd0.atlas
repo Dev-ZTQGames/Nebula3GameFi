@@ -1,0 +1,146 @@
+
+0126_leo_ani_idle_idol.png
+size: 1160,778
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Kort_R_eye
+  rotate: false
+  xy: 996, 96
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+Leo_L_blush
+  rotate: false
+  xy: 1025, 132
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+Leo_L_coat
+  rotate: true
+  xy: 1018, 8
+  size: 92, 129
+  orig: 92, 129
+  offset: 0, 0
+  index: -1
+Leo_L_ear
+  rotate: false
+  xy: 1072, 114
+  size: 84, 84
+  orig: 84, 84
+  offset: 0, 0
+  index: -1
+Leo_L_earrings
+  rotate: true
+  xy: 1025, 162
+  size: 34, 35
+  orig: 34, 35
+  offset: 0, 0
+  index: -1
+Leo_L_eye
+  rotate: true
+  xy: 1050, 111
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+Leo_L_feet
+  rotate: true
+  xy: 1089, 389
+  size: 73, 55
+  orig: 73, 55
+  offset: 0, 0
+  index: -1
+Leo_R_blush
+  rotate: false
+  xy: 1020, 102
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+Leo_R_coat
+  rotate: false
+  xy: 896, 17
+  size: 98, 132
+  orig: 98, 132
+  offset: 0, 0
+  index: -1
+Leo_R_ear
+  rotate: true
+  xy: 1073, 200
+  size: 87, 82
+  orig: 87, 82
+  offset: 0, 0
+  index: -1
+Leo_R_eye
+  rotate: false
+  xy: 996, 75
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Leo_R_feet
+  rotate: true
+  xy: 1089, 464
+  size: 83, 57
+  orig: 83, 57
+  offset: 0, 0
+  index: -1
+Leo_R_hand
+  rotate: true
+  xy: 1073, 289
+  size: 98, 82
+  orig: 98, 82
+  offset: 0, 0
+  index: -1
+Leo_body
+  rotate: false
+  xy: 896, 404
+  size: 191, 143
+  orig: 191, 143
+  offset: 0, 0
+  index: -1
+Leo_hat
+  rotate: false
+  xy: 896, 151
+  size: 127, 127
+  orig: 127, 127
+  offset: 0, 0
+  index: -1
+Leo_head
+  rotate: false
+  xy: 896, 549
+  size: 262, 227
+  orig: 262, 227
+  offset: 0, 0
+  index: -1
+Leo_nose
+  rotate: true
+  xy: 1025, 198
+  size: 80, 45
+  orig: 80, 45
+  offset: 0, 0
+  index: -1
+Leo_shirt
+  rotate: false
+  xy: 896, 280
+  size: 175, 122
+  orig: 175, 122
+  offset: 0, 0
+  index: -1
+Leo_tongue
+  rotate: false
+  xy: 996, 121
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+heartPNG
+  rotate: false
+  xy: 2, 2
+  size: 892, 774
+  orig: 1000, 1000
+  offset: 54, 113
+  index: -1

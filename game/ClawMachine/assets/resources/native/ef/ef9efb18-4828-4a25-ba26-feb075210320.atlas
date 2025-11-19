@@ -1,0 +1,188 @@
+
+0016_leo_ani_idle_floewr.png
+size: 779,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Leo_L_blush
+  rotate: false
+  xy: 736, 147
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+Leo_R_blush
+  rotate: false
+  xy: 736, 147
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+Leo_L_ear
+  rotate: true
+  xy: 446, 5
+  size: 86, 83
+  orig: 86, 83
+  offset: 0, 0
+  index: -1
+Leo_L_eye
+  rotate: false
+  xy: 736, 126
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Leo_L_eye2
+  rotate: true
+  xy: 363, 58
+  size: 21, 10
+  orig: 23, 12
+  offset: 1, 1
+  index: -1
+Leo_L_feet
+  rotate: true
+  xy: 618, 103
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+Leo_L_flower
+  rotate: false
+  xy: 721, 20
+  size: 48, 47
+  orig: 48, 47
+  offset: 0, 0
+  index: -1
+Leo_L_flower stem
+  rotate: false
+  xy: 618, 170
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+Leo_L_hand
+  rotate: true
+  xy: 228, 81
+  size: 185, 126
+  orig: 185, 126
+  offset: 0, 0
+  index: -1
+Leo_L_suspenders
+  rotate: false
+  xy: 741, 205
+  size: 36, 61
+  orig: 36, 61
+  offset: 0, 0
+  index: -1
+Leo_R_ear
+  rotate: true
+  xy: 531, 6
+  size: 86, 83
+  orig: 86, 83
+  offset: 0, 0
+  index: -1
+Leo_R_eye
+  rotate: false
+  xy: 757, 126
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1
+Leo_R_eye2
+  rotate: false
+  xy: 356, 81
+  size: 23, 10
+  orig: 25, 12
+  offset: 1, 1
+  index: -1
+Leo_R_feet
+  rotate: true
+  xy: 677, 113
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+Leo_R_flower
+  rotate: false
+  xy: 663, 11
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+Leo_R_flower stem
+  rotate: false
+  xy: 318, 4
+  size: 43, 75
+  orig: 43, 75
+  offset: 0, 0
+  index: -1
+Leo_R_hand
+  rotate: false
+  xy: 228, 3
+  size: 88, 76
+  orig: 88, 76
+  offset: 0, 0
+  index: -1
+Leo_R_suspenders
+  rotate: true
+  xy: 663, 180
+  size: 33, 74
+  orig: 33, 74
+  offset: 0, 0
+  index: -1
+Leo_apron
+  rotate: true
+  xy: 518, 94
+  size: 172, 98
+  orig: 172, 98
+  offset: 0, 0
+  index: -1
+Leo_body
+  rotate: true
+  xy: 356, 93
+  size: 173, 160
+  orig: 173, 160
+  offset: 0, 0
+  index: -1
+Leo_head
+  rotate: true
+  xy: 2, 4
+  size: 262, 224
+  orig: 262, 224
+  offset: 0, 0
+  index: -1
+Leo_line
+  rotate: true
+  xy: 677, 69
+  size: 42, 61
+  orig: 44, 63
+  offset: 1, 1
+  index: -1
+Leo_nose
+  rotate: true
+  xy: 616, 9
+  size: 83, 45
+  orig: 83, 45
+  offset: 0, 0
+  index: -1
+Leo_potted plants
+  rotate: true
+  xy: 381, 2
+  size: 89, 63
+  orig: 89, 63
+  offset: 0, 0
+  index: -1
+Leo_tail
+  rotate: false
+  xy: 618, 215
+  size: 121, 51
+  orig: 121, 51
+  offset: 0, 0
+  index: -1
+Leo_tongue
+  rotate: false
+  xy: 739, 177
+  size: 33, 26
+  orig: 35, 28
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,139 @@
+
+0037_asha_ani_idle_server.png
+size: 636,204
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Asha_L_blush
+  rotate: false
+  xy: 198, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+Asha_L_ear
+  rotate: true
+  xy: 242, 23
+  size: 40, 64
+  orig: 40, 64
+  offset: 0, 0
+  index: -1
+Asha_L_eye
+  rotate: false
+  xy: 236, 9
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+Asha_L_feet
+  rotate: false
+  xy: 308, 2
+  size: 45, 28
+  orig: 45, 28
+  offset: 0, 0
+  index: -1
+Asha_L_hand
+  rotate: true
+  xy: 425, 44
+  size: 48, 43
+  orig: 48, 43
+  offset: 0, 0
+  index: -1
+Asha_R_blush
+  rotate: false
+  xy: 217, 4
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+Asha_R_ear
+  rotate: true
+  xy: 175, 23
+  size: 40, 65
+  orig: 40, 65
+  offset: 0, 0
+  index: -1
+Asha_R_eye
+  rotate: true
+  xy: 250, 9
+  size: 12, 11
+  orig: 12, 12
+  offset: 0, 1
+  index: -1
+Asha_R_feet
+  rotate: false
+  xy: 355, 2
+  size: 45, 28
+  orig: 45, 28
+  offset: 0, 0
+  index: -1
+Asha_R_hand
+  rotate: false
+  xy: 450, 3
+  size: 37, 39
+  orig: 37, 39
+  offset: 0, 0
+  index: -1
+Asha_bowtie
+  rotate: false
+  xy: 402, 4
+  size: 46, 32
+  orig: 46, 32
+  offset: 0, 0
+  index: -1
+Asha_collar
+  rotate: false
+  xy: 308, 32
+  size: 73, 31
+  orig: 73, 31
+  offset: 0, 0
+  index: -1
+Asha_head
+  rotate: false
+  xy: 414, 94
+  size: 143, 108
+  orig: 143, 111
+  offset: 0, 3
+  index: -1
+Asha_kanban
+  rotate: false
+  xy: 2, 2
+  size: 171, 200
+  orig: 171, 200
+  offset: 0, 0
+  index: -1
+Asha_nose
+  rotate: false
+  xy: 383, 38
+  size: 40, 25
+  orig: 40, 25
+  offset: 0, 0
+  index: -1
+Asha_tail
+  rotate: true
+  xy: 559, 103
+  size: 99, 75
+  orig: 99, 75
+  offset: 0, 0
+  index: -1
+Asha_tongue
+  rotate: true
+  xy: 175, 3
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+Asha_uniform
+  rotate: false
+  xy: 489, 27
+  size: 135, 65
+  orig: 135, 65
+  offset: 0, 0
+  index: -1
+Caty_line2
+  rotate: false
+  xy: 175, 65
+  size: 237, 137
+  orig: 237, 137
+  offset: 0, 0
+  index: -1

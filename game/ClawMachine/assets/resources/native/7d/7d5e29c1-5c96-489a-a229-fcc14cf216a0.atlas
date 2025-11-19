@@ -1,0 +1,230 @@
+
+0032_caty_ani_idle_server.png
+size: 1095,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Caty_L_beard
+  rotate: false
+  xy: 991, 22
+  size: 33, 42
+  orig: 33, 42
+  offset: 0, 0
+  index: -1
+Caty_L_eye
+  rotate: false
+  xy: 1026, 42
+  size: 22, 22
+  orig: 22, 22
+  offset: 0, 0
+  index: -1
+Caty_L_eyeleft
+  rotate: false
+  xy: 707, 59
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+Caty_R_eyeleft
+  rotate: false
+  xy: 707, 59
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+Caty_L_eyeright
+  rotate: false
+  xy: 299, 40
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Caty_R_eyeright
+  rotate: false
+  xy: 299, 40
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Caty_L_feet
+  rotate: false
+  xy: 797, 2
+  size: 88, 66
+  orig: 88, 66
+  offset: 0, 0
+  index: -1
+Caty_L_hand
+  rotate: true
+  xy: 716, 6
+  size: 81, 79
+  orig: 81, 79
+  offset: 0, 0
+  index: -1
+Caty_L_wheel
+  rotate: false
+  xy: 667, 24
+  size: 38, 41
+  orig: 38, 41
+  offset: 0, 0
+  index: -1
+Caty_Line
+  rotate: true
+  xy: 976, 15
+  size: 53, 13
+  orig: 53, 13
+  offset: 0, 0
+  index: -1
+Caty_R_beard
+  rotate: false
+  xy: 1061, 101
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1
+Caty_R_eye
+  rotate: true
+  xy: 1026, 19
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1
+Caty_R_feet
+  rotate: false
+  xy: 887, 2
+  size: 87, 66
+  orig: 87, 66
+  offset: 0, 0
+  index: -1
+Caty_R_hand
+  rotate: false
+  xy: 991, 66
+  size: 68, 77
+  orig: 68, 77
+  offset: 0, 0
+  index: -1
+Caty_R_wheel
+  rotate: false
+  xy: 255, 7
+  size: 42, 41
+  orig: 42, 41
+  offset: 0, 0
+  index: -1
+Caty_apron
+  rotate: false
+  xy: 311, 2
+  size: 143, 64
+  orig: 143, 64
+  offset: 0, 0
+  index: -1
+Caty_body
+  rotate: false
+  xy: 2, 3
+  size: 180, 45
+  orig: 180, 45
+  offset: 0, 0
+  index: -1
+Caty_bowtie
+  rotate: false
+  xy: 456, 11
+  size: 91, 55
+  orig: 91, 55
+  offset: 0, 0
+  index: -1
+Caty_cheese
+  rotate: false
+  xy: 184, 4
+  size: 69, 44
+  orig: 69, 44
+  offset: 0, 0
+  index: -1
+Caty_diningcar
+  rotate: false
+  xy: 798, 70
+  size: 191, 73
+  orig: 191, 73
+  offset: 0, 0
+  index: -1
+Caty_grip
+  rotate: true
+  xy: 1064, 203
+  size: 64, 27
+  orig: 64, 27
+  offset: 0, 0
+  index: -1
+Caty_head
+  rotate: false
+  xy: 2, 50
+  size: 307, 217
+  orig: 307, 217
+  offset: 0, 0
+  index: -1
+Caty_light
+  rotate: false
+  xy: 311, 68
+  size: 249, 199
+  orig: 354, 337
+  offset: 0, 40
+  index: -1
+Caty_light2
+  rotate: false
+  xy: 562, 89
+  size: 234, 178
+  orig: 234, 178
+  offset: 0, 0
+  index: -1
+Caty_mouth
+  rotate: true
+  xy: 1064, 160
+  size: 41, 15
+  orig: 41, 15
+  offset: 0, 0
+  index: -1
+Caty_nose
+  rotate: false
+  xy: 456, 2
+  size: 8, 7
+  orig: 8, 7
+  offset: 0, 0
+  index: -1
+Caty_plate
+  rotate: false
+  xy: 562, 67
+  size: 152, 20
+  orig: 152, 20
+  offset: 0, 0
+  index: -1
+Caty_platecover
+  rotate: true
+  xy: 1003, 146
+  size: 121, 59
+  orig: 121, 59
+  offset: 0, 0
+  index: -1
+Caty_saliva
+  rotate: true
+  xy: 667, 6
+  size: 16, 19
+  orig: 16, 19
+  offset: 0, 0
+  index: -1
+Caty_tail
+  rotate: false
+  xy: 549, 9
+  size: 116, 56
+  orig: 116, 56
+  offset: 0, 0
+  index: -1
+Caty_tongue
+  rotate: false
+  xy: 1061, 77
+  size: 26, 22
+  orig: 26, 22
+  offset: 0, 0
+  index: -1
+Caty_uniform
+  rotate: false
+  xy: 798, 145
+  size: 203, 122
+  orig: 203, 122
+  offset: 0, 0
+  index: -1

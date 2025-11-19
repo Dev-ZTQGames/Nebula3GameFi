@@ -1,0 +1,216 @@
+
+0013_haru_ani_idle_floewr.png
+size: 490,522
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_R_eye2
+  rotate: false
+  xy: 454, 26
+  size: 28, 28
+  orig: 30, 30
+  offset: 1, 1
+  index: -1
+Haru_Down_scarf
+  rotate: false
+  xy: 314, 235
+  size: 95, 89
+  orig: 95, 89
+  offset: 0, 0
+  index: -1
+Haru_L_blush
+  rotate: false
+  xy: 432, 56
+  size: 56, 54
+  orig: 56, 54
+  offset: 0, 0
+  index: -1
+Haru_L_ear
+  rotate: false
+  xy: 210, 12
+  size: 91, 90
+  orig: 91, 90
+  offset: 0, 0
+  index: -1
+Haru_L_eye
+  rotate: false
+  xy: 453, 3
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+Haru_L_eyebrow
+  rotate: false
+  xy: 423, 26
+  size: 29, 28
+  orig: 29, 28
+  offset: 0, 0
+  index: -1
+Haru_L_feet
+  rotate: true
+  xy: 411, 234
+  size: 90, 66
+  orig: 90, 66
+  offset: 0, 0
+  index: -1
+Haru_L_hand
+  rotate: false
+  xy: 2, 13
+  size: 98, 89
+  orig: 98, 89
+  offset: 0, 0
+  index: -1
+Haru_R_blush
+  rotate: false
+  xy: 371, 5
+  size: 50, 49
+  orig: 50, 49
+  offset: 0, 0
+  index: -1
+Haru_R_ear
+  rotate: true
+  xy: 257, 117
+  size: 94, 90
+  orig: 94, 90
+  offset: 0, 0
+  index: -1
+Haru_R_eye1
+  rotate: false
+  xy: 451, 361
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+Haru_R_eye2
+  rotate: true
+  xy: 314, 214
+  size: 19, 24
+  orig: 19, 24
+  offset: 0, 0
+  index: -1
+Haru_R_eyebrow
+  rotate: true
+  xy: 451, 384
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+Haru_R_feet
+  rotate: true
+  xy: 303, 28
+  size: 87, 66
+  orig: 87, 66
+  offset: 0, 0
+  index: -1
+Haru_R_hand
+  rotate: true
+  xy: 349, 167
+  size: 66, 60
+  orig: 66, 60
+  offset: 0, 0
+  index: -1
+Haru_Up_scarf
+  rotate: false
+  xy: 102, 23
+  size: 106, 79
+  orig: 106, 79
+  offset: 0, 0
+  index: -1
+Haru_body
+  rotate: true
+  xy: 314, 326
+  size: 194, 135
+  orig: 194, 135
+  offset: 0, 0
+  index: -1
+Haru_flower
+  rotate: false
+  xy: 411, 112
+  size: 61, 56
+  orig: 61, 56
+  offset: 0, 0
+  index: -1
+Haru_head
+  rotate: false
+  xy: 2, 314
+  size: 310, 206
+  orig: 310, 206
+  offset: 0, 0
+  index: -1
+Haru_line
+  rotate: false
+  xy: 303, 13
+  size: 48, 13
+  orig: 48, 13
+  offset: 0, 0
+  index: -1
+Haru_mouth
+  rotate: true
+  xy: 451, 415
+  size: 54, 16
+  orig: 54, 16
+  offset: 0, 0
+  index: -1
+Haru_nose
+  rotate: false
+  xy: 353, 10
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+Haru_scarf
+  rotate: false
+  xy: 2, 104
+  size: 253, 74
+  orig: 253, 74
+  offset: 0, 0
+  index: -1
+Haru_tail
+  rotate: true
+  xy: 245, 213
+  size: 99, 67
+  orig: 99, 67
+  offset: 0, 0
+  index: -1
+Haru_tongue
+  rotate: false
+  xy: 423, 2
+  size: 28, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+Haru_triangle1
+  rotate: false
+  xy: 371, 56
+  size: 59, 54
+  orig: 61, 56
+  offset: 1, 1
+  index: -1
+Haru_triangle2
+  rotate: true
+  xy: 349, 121
+  size: 44, 60
+  orig: 46, 62
+  offset: 1, 1
+  index: -1
+Haru_triangle3
+  rotate: true
+  xy: 451, 471
+  size: 49, 29
+  orig: 51, 31
+  offset: 1, 1
+  index: -1
+Haru_tshirt
+  rotate: false
+  xy: 2, 180
+  size: 241, 132
+  orig: 241, 132
+  offset: 0, 0
+  index: -1
+Haru_whitecircle
+  rotate: false
+  xy: 411, 170
+  size: 73, 62
+  orig: 73, 62
+  offset: 0, 0
+  index: -1

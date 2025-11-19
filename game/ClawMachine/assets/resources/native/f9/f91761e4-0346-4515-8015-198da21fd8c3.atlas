@@ -1,0 +1,83 @@
+
+0009_baloo_ani_idle_basic.png
+size: 204,207
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_L_eye
+  rotate: false
+  xy: 175, 17
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+Baloo_L_feet
+  rotate: true
+  xy: 153, 2
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Baloo_L_hand
+  rotate: true
+  xy: 2, 2
+  size: 44, 49
+  orig: 44, 49
+  offset: 0, 0
+  index: -1
+Baloo_R_eye
+  rotate: false
+  xy: 153, 17
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Baloo_R_feet
+  rotate: true
+  xy: 175, 2
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Baloo_R_hand
+  rotate: true
+  xy: 53, 2
+  size: 44, 48
+  orig: 44, 48
+  offset: 0, 0
+  index: -1
+Baloo_body
+  rotate: true
+  xy: 2, 48
+  size: 157, 144
+  orig: 157, 144
+  offset: 0, 0
+  index: -1
+Baloo_mouth
+  rotate: false
+  xy: 103, 9
+  size: 48, 28
+  orig: 48, 28
+  offset: 0, 0
+  index: -1
+flash
+  rotate: false
+  xy: 148, 151
+  size: 54, 54
+  orig: 56, 56
+  offset: 1, 1
+  index: -1
+flash1
+  rotate: false
+  xy: 148, 95
+  size: 54, 54
+  orig: 56, 56
+  offset: 1, 1
+  index: -1
+flash2
+  rotate: false
+  xy: 148, 39
+  size: 54, 54
+  orig: 56, 56
+  offset: 1, 1
+  index: -1

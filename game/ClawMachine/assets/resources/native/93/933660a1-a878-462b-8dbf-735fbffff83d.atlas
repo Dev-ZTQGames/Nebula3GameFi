@@ -1,0 +1,97 @@
+
+0069_baloo_ani_idle_navy.png
+size: 326,201
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Baloo_Down_navy cap
+  rotate: false
+  xy: 120, 7
+  size: 111, 33
+  orig: 111, 33
+  offset: 0, 0
+  index: -1
+Baloo_L_eye
+  rotate: false
+  xy: 194, 44
+  size: 18, 12
+  orig: 18, 12
+  offset: 0, 0
+  index: -1
+Baloo_L_feet
+  rotate: false
+  xy: 194, 58
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Baloo_L_hand
+  rotate: false
+  xy: 148, 45
+  size: 44, 39
+  orig: 44, 39
+  offset: 0, 0
+  index: -1
+Baloo_R_eye
+  rotate: true
+  xy: 214, 46
+  size: 17, 11
+  orig: 17, 11
+  offset: 0, 0
+  index: -1
+Baloo_R_feet
+  rotate: true
+  xy: 209, 65
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+Baloo_R_hand
+  rotate: true
+  xy: 148, 86
+  size: 42, 44
+  orig: 42, 44
+  offset: 0, 0
+  index: -1
+Baloo_Up_navy cap
+  rotate: true
+  xy: 233, 65
+  size: 134, 91
+  orig: 134, 91
+  offset: 0, 0
+  index: -1
+Baloo_body
+  rotate: true
+  xy: 2, 42
+  size: 157, 144
+  orig: 157, 144
+  offset: 0, 0
+  index: -1
+Baloo_cigarette
+  rotate: true
+  xy: 148, 130
+  size: 69, 78
+  orig: 69, 78
+  offset: 0, 0
+  index: -1
+Baloo_hat brim
+  rotate: false
+  xy: 2, 2
+  size: 116, 38
+  orig: 116, 38
+  offset: 0, 0
+  index: -1
+Baloo_mouth
+  rotate: true
+  xy: 194, 80
+  size: 48, 28
+  orig: 48, 28
+  offset: 0, 0
+  index: -1
+Baloo_pipe
+  rotate: false
+  xy: 233, 17
+  size: 88, 46
+  orig: 88, 46
+  offset: 0, 0
+  index: -1

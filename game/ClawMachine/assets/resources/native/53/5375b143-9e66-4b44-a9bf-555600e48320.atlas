@@ -1,0 +1,132 @@
+
+0028_kort_ani_idle_pajamas.png
+size: 889,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Kote_L_ear
+  rotate: true
+  xy: 577, 3
+  size: 91, 102
+  orig: 91, 102
+  offset: 0, 0
+  index: -1
+Kote_L_eye
+  rotate: false
+  xy: 301, 5
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+Kote_L_feet
+  rotate: false
+  xy: 821, 158
+  size: 66, 45
+  orig: 66, 45
+  offset: 0, 0
+  index: -1
+Kote_L_hand
+  rotate: true
+  xy: 509, 12
+  size: 69, 66
+  orig: 69, 66
+  offset: 0, 0
+  index: -1
+Kote_R_ear
+  rotate: false
+  xy: 731, 5
+  size: 93, 99
+  orig: 93, 99
+  offset: 0, 0
+  index: -1
+Kote_R_eye
+  rotate: false
+  xy: 325, 9
+  size: 23, 13
+  orig: 23, 13
+  offset: 0, 0
+  index: -1
+Kote_R_feet
+  rotate: false
+  xy: 821, 111
+  size: 66, 45
+  orig: 66, 45
+  offset: 0, 0
+  index: -1
+Kote_R_hand
+  rotate: false
+  xy: 435, 4
+  size: 72, 77
+  orig: 72, 77
+  offset: 0, 0
+  index: -1
+Kote_hat
+  rotate: false
+  xy: 241, 83
+  size: 269, 120
+  orig: 269, 120
+  offset: 0, 0
+  index: -1
+Kote_hattop
+  rotate: false
+  xy: 241, 24
+  size: 192, 57
+  orig: 192, 57
+  offset: 0, 0
+  index: -1
+Kote_head
+  rotate: false
+  xy: 2, 2
+  size: 237, 201
+  orig: 237, 201
+  offset: 0, 0
+  index: -1
+Kote_mouse
+  rotate: false
+  xy: 241, 5
+  size: 58, 17
+  orig: 58, 17
+  offset: 0, 0
+  index: -1
+Kote_pajamas
+  rotate: false
+  xy: 512, 96
+  size: 188, 107
+  orig: 188, 107
+  offset: 0, 0
+  index: -1
+Kote_pillow
+  rotate: false
+  xy: 702, 106
+  size: 117, 97
+  orig: 117, 97
+  offset: 0, 0
+  index: -1
+Kote_tail
+  rotate: false
+  xy: 826, 66
+  size: 59, 43
+  orig: 59, 43
+  offset: 0, 0
+  index: -1
+Kote_tie
+  rotate: true
+  xy: 681, 3
+  size: 91, 48
+  orig: 91, 48
+  offset: 0, 0
+  index: -1
+Kote_tongue
+  rotate: true
+  xy: 826, 24
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+z2
+  rotate: false
+  xy: 854, 33
+  size: 32, 31
+  orig: 34, 33
+  offset: 1, 1
+  index: -1

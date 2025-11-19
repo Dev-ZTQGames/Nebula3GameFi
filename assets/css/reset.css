@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*
+ * File       : reset.css
+ */
+
+
+
+/* **************************************** *
+ * RESET FILES
+ * **************************************** */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, time, figure, article, nav, header, footer, hgroup, video, audio, aside, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+ol, ul { list-style: none; }
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+figure, article, header, footer, nav, hgroup, video, audio, aside, main { display: block; }
+
+/* reset mobile default style */
+html { -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; }
+body, textarea:focus, input:focus, a:focus { -webkit-tap-highlight-color: rgba(50, 65, 140, .08); }
+body { -webkit-touch-callout: none; }
+
+
+
+/* **************************************** *
+ * INPUT
+ * **************************************** */
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=search],
+input[type=file],
+input[type=file]::file-selector-button,
+textarea { border-radius:6rem; -webkit-appearance: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; outline: none; font-family: 'Montserrat', sans-serif; }
+input[type=submit], input[type=button], button { -webkit-appearance: none; font-family: 'Montserrat', sans-serif; border-radius: 6rem; color:#000;}
+input[type=radio] { border-radius: 100%; }
+input:autofill,
+input:-webkit-autofill {caret-color: white; border: 5px solid #fff; -webkit-text-fill-color: #fff;  -webkit-box-shadow: 0 0 0px 1000px #212121 inset;  transition: background-color 5000s ease-in-out 0s;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder { font-family: 'Montserrat', sans-serif; font-size: 16rem; color: #767676; } 
+::-moz-placeholder { font-family: 'Montserrat', sans-serif; font-size: 16rem; color: #767676; } 
+:-ms-input-placeholder { font-family: 'Montserrat', sans-serif; font-size: 16rem; color: #767676; } 
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: transparent; } 
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transparent; } 
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color: transparent; }
+
+/* reset some shadow dom */
+/* clears the 'X' from Internet Explorer Chrome */
+input::-ms-clear { display: none; width: 0; height: 0; }
+input::-ms-reveal { display: none; width: 0; height: 0; }
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+

@@ -1,0 +1,104 @@
+
+0000_ed_ani_idle_basic.png
+size: 589,319
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ed_L_ear
+  rotate: false
+  xy: 366, 83
+  size: 82, 74
+  orig: 82, 75
+  offset: 0, 0
+  index: -1
+Ed_L_eye
+  rotate: false
+  xy: 540, 217
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Ed_L_feet
+  rotate: true
+  xy: 528, 4
+  size: 91, 59
+  orig: 91, 59
+  offset: 0, 0
+  index: -1
+Ed_L_hand
+  rotate: false
+  xy: 366, 224
+  size: 89, 93
+  orig: 89, 93
+  offset: 0, 0
+  index: -1
+Ed_R_ear
+  rotate: false
+  xy: 457, 241
+  size: 80, 76
+  orig: 80, 76
+  offset: 0, 0
+  index: -1
+Ed_R_eye
+  rotate: false
+  xy: 540, 239
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Ed_R_feet
+  rotate: false
+  xy: 443, 2
+  size: 83, 60
+  orig: 83, 60
+  offset: 0, 0
+  index: -1
+Ed_R_hand
+  rotate: false
+  xy: 450, 64
+  size: 65, 93
+  orig: 65, 93
+  offset: 0, 0
+  index: -1
+Ed_body
+  rotate: true
+  xy: 2, 5
+  size: 312, 362
+  orig: 312, 362
+  offset: 0, 0
+  index: -1
+Ed_mouth
+  rotate: true
+  xy: 539, 262
+  size: 55, 29
+  orig: 55, 29
+  offset: 0, 0
+  index: -1
+Ed_tie
+  rotate: true
+  xy: 366, 159
+  size: 63, 95
+  orig: 63, 95
+  offset: 0, 0
+  index: -1
+heart2
+  rotate: false
+  xy: 366, 16
+  size: 75, 65
+  orig: 77, 67
+  offset: 1, 1
+  index: -1
+heart3
+  rotate: false
+  xy: 463, 174
+  size: 75, 65
+  orig: 77, 67
+  offset: 1, 1
+  index: -1
+heart4
+  rotate: true
+  xy: 517, 97
+  size: 75, 65
+  orig: 77, 67
+  offset: 1, 1
+  index: -1
