@@ -22,13 +22,14 @@
  * VISUAL
  * **************************************** */
 /* .main-visual {padding-bottom:30rem;} */
-.main-visual__contents {display:flex;align-items:center;}
-.main-visual__txt { max-width: 35%; margin-right:5%; margin-left:0;}
+.main-visual__contents {display:flex;align-items:center;gap: 40rem;}
+.main-visual__txt {max-width: 35%;width: 100%;}
+.main-visual__txt .swiper-slide {width:100%;}
 .main-visual__title { font-size:40rem; font-weight:700;}
 .main-visual__sub-title { font-size:30rem; margin-top:6rem;}
 .main-visual__desc {font-size:20rem; line-height:1.4;color:#ddd; margin-top:20rem;}
 .main-visual .btn-more {margin-top:30rem;}
-.triple-slider {position: relative;display:flex;align-items:center; width: 60%;}
+.triple-slider {position: relative;display:flex;align-items:center;width: 100%;max-width:960rem;flex:1;}
 .triple-slider__contents { width:100%; border-radius: 12rem; -webkit-mask-image: -webkit-radial-gradient(white, black); }
 .triple-slider .main-visual__center {box-shadow:0 0 20rem 20rem rgba(0,0,0,0.1)}
 .triple-slider .main-visual__left,.triple-slider .main-visual__right { opacity: .5; position: absolute; top: 50%; user-select: none; cursor: pointer }

@@ -10,7 +10,7 @@ if( $query == "login" ){
 
 	$info = array();
 
-	$que = mysqli_query($connect, "SELECT *,PASSWORD('".$login_pw."') as check_pw FROM Accounts WHERE login_id='".$login_id."'");
+	$que = mysqli_query($connect, "SELECT *,CONCAT('*', UPPER(SHA1(UNHEX(SHA1('".$login_pw."'))))) as check_pw FROM Accounts WHERE login_id='".$login_id."'");
 	$row = mysqli_fetch_array($que);
 	$info = $row;
 
@@ -92,12 +92,6 @@ if( $query == "login" ){
                 <button class="btn-basic btn-login btn-primary" type="button" onclick="login_check();"><span><?php echo $lang['Login']; ?></span></button>
 			</form>
             </div>
-			<div class="or">or</div>
-            <div class="signup"><a href="./signup.php" class="btn-basic btn-signup btn-primary"><span><?php echo $lang['Signup']; ?></span></a></div>
-            <ul class="login-helper">     
-                <li><a href="./find-id.php"><span><?php echo $lang['Forgetaccount']; ?></span></a></li>
-                <li><a href="./find-pw.php"><span><?php echo $lang['Forgetpassword']; ?></span></a></li>
-            </ul>
         </div><!-- .wrap -->
     </div><!-- .article-body -->
 </div><!-- #container -->
@@ -144,7 +138,7 @@ if( $query == "login" ){
 			return false;
 		} 
 
-		if (login_pw == "" || !isValidPassword(login_pw) || chk_login_id != "Y") {
+		if (login_pw == "" || !isValidPassword(login_pw) || chk_login_pw != "Y") {
 			$("#valid_message_error").show();
 			$("#login_pw").focus();
 			return false;

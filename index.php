@@ -417,13 +417,13 @@
             <div class="main-announcement__inner">
                 <div class="main-section__head">
                     <div class="main-section__head__inner">
-                        <h2 class="main-section__title"><?php echo $lang['ANNOUNCEMENT']; ?></h2>
+                        <h2 class="main-section__title"><?php echo $lang['News']; ?></h2>
                         <div class="btn-more"><a href="/sub/announcement.php"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                     </div>
                 </div>
                 <div class="main-announcement__contents">
                     <div class="main-updates main-announcement__section">
-                        <h3><?php echo $lang['Updates']; ?></h3>
+                        <h3><?php echo $lang['OurJourney']; ?></h3>
                         <div class="main-updates__list">
 						<?php
 							$query_updates = mysqli_query($connect, "SELECT * FROM News WHERE m_type = '2' ORDER BY m_index DESC LIMIT 3");
@@ -450,7 +450,7 @@
                         </div><!-- .main-updates__list -->
                     </div><!-- .main-updates -->
                     <div class="main-events main-announcement__section">
-                        <h3><?php echo $lang['Events']; ?></h3>
+                        <h3><?php echo $lang['Announcement']; ?></h3>
                         <div class="main-events__list">
 						<?php
 							$query_events = mysqli_query($connect, "SELECT * FROM News WHERE m_type = '3' AND m_status != 4 ORDER BY m_index DESC LIMIT 2");

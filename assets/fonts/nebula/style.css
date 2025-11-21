@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'nebula';
   src:
-    url('fonts/nebula.ttf?nb1t0d') format('truetype'),
-    url('fonts/nebula.woff?nb1t0d') format('woff'),
-    url('fonts/nebula.svg?nb1t0d#nebula') format('svg');
+    url('fonts/nebula.ttf?2vebhu') format('truetype'),
+    url('fonts/nebula.woff?2vebhu') format('woff'),
+    url('fonts/nebula.svg?2vebhu#nebula') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="koama-"], [class*=" koama-"] {
+[class^="nebula-"], [class*=" nebula-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'nebula' !important;
   speak: never;
@@ -24,129 +24,135 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.koama-apple:before {
+.nebula-chart:before {
+  content: "\e915";
+}
+.nebula-paper:before {
+  content: "\e916";
+}
+.nebula-apple:before {
   content: "\e914";
 }
-.koama-change2:before {
+.nebula-change2:before {
   content: "\e913";
 }
-.koama-transfer2:before {
+.nebula-transfer2:before {
   content: "\e912";
 }
-.koama-change:before {
+.nebula-change:before {
   content: "\e911";
 }
-.koama-direction-left:before {
+.nebula-direction-left:before {
   content: "\e90b";
 }
-.koama-direction-down:before {
+.nebula-direction-down:before {
   content: "\e90c";
 }
-.koama-direction-right:before {
+.nebula-direction-right:before {
   content: "\e90d";
 }
-.koama-direction-up:before {
+.nebula-direction-up:before {
   content: "\e90e";
 }
-.koama-logout:before {
+.nebula-logout:before {
   content: "\e907";
 }
-.koama-refresh:before {
+.nebula-refresh:before {
   content: "\e908";
 }
-.koama-transfer:before {
+.nebula-transfer:before {
   content: "\e909";
 }
-.koama-fullscreen:before {
+.nebula-fullscreen:before {
   content: "\e906";
 }
-.koama-medium:before {
+.nebula-medium:before {
   content: "\e954";
 }
-.koama-facebook1:before {
+.nebula-facebook1:before {
   content: "\e947";
 }
-.koama-instagram:before {
+.nebula-instagram:before {
   content: "\e948";
 }
-.koama-telegram:before {
+.nebula-telegram:before {
   content: "\e949";
 }
-.koama-play-store:before {
+.nebula-play-store:before {
   content: "\e91e";
 }
-.koama-user-box:before {
+.nebula-user-box:before {
   content: "\e900";
 }
-.koama-wallet:before {
+.nebula-wallet:before {
   content: "\e901";
 }
-.koama-pause:before {
+.nebula-pause:before {
   content: "\e90f";
 }
-.koama-play-type2:before {
+.nebula-play-type2:before {
   content: "\e910";
 }
-.koama-play:before {
+.nebula-play:before {
   content: "\e902";
 }
-.koama-browser:before {
+.nebula-browser:before {
   content: "\e903";
 }
-.koama-mobile:before {
+.nebula-mobile:before {
   content: "\e92a";
 }
-.koama-pc:before {
+.nebula-pc:before {
   content: "\e927";
 }
-.koama-ios:before {
+.nebula-ios:before {
   content: "\e928";
 }
-.koama-arrow-diagonal:before {
+.nebula-arrow-diagonal:before {
   content: "\e929";
 }
-.koama-arrow-thin-right:before {
+.nebula-arrow-thin-right:before {
   content: "\e918";
 }
-.koama-arrow-thin-top:before {
+.nebula-arrow-thin-top:before {
   content: "\e91a";
 }
-.koama-arrow-thin-left:before {
+.nebula-arrow-thin-left:before {
   content: "\e91c";
 }
-.koama-arrow-thin-bottom:before {
+.nebula-arrow-thin-bottom:before {
   content: "\e91d";
 }
-.koama-twitter:before {
+.nebula-twitter:before {
   content: "\e904";
 }
-.koama-discord:before {
+.nebula-discord:before {
   content: "\e919";
 }
-.koama-youtube:before {
+.nebula-youtube:before {
   content: "\e91b";
 }
-.koama-globe:before {
+.nebula-globe:before {
   content: "\e943";
 }
-.koama-search:before {
+.nebula-search:before {
   content: "\e944";
 }
-.koama-minus:before {
+.nebula-minus:before {
   content: "\e942";
 }
-.koama-plus:before {
+.nebula-plus:before {
   content: "\e945";
 }
-.koama-close:before {
+.nebula-close:before {
   content: "\e956";
 }
-.koama-filter:before {
+.nebula-filter:before {
   content: "\e933";
 }
-.koama-check:before {
+.nebula-check:before {
   content: "\e905";
 }
-.koama-exclamation-mark:before {
+.nebula-exclamation-mark:before {
   content: "\e90a";
 }

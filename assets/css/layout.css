@@ -90,11 +90,15 @@ body.menu-open .menu-overlay { opacity:1;-webkit-transition: opacity .3s;transit
 .sns-youtube a {background:#FF0000;}
 .sns-telegram a {background:#36ace8}
 .sns-web a {background:#444;}
+.sns-whitepaper a {background:linear-gradient(to right, #FF8533, #A14BC9, #3434EA);}
+.sns-dashboard a {background:linear-gradient(to right, #FF8533, #A14BC9, #3434EA);}
 .sns-discord a:before {content:'\e919';left: 50%;}
 .sns-twitter a:before {content:'\e904'; font-size:18rem; left: 50%;}
 .sns-youtube a:before {content:'\e91b'; left:50%;}
 .sns-telegram a:before {content:'\e949';}
 .sns-web a:before {content:'\e943'; font-size:20rem; left:50%;}
+.sns-whitepaper a:before {content:'\e916'; font-size:19rem; left:50%;}
+.sns-dashboard a:before {content:'\e915'; left:50%;}
 
 .small-menu-controller {display:none;}
 

@@ -3,7 +3,7 @@
 <div id="container" class="page-announcement">
     <div class="article-header">
         <div class="article-header__inner wrap">
-            <h2 class="article-title"><?php echo $lang['ANNOUNCEMENT']; ?></h2>
+            <h2 class="article-title"><?php echo $lang['News']; ?></h2>
         </div><!-- .article-header__inner -->
     </div><!-- .article-header -->
 
@@ -11,7 +11,7 @@
         <div class="wrap">
             <div class="announcement-section">
                 <div class="announcement-head">
-                    <h2 class="announcement-head__title"><?php echo $lang['Updates']; ?></h2>
+                    <h2 class="announcement-head__title"><?php echo $lang['OurJourney']; ?></h2>
                     <div class="btn-more"><a href="https://x.com/Nebula3_GameFi" target="_blank"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                 </div>
                 <div class="announcement-list announcement-slide swiper-container">
@@ -50,7 +50,7 @@
             </div><!-- .announcement-section -->
             <div class="announcement-section">
                 <div class="announcement-head">
-                    <h2 class="announcement-head__title"><?php echo $lang['Events']; ?></h2>
+                    <h2 class="announcement-head__title"><?php echo $lang['Announcement']; ?></h2>
                     <div class="btn-more"><a href="https://x.com/Nebula3_GameFi" target="_blank"><span><?php echo $lang['ViewMore']; ?></span></a></div>
                 </div>
                 <div class="announcement-list announcement-slide swiper-container">

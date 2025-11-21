@@ -357,5 +357,4 @@ $lang['Resigter_Failed_noEmail']							= "E-mail field incomplete. Please comple
 $lang['SPORTS']											= "SPORTS";
 $lang['Binance_Wallet']                                            = "Binance Wallet";
 $lang['DownloadBinance']															="go to download Binance Wallet";
-$lang['BinanceAddress']													= "Binance Address";
 ?>
